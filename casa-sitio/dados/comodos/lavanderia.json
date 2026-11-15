@@ -1,7 +1,7 @@
 {
   "comodo": "lavanderia",
-  "revisao": "04",
-  "obs": "Adaptação da referência farmhouse: bancada em pedra clara com cuba inox e gabinete branco de 2 portas; revestimento cerâmico branco tipo tijolinho e duas prateleiras de madeira com cestos e plantas na parede direita; lavadora superior como padrão (frontal permanece no inventário). Suggar Lavamax Eco 20kg embaixo da janela dos fundos, com dimensões oficiais. Aberturas P8, V3 e J7 preservadas. Instalações elétricas e hidráulicas seguem propostas a validar com profissionais.",
+  "revisao": "05",
+  "obs": "Adaptação da referência farmhouse: bancada em pedra clara com cuba inox e gabinete branco de 2 portas; revestimento cerâmico branco tipo tijolinho e duas prateleiras de madeira com cestos e plantas na parede direita; lavadora superior como padrão (frontal permanece no inventário). Suggar Lavamax Eco 20kg embaixo da janela dos fundos, com dimensões oficiais. Aberturas P8, V3 e J7 preservadas. Instalações elétricas e hidráulicas seguem propostas a validar com profissionais. Revestimento tipo tijolinho estendido a toda a parede direita (piso ao teto). Distribuição de máquinas e pia em estudo; móveis não reposicionados nesta revisão.",
   "pecas": [
     {
       "id": "LAV-TANQUE",
@@ -194,17 +194,17 @@
     {
       "id": "LAV-REV-TIJOLINHO",
       "tipo": "revestimento-tijolinho",
-      "nome": "Faixa de azulejo branco tijolinho — parede direita",
+      "nome": "Azulejo branco tijolinho — parede direita inteira",
       "parede": "direita",
-      "dosFundos": 5,
-      "doPiso": 92,
-      "largura": 165,
-      "altura": 135,
+      "dosFundos": 0,
+      "doPiso": 0,
+      "largura": 200,
+      "altura": 300,
       "profundidade": 0.9,
       "larguraPeca": 16,
       "alturaPeca": 7.5,
       "status": "proposta",
-      "obs": "Tijolinho branco tipo metrô com paginação desencontrada. Revestimento visual de 92 a 227 cm acima do piso, preservando a parede dos fundos e a janela."
+      "obs": "Revestimento do piso ao teto em toda a parede direita da lavanderia: 200 cm de comprimento × 300 cm de altura. Sem alterar a posição da pia, lavadora e tanquinho nesta revisão."
     },
     {
       "id": "LAV-PRATELEIRAS-MADEIRA",
