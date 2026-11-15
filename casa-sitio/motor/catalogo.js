@@ -175,7 +175,7 @@ reg('estante', { rotulo: 'Estante / torre', dimensoes: () => ({ largura: 70, pro
 
 const ELETROS = {
   geladeira: [70, 72, 178, 'eletro-inox'], 'freezer-vertical': [60, 65, 184, 'eletro-branco'], microondas: [48, 36, 27, 'eletro-inox'], forno: [55, 48, 36, 'eletro-preto'],
-  airfryer: [30, 36, 34, 'eletro-preto'], fogao: [76, 62, 90, 'eletro-inox'], 'lava-roupas': [60, 65, 100, 'eletro-branco'], 'lavadora-frontal': [60, 65.9, 85, 'eletro-branco'], 'lavadora-superior': [59.1, 66.5, 105.2, 'eletro-branco'], tanquinho: [58, 58, 95, 'eletro-branco'], 'lava-loucas': [60, 60, 82, 'eletro-inox'],
+  airfryer: [30, 36, 34, 'eletro-preto'], fogao: [76, 62, 90, 'eletro-inox'], 'lava-roupas': [60, 65, 100, 'eletro-branco'], 'lavadora-frontal': [60, 65.9, 85, 'eletro-branco'], 'lavadora-superior': [59.1, 66.5, 105.2, 'eletro-branco'], tanquinho: [58, 58, 95, 'eletro-branco'], 'tanquinho-suggar-eco20': [55, 59.5, 95.7, 'eletro-branco'], 'lava-loucas': [60, 60, 82, 'eletro-inox'],
   cafeteira: [22, 30, 34, 'eletro-preto'], liquidificador: [18, 18, 40, 'eletro-preto'], generico: [40, 35, 30, 'eletro-inox'],
 };
 reg('eletro', { rotulo: 'Eletrodoméstico',
@@ -218,11 +218,12 @@ reg('eletro', { rotulo: 'Eletrodoméstico',
         porta.cilZ(L / 2 - 2, cy, 1.5, 1, r - 4, 'vidro-escuro', { seg: 40, sombra: false });
         M.acao('Abrir porta frontal', v => { porta.g.rotation.y = -v * 1.75; }, !!p.aberto);
         break; }
-      case 'lavadora-superior': case 'tanquinho': {
-        const tq = p.modelo === 'tanquinho';
+      case 'lavadora-superior': case 'tanquinho': case 'tanquinho-suggar-eco20': {
+        const tq = p.modelo === 'tanquinho' || p.modelo === 'tanquinho-suggar-eco20';
         M.cx(0, L, tq ? 6 : 2, A - 3, 0, P - 1.5, m);
         M.cx(2, L - 2, A - (tq ? 20 : 14), A - 4, P - 1.5, P - .3, tq ? 'eletro-branco' : '#e4e8e9', { sombra: false });
         if (tq) for (let i = 0; i < 4; i++) M.cx(L * .15 + i * L * .18, L * .24 + i * L * .18, A - 13, A - 9, P - .3, P + .7, 'vidro-escuro', { sombra: false });
+        if (p.modelo === 'tanquinho-suggar-eco20') M.cx(0.8, L - 0.8, 14, 18, P - 1, P + 0.5, '#65adb4', { sombra: false });
         const tampa = M.sub(0, A - 3, 4);
         tampa.cx(2, L - 2, 0, 2.5, 0, P - 7, tq ? 'eletro-branco' : '#dfe5e6', { sombra: false });
         tampa.cx(5, L - 5, 2.5, 2.9, 5, P - 14, tq ? 'placa-branca' : 'vidro-escuro', { sombra: false });
@@ -317,6 +318,27 @@ reg('grelha', { rotulo: 'Grelha de ventilação', fixacao: 'parede', colide: fal
     const n = Math.max(2, Math.round((A - 4) / 5)); for (let i = 0; i < n; i++) { const y = 2 + ((A - 4) * (i + 0.5)) / n; M.cx(2, L - 2, y - 1.2, y + 1.2, 0.6, P - 0.2, 'placa-branca', { sombra: false }); } } });
 reg('revestimento', { rotulo: 'Revestimento de parede', fixacao: 'parede', camada: 'decoracao', colide: false, dimensoes: () => ({ largura: 100, profundidade: 1, altura: 60 }),
   construir(M, p, { L, P, A }) { M.cx(0, L, 0, A, 0, P, p.material || 'ceramica-banho', { sombra: false }); } });
+
+// Revestimento cerâmico branco tipo metrô / tijolinho, com juntas desencontradas.
+// Peça fina fixada à parede, sem colisão funcional.
+reg('revestimento-tijolinho', { rotulo: 'Azulejo branco tipo tijolinho', fixacao: 'parede', camada: 'decoracao', colide: false,
+  dimensoes: () => ({ largura: 150, profundidade: 0.9, altura: 130, doPiso: 93 }),
+  construir(M, p, { L, A }) {
+    const largTile = num(p.larguraPeca, 16), altTile = num(p.alturaPeca, 7.5);
+    const junta = 0.35, n = Math.ceil(A / altTile);
+    M.cx(0, L, 0, A, 0, 0.4, '#dad9d4', { sombra: false });
+    for (let linha = 0; linha < n; linha++) {
+      const y0 = linha * altTile + junta / 2, y1 = Math.min(A, (linha + 1) * altTile - junta / 2);
+      if (y1 <= y0) continue;
+      const desloc = linha % 2 ? largTile / 2 : 0;
+      for (let k = -1; k <= Math.ceil(L / largTile) + 1; k++) {
+        const x0 = Math.max(0, k * largTile - desloc + junta / 2);
+        const x1 = Math.min(L, (k + 1) * largTile - desloc - junta / 2);
+        if (x1 <= x0) continue;
+        M.cx(x0, x1, y0, y1, 0.42, 0.95, (k + linha) % 7 === 0 ? '#eeece8' : '#faf9f5', { sombra: false });
+      }
+    }
+  } });
 
 // ---------- LOUÇAS ----------
 reg('vaso-sanitario', { rotulo: 'Vaso sanitário', dimensoes: () => ({ largura: 38, profundidade: 66, altura: 78 }), material: () => 'louca-branca',
