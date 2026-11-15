@@ -1,7 +1,7 @@
 {
   "comodo": "lavanderia",
-  "revisao": "02",
-  "obs": "Layout proposto, atualizado: parede direita com lavadora substituível próxima aos fundos e tanque de cuba única mais à frente. Tanquinho nos fundos preservado; infraestrutura ilustrativa reposicionada conforme equipamentos. Conferir portas P8/V3 e folgas de abertura antes da execução.",
+  "revisao": "03",
+  "obs": "Layout proposto, atualizado: parede direita com lavadora substituível próxima aos fundos e tanque de cuba única mais à frente. Tanquinho nos fundos preservado; infraestrutura ilustrativa reposicionada conforme equipamentos. Conferir portas P8/V3 e folgas de abertura antes da execução. Iluminação geral e placa conjugada interruptor+tomada previstos no acesso.",
   "pecas": [
     {
       "id": "LAV-TANQUE",
@@ -145,6 +145,30 @@
       "profundidade": 15,
       "status": "proposta",
       "obs": "Caixa sifonada do piso, com declividade do contrapiso e tubulações dimensionadas por profissional; não recebe mangueiras soltas de equipamentos."
+    },
+    {
+      "id": "LAV-ILUM-TETO",
+      "tipo": "plafon",
+      "nome": "Plafon LED central da lavanderia",
+      "daEsquerda": 127.5,
+      "dosFundos": 85,
+      "diametro": 30,
+      "potencia": 18,
+      "temperatura": 4000,
+      "status": "proposta",
+      "obs": "Iluminação geral centralizada em planta (considerado diâmetro de 30 cm). Potência luminosa real e proteção contra umidade a conferir conforme luminária adquirida."
+    },
+    {
+      "id": "LAV-INT-TOMADA",
+      "tipo": "interruptor-tomada",
+      "nome": "Interruptor simples + tomada 2P+T conjugados",
+      "parede": "frente",
+      "daEsquerda": 145,
+      "doPiso": 110,
+      "amperagem": 10,
+      "comanda": "LAV-ILUM-TETO",
+      "status": "proposta",
+      "obs": "Conjunto 4x2 ao lado do vão V3 de acesso, em trecho sólido da parede, fora da área de respingos. Tomada de uso geral com alimentação e proteção previstas pelo eletricista; a associação com a luminária é documental (não simula comando elétrico interativo)."
     }
   ]
 }
