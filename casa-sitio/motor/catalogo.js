@@ -348,6 +348,17 @@ reg('interruptor', { rotulo: 'Interruptor', camada: 'eletrica', colide: false, p
   dimensoes: () => ({ largura: 7.5, profundidade: 1.6, altura: 11.5, doPiso: 110 }),
   construir(M, p, { L, A }) { placa(M, L, A, p.cor); const n = clamp(num(p.teclas, 1), 1, 3); for (let i = 0; i < n; i++) { const y = A / 2 + (i - (n - 1) / 2) * 3.1; M.cx(L / 2 - 1.9, L / 2 + 1.9, y - 1.3, y + 1.3, 0.8, 1.5, '#e9e9e6', { sombra: false }); } } });
 
+// Placa conjugada: interruptor simples + tomada 2P+T em uma única caixa 4x2.
+reg('interruptor-tomada', { rotulo: 'Interruptor + tomada', camada: 'eletrica', colide: false, ponto: true, fixacao: 'parede', etiqueta: 'I+T',
+  dimensoes: () => ({ largura: 7.5, profundidade: 1.6, altura: 11.5, doPiso: 110 }),
+  construir(M, p, { L, A }) {
+    placa(M, L, A, p.cor);
+    M.cx(L / 2 - 2.4, L / 2 + 2.4, A * 0.58, A * 0.83, 0.9, 1.7, '#e9e9e6', { sombra: false });
+    const y = A * 0.29;
+    M.cilZ(L / 2, y - 0.3, 1, 0.65, 1.65, 'placa-furo', { seg: 16, sombra: false });
+    for (const dx of [-0.85, 0.85]) M.cilZ(L / 2 + dx, y, 1.55, 0.16, 0.3, '#111111', { seg: 8, sombra: false });
+  } });
+
 // ---------- ILUMINAÇÃO ----------
 reg('plafon', { rotulo: 'Plafon', camada: 'iluminacao', colide: false, fixacao: 'teto', etiqueta: 'L',
   dimensoes: p => ({ largura: num(p.diametro, 30), profundidade: num(p.diametro, 30), altura: 4 }),
