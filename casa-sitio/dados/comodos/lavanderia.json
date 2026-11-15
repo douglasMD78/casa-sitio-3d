@@ -1,53 +1,74 @@
 {
   "comodo": "lavanderia",
-  "revisao": "03",
-  "obs": "Layout proposto, atualizado: parede direita com lavadora substituível próxima aos fundos e tanque de cuba única mais à frente. Tanquinho nos fundos preservado; infraestrutura ilustrativa reposicionada conforme equipamentos. Conferir portas P8/V3 e folgas de abertura antes da execução. Iluminação geral e placa conjugada interruptor+tomada previstos no acesso.",
+  "revisao": "04",
+  "obs": "Adaptação da referência farmhouse: bancada em pedra clara com cuba inox e gabinete branco de 2 portas; revestimento cerâmico branco tipo tijolinho e duas prateleiras de madeira com cestos e plantas na parede direita; lavadora superior como padrão (frontal permanece no inventário). Suggar Lavamax Eco 20kg embaixo da janela dos fundos, com dimensões oficiais. Aberturas P8, V3 e J7 preservadas. Instalações elétricas e hidráulicas seguem propostas a validar com profissionais.",
   "pecas": [
     {
       "id": "LAV-TANQUE",
-      "tipo": "tanque",
-      "nome": "Tanque de roupas — cuba única",
+      "tipo": "bancada",
+      "nome": "Gabinete branco de lavanderia com cuba inox e pedra clara",
       "parede": "direita",
-      "dosFundos": 96,
-      "largura": 60,
+      "dosFundos": 76,
+      "largura": 70,
       "profundidade": 55,
       "altura": 90,
       "status": "proposta",
-      "obs": "Tanque simples para roupas; manter acesso ao sifão e à torneira."
+      "obs": "Referência: gabinete com duas portas brancas, tampo claro bege-acinzentado, cuba inox única e torneira. Caixa sifonada e acesso a conexões precisam de conferência executiva.",
+      "base": "portas",
+      "corpo": "mdf-branco",
+      "frente": "mdf-branco",
+      "puxador": "bola",
+      "modulos": [
+        {
+          "tipo": "portas",
+          "portas": 2
+        }
+      ],
+      "tampo": {
+        "material": "pedra-clara",
+        "espessura": 2
+      },
+      "cuba": {
+        "largura": 48,
+        "profundidade": 37,
+        "fundura": 18,
+        "material": "inox"
+      }
     },
     {
       "id": "LAV-MAQUINA",
       "tipo": "eletro",
-      "nome": "Lavadora — frontal Electrolux LFB12 12 kg",
+      "nome": "Lavadora superior Electrolux LED13 13 kg",
       "categoriaInventario": "lavadora",
-      "modelo": "lavadora-frontal",
+      "modelo": "lavadora-superior",
       "parede": "direita",
       "dosFundos": 8,
-      "largura": 60,
-      "profundidade": 65.9,
-      "altura": 85,
+      "largura": 59.1,
+      "profundidade": 66.5,
+      "altura": 105.2,
       "status": "proposta",
-      "obs": "Selecione a máquina e troque o modelo pelo inventário na ficha; abrir/fechar pela ação da peça. Conferir as folgas de instalação do modelo final."
+      "obs": "Modelo inicial inspirado na foto. O inventário mantém frontal LFB12 12 kg como alternativa. Abrir tampa no 3D e verificar distâncias até prateleiras e pontos hidráulicos."
     },
     {
       "id": "LAV-TANQUINHO",
       "tipo": "eletro",
-      "modelo": "tanquinho",
-      "nome": "Tanquinho de lavar roupas — referência genérica",
+      "modelo": "tanquinho-suggar-eco20",
+      "nome": "Suggar Lavamax Eco 20 kg — LE2021/LE2022",
       "parede": "fundos",
       "daEsquerda": 128,
-      "largura": 58,
-      "profundidade": 58,
-      "altura": 95,
+      "largura": 55,
+      "profundidade": 59.5,
+      "altura": 95.7,
       "status": "proposta",
-      "obs": "Dimensões ilustrativas, dependem da marca/modelo escolhido; a tampa abre no 3D."
+      "obs": "Medidas oficiais sem embalagem (L×P×A) 55×59,5×95,7 cm. Tampa abre no 3D. Manter espaço para mangueiras e drenagem segundo manual; sem prateleira imediatamente acima da tampa. Janela J7 inicia no peitoril 150 cm.",
+      "material": "eletro-branco"
     },
     {
       "id": "LAV-AGUA-TANQUE",
       "tipo": "ponto-agua",
       "nome": "Água fria do tanque",
       "parede": "direita",
-      "dosFundos": 126,
+      "dosFundos": 110,
       "doPiso": 110,
       "status": "proposta"
     },
@@ -56,7 +77,7 @@
       "tipo": "ponto-esgoto",
       "nome": "Esgoto do tanque Ø 50 mm — sifonado",
       "parede": "direita",
-      "dosFundos": 125,
+      "dosFundos": 110,
       "doPiso": 45,
       "diametro": 50,
       "status": "proposta"
@@ -118,7 +139,7 @@
       "tipo": "tomada",
       "nome": "Tomada dedicada ao tanquinho",
       "parede": "fundos",
-      "daEsquerda": 203,
+      "daEsquerda": 208,
       "doPiso": 125,
       "amperagem": 10,
       "status": "proposta",
@@ -169,6 +190,64 @@
       "comanda": "LAV-ILUM-TETO",
       "status": "proposta",
       "obs": "Conjunto 4x2 ao lado do vão V3 de acesso, em trecho sólido da parede, fora da área de respingos. Tomada de uso geral com alimentação e proteção previstas pelo eletricista; a associação com a luminária é documental (não simula comando elétrico interativo)."
+    },
+    {
+      "id": "LAV-REV-TIJOLINHO",
+      "tipo": "revestimento-tijolinho",
+      "nome": "Faixa de azulejo branco tijolinho — parede direita",
+      "parede": "direita",
+      "dosFundos": 5,
+      "doPiso": 92,
+      "largura": 165,
+      "altura": 135,
+      "profundidade": 0.9,
+      "larguraPeca": 16,
+      "alturaPeca": 7.5,
+      "status": "proposta",
+      "obs": "Tijolinho branco tipo metrô com paginação desencontrada. Revestimento visual de 92 a 227 cm acima do piso, preservando a parede dos fundos e a janela."
+    },
+    {
+      "id": "LAV-PRATELEIRAS-MADEIRA",
+      "tipo": "prateleiras",
+      "nome": "Duas prateleiras flutuantes de madeira clara",
+      "parede": "direita",
+      "dosFundos": 8,
+      "largura": 158,
+      "profundidade": 24,
+      "niveis": [
+        177,
+        223
+      ],
+      "chapa": 3.5,
+      "material": "madeira-clara",
+      "decor": "caixas",
+      "status": "proposta",
+      "obs": "Prateleiras sobre o conjunto da máquina e do tanque; a primeira fica 177 cm do piso para liberar a tampa da lavadora e a segunda a 223 cm. Suportes adequados ao peso real e afastamentos a confirmar."
+    },
+    {
+      "id": "LAV-PLANTA-1",
+      "tipo": "planta",
+      "nome": "Planta pendente decorativa sobre prateleira",
+      "parede": "direita",
+      "dosFundos": 20,
+      "doPiso": 223,
+      "largura": 22,
+      "profundidade": 20,
+      "altura": 32,
+      "status": "proposta",
+      "obs": "Representação visual simplificada de folhagem. Vaso sobre prateleira superior."
+    },
+    {
+      "id": "LAV-PLANTA-2",
+      "tipo": "planta",
+      "nome": "Vaso pequeno de folhagem na prateleira",
+      "parede": "direita",
+      "dosFundos": 117,
+      "doPiso": 177,
+      "largura": 18,
+      "profundidade": 18,
+      "altura": 22,
+      "status": "proposta"
     }
   ]
 }
