@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#e9eee6">
+<meta name="robots" content="noindex,nofollow">
+<title>Casa do Sítio — maquete</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%277%27 fill=%27%232f6f5e%27/%3E%3Cpath d=%27M6 17 16 8l10 9v8H6z%27 fill=%27%23fff%27/%3E%3C/svg%3E">
+<link rel="stylesheet" href="motor/estilo.css">
+<script type="importmap">{ "imports": { "three": "./vendor/three/three.min.js", "three/addons/": "./vendor/three/addons/" } }</script>
+</head>
+<body>
+<div id="app">
+  <canvas id="tela" aria-label="Maquete 3D da casa. Arraste para girar."></canvas>
+  <div id="rotulos" aria-hidden="true"></div>
+  <div id="sonda" hidden></div>
+  <div id="sondaFixa" class="painel" hidden></div>
+
+  <header id="topo">
+    <button class="so-celular" data-acao="menu" aria-label="Lista de cômodos">Cômodos</button>
+    <div class="titulo"><small id="tProjeto">Carregando…</small><strong id="tLocal">Casa inteira</strong></div>
+    <nav class="acoes" aria-label="Ferramentas">
+      <button id="btCasa" data-acao="casa">Casa</button>
+      <button data-acao="cima">De cima</button>
+      <button data-acao="recentrar">Recentrar</button>
+      <button data-acao="abrir-camadas">Camadas</button>
+      <button id="btNoite" data-acao="noite">Noite</button>
+      <button data-acao="conferencia">Conferência <b id="nConf"></b></button>
+      <button id="btEditar" data-acao="editar">Editar</button>
+      <button id="btRef" data-acao="ref" title="Mostra medidas sob o cursor">Referência</button>
+      <button data-acao="abrir-ia">IA</button>
+      <button class="so-edicao" data-acao="desfazer" title="Ctrl+Z">Desfazer</button>
+      <button class="so-edicao" data-acao="refazer" title="Ctrl+Y">Refazer</button>
+    </nav>
+  </header>
+
+  <nav id="lista" class="painel" aria-label="Cômodos"></nav>
+  <section id="pCamadas" class="painel flutuante" hidden></section>
+  <section id="pConf" class="painel flutuante" hidden></section>
+  <section id="pTex" class="painel flutuante" hidden>
+    <h3>Nova textura por foto</h3>
+    <div class="form">
+      <label for="texArq">Foto do material (granito, madeira, piso…)</label>
+      <input id="texArq" type="file" accept="image/*">
+      <label for="texNome">Nome do material</label>
+      <div class="num"><input id="texNome" type="text" placeholder="ex.: granito-verde-ubatuba" autocapitalize="off" autocomplete="off"></div>
+      <label for="texL">Tamanho real que a foto mostra, em cm (largura × altura)</label>
+      <div class="num"><input id="texL" type="number" inputmode="decimal" value="60"><span>×</span><input id="texA" type="number" inputmode="decimal" value="60" aria-label="Altura real em cm"></div>
+    </div>
+    <div class="botoes"><button class="primario" id="btTex" data-acao="enviar-textura">Criar material</button><button data-acao="fechar-paineis">Fechar</button></div>
+    <p class="obs" id="texObs"></p>
+  </section>
+
+  <section id="pIA" class="painel flutuante" hidden>
+    <h3>Editar com IA · <span id="iaOnde"></span></h3>
+    <div class="form">
+      <label for="iaPedido">1. O que você quer mudar neste cômodo?</label>
+      <div class="num"><textarea id="iaPedido" rows="3" placeholder="ex.: colocar uma ilha de 180 × 90 no meio, com cooktop, e duas tomadas de 20A na parede dos fundos"></textarea></div>
+    </div>
+    <div class="botoes"><button class="primario" data-acao="ia-copiar">Copiar pedido para a IA</button></div>
+    <p class="obs">O pedido copiado já leva o guia, as medidas do cômodo, as portas e janelas e o arquivo atual. Cole no ChatGPT ou em outra IA.</p>
+    <div class="form">
+      <label for="iaTexto">2. Cole aqui a resposta da IA</label>
+      <div class="num"><textarea id="iaTexto" rows="7" spellcheck="false" placeholder='{ "comodo": "cozinha", "modo": "mesclar", "pecas": [ ... ] }'></textarea></div>
+    </div>
+    <div class="botoes"><button class="primario" data-acao="ia-conferir">Conferir antes de aplicar</button><button data-acao="fechar-paineis">Fechar</button></div>
+    <div id="iaResultado"></div>
+  </section>
+
+  <aside id="ficha" class="painel">
+    <button id="fichaMin" class="mini" data-acao="ficha-min">Fechar</button>
+    <div id="fichaCorpo"></div>
+  </aside>
+
+  <div id="aviso" role="status"></div>
+  <div id="carregando">Montando a maquete…</div>
+  <div id="erroFatal" hidden><strong>Não foi possível abrir a maquete.</strong><pre></pre><p>Se você acabou de editar um arquivo em <code>dados/</code>, confira vírgulas e aspas do JSON. A página precisa ser aberta por um servidor (http), não direto do arquivo.</p></div>
+  <datalist id="lista-materiais"></datalist>
+  <datalist id="lista-campos"><option value="daEsquerda"><option value="daDireita"><option value="dosFundos"><option value="daFrente"><option value="doPiso"><option value="afastamento"><option value="largura"><option value="profundidade"><option value="altura"><option value="material"><option value="status"><option value="obs"><option value="nome"></datalist>
+</div>
+<noscript>Esta maquete precisa de JavaScript.</noscript>
+<script type="module" src="motor/app.js"></script>
+</body>
+</html>

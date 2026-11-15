@@ -1,0 +1,38 @@
+{
+  "versao": 1,
+  "descricao": "Padrão de itens substituíveis: cada slot tem um id estável, modelo selecionado e variantes com geometria, dimensões e abertura. Valores em centímetros.",
+  "categorias": {
+    "lavadora": {
+      "nome": "Máquina de lavar roupa",
+      "modelos": [
+        {
+          "id": "lavadora-frontal",
+          "nome": "Frontal — Electrolux LFB12 12 kg",
+          "tipo": "eletro",
+          "modelo": "lavadora-frontal",
+          "largura": 60,
+          "profundidade": 65.9,
+          "altura": 85,
+          "abertura": "frontal",
+          "fabricante": "Electrolux",
+          "referencia": "LFB12",
+          "status": "referencia-dimensionamento"
+        },
+        {
+          "id": "lavadora-superior",
+          "nome": "Superior — Electrolux LED13 13 kg",
+          "tipo": "eletro",
+          "modelo": "lavadora-superior",
+          "largura": 59.1,
+          "profundidade": 66.5,
+          "altura": 105.2,
+          "alturaAberta": 139,
+          "abertura": "superior",
+          "fabricante": "Electrolux",
+          "referencia": "LED13",
+          "status": "referencia-dimensionamento"
+        }
+      ]
+    }
+  }
+}

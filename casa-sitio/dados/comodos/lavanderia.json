@@ -1,0 +1,150 @@
+{
+  "comodo": "lavanderia",
+  "revisao": "01",
+  "obs": "Layout proposto. Parede direita: tanque e lavadora substituível. Fundos: tanquinho, respeitando a porta P8. Infraestrutura ilustrativa para validação com responsáveis técnicos; conferir P8/V3 antes da execução.",
+  "pecas": [
+    {
+      "id": "LAV-TANQUE",
+      "tipo": "tanque",
+      "nome": "Tanque de roupas — cuba única",
+      "parede": "direita",
+      "dosFundos": 8,
+      "largura": 60,
+      "profundidade": 55,
+      "altura": 90,
+      "status": "proposta",
+      "obs": "Tanque simples para roupas; manter acesso ao sifão e à torneira."
+    },
+    {
+      "id": "LAV-MAQUINA",
+      "tipo": "eletro",
+      "nome": "Lavadora — frontal Electrolux LFB12 12 kg",
+      "categoriaInventario": "lavadora",
+      "modelo": "lavadora-frontal",
+      "parede": "direita",
+      "dosFundos": 96,
+      "largura": 60,
+      "profundidade": 65.9,
+      "altura": 85,
+      "status": "proposta",
+      "obs": "Selecione a máquina e troque o modelo pelo inventário na ficha; abrir/fechar pela ação da peça. Conferir as folgas de instalação do modelo final."
+    },
+    {
+      "id": "LAV-TANQUINHO",
+      "tipo": "eletro",
+      "modelo": "tanquinho",
+      "nome": "Tanquinho de lavar roupas — referência genérica",
+      "parede": "fundos",
+      "daEsquerda": 128,
+      "largura": 58,
+      "profundidade": 58,
+      "altura": 95,
+      "status": "proposta",
+      "obs": "Dimensões ilustrativas, dependem da marca/modelo escolhido; a tampa abre no 3D."
+    },
+    {
+      "id": "LAV-AGUA-TANQUE",
+      "tipo": "ponto-agua",
+      "nome": "Água fria do tanque",
+      "parede": "direita",
+      "dosFundos": 38,
+      "doPiso": 110,
+      "status": "proposta"
+    },
+    {
+      "id": "LAV-ESG-TANQUE",
+      "tipo": "ponto-esgoto",
+      "nome": "Esgoto do tanque Ø 50 mm — sifonado",
+      "parede": "direita",
+      "dosFundos": 37,
+      "doPiso": 45,
+      "diametro": 50,
+      "status": "proposta"
+    },
+    {
+      "id": "LAV-AGUA-MAQ",
+      "tipo": "ponto-agua",
+      "nome": "Ponto exclusivo água lavadora",
+      "parede": "direita",
+      "dosFundos": 128,
+      "doPiso": 120,
+      "status": "proposta",
+      "obs": "Registro individual acessível na lateral, sem obstruir o equipamento."
+    },
+    {
+      "id": "LAV-ESG-MAQ",
+      "tipo": "ponto-esgoto",
+      "nome": "Deságue independente lavadora Ø 50 mm",
+      "parede": "direita",
+      "dosFundos": 130,
+      "doPiso": 80,
+      "diametro": 50,
+      "status": "proposta",
+      "obs": "Altura final e conexão da mangueira devem seguir manual do modelo adquirido; prever sifonagem/ventilação conforme projeto hidrossanitário."
+    },
+    {
+      "id": "LAV-TOM-MAQ",
+      "tipo": "tomada",
+      "nome": "Tomada dedicada à lavadora",
+      "parede": "direita",
+      "dosFundos": 170,
+      "doPiso": 125,
+      "amperagem": 20,
+      "status": "proposta",
+      "obs": "Corrente, tensão e circuito definidos pelo eletricista após escolha do modelo; tomada acessível fora da zona de respingos."
+    },
+    {
+      "id": "LAV-AGUA-TANQUINHO",
+      "tipo": "ponto-agua",
+      "nome": "Água do tanquinho",
+      "parede": "fundos",
+      "daEsquerda": 158,
+      "doPiso": 125,
+      "status": "proposta"
+    },
+    {
+      "id": "LAV-ESG-TANQUINHO",
+      "tipo": "ponto-esgoto",
+      "nome": "Deságue do tanquinho Ø 50 mm",
+      "parede": "fundos",
+      "daEsquerda": 173,
+      "doPiso": 75,
+      "diametro": 50,
+      "status": "proposta",
+      "obs": "Altura da saída depende do tanquinho real; alguns exigem descarga por gravidade próxima do piso."
+    },
+    {
+      "id": "LAV-TOM-TANQUINHO",
+      "tipo": "tomada",
+      "nome": "Tomada dedicada ao tanquinho",
+      "parede": "fundos",
+      "daEsquerda": 203,
+      "doPiso": 125,
+      "amperagem": 10,
+      "status": "proposta",
+      "obs": "Confirmar a tensão, amperagem e afastamento de pontos de água no projeto elétrico."
+    },
+    {
+      "id": "LAV-TOM-APOIO",
+      "tipo": "tomada",
+      "nome": "Tomada auxiliar para manutenção",
+      "parede": "direita",
+      "dosFundos": 81,
+      "doPiso": 130,
+      "amperagem": 10,
+      "status": "proposta",
+      "obs": "Não diretamente sobre a cuba nem sujeita a respingos."
+    },
+    {
+      "id": "LAV-RALO",
+      "tipo": "ralo",
+      "nome": "Ralo sifonado do piso",
+      "daEsquerda": 195,
+      "dosFundos": 75,
+      "largura": 15,
+      "profundidade": 15,
+      "status": "proposta",
+      "obs": "Caixa sifonada do piso, com declividade do contrapiso e tubulações dimensionadas por profissional; não recebe mangueiras soltas de equipamentos."
+    }
+  ]
+}

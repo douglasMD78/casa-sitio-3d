@@ -1,0 +1,84 @@
+{
+  "comodo": "despensa",
+  "revisao": "01",
+  "obs": "Migrada da maquete original da despensa. Medidas preservadas; iluminação acrescentada.",
+
+  "forro": { "altura": 300, "material": "forro-branco", "status": "a-confirmar", "obs": "A planta dá pé-direito de 3,00 m. A maquete antiga usava 2,80 m. Confirmar se haverá forro rebaixado." },
+  "acabamentos": { "piso": "porcelanato-bege", "paredes": "parede-branca" },
+  "pessoa": { "daEsquerda": 115, "dosFundos": 95 },
+
+  "pecas": [
+    {
+      "id": "DES-BANCADA", "tipo": "bancada", "nome": "Bancada contínua",
+      "parede": "frente", "daEsquerda": 0, "largura": 285, "profundidade": 60, "altura": 90,
+      "tampo": { "material": "madeira-clara", "espessura": 2.5 },
+      "corpo": "mdf-branco", "chapa": 1.8,
+      "modulos": [
+        { "largura": 61, "tipo": "nicho", "prateleiras": [42], "cestos": true },
+        { "largura": 61, "tipo": "nicho", "prateleiras": [42], "cestos": true },
+        { "largura": 88, "tipo": "nicho", "divisorias": 6, "obs": "divisórias verticais para assadeiras" },
+        { "largura": 36, "tipo": "nicho", "prateleiras": [42], "cestos": "baixo" },
+        { "largura": 39, "tipo": "nicho", "prateleiras": [42], "cestos": "baixo" }
+      ],
+      "status": "definido"
+    },
+    {
+      "id": "DES-PRATELEIRAS", "tipo": "prateleiras", "nome": "Prateleiras de mantimentos",
+      "parede": "frente", "daEsquerda": 0, "largura": 285, "profundidade": 31,
+      "niveis": [149.5, 188.5, 227.5, 260], "chapa": 3.5, "laterais": true, "divisorias": [74, 146, 213],
+      "material": "mdf-branco", "decor": "potes",
+      "status": "definido"
+    },
+    {
+      "id": "DES-NICHO-FREEZER", "tipo": "estante", "nome": "Nicho do freezer",
+      "parede": "fundos", "daEsquerda": 123.5, "largura": 86, "profundidade": 77, "altura": 237,
+      "chapa": 2.5, "niveis": [208.5], "tampo": true, "material": "mdf-branco",
+      "status": "proposta", "obs": "Largura do nicho depende do freezer escolhido. Marcenaria aberta atrás para ventilação."
+    },
+    {
+      "id": "DES-FREEZER", "tipo": "eletro", "modelo": "freezer-vertical", "nome": "Freezer vertical",
+      "parede": "fundos", "daEsquerda": 134.5, "afastamento": 8.5, "largura": 60, "profundidade": 65, "altura": 184,
+      "dobradica": "direita", "dentroDe": "DES-NICHO-FREEZER",
+      "status": "proposta", "obs": "Modelo demonstrativo. Folgas de ventilação e abertura dependem do manual do freezer real."
+    },
+    {
+      "id": "DES-TORRE", "tipo": "estante", "nome": "Torre de eletros",
+      "parede": "fundos", "daEsquerda": 213, "afastamento": 2.5, "largura": 69.5, "profundidade": 50, "altura": 256.5,
+      "chapa": 3.5, "niveis": [3.5, 48.5, 94.5, 140.5, 186.5, 232.5], "tampo": true, "material": "mdf-branco",
+      "itens": [
+        { "nivel": 0, "tipo": "eletro", "modelo": "generico", "largura": 51, "profundidade": 34, "altura": 22, "material": "eletro-preto" },
+        { "nivel": 1, "tipo": "eletro", "modelo": "generico", "largura": 51, "profundidade": 34, "altura": 29, "material": "eletro-inox" },
+        { "nivel": 2, "tipo": "eletro", "modelo": "generico", "largura": 51, "profundidade": 34, "altura": 27, "material": "eletro-preto" },
+        { "nivel": 3, "tipo": "eletro", "modelo": "generico", "largura": 51, "profundidade": 34, "altura": 24, "material": "eletro-branco" }
+      ],
+      "status": "definido", "obs": "Eletros ilustrativos; modelos a definir."
+    },
+    {
+      "id": "DES-NICHOS-FUNDO", "tipo": "prateleiras", "nome": "Nichos da parede direita",
+      "parede": "direita", "dosFundos": 60, "largura": 105, "profundidade": 24.5,
+      "niveis": [127, 164, 201, 238], "chapa": 3, "material": "mdf-branco",
+      "status": "definido"
+    },
+    {
+      "id": "DES-PONTE", "tipo": "prateleiras", "nome": "Prateleira ponte sobre o vão V3",
+      "parede": "fundos", "daEsquerda": 10, "afastamento": 1, "largura": 110, "profundidade": 33,
+      "niveis": [244], "chapa": 4, "material": "mdf-branco",
+      "status": "definido"
+    },
+    {
+      "id": "DES-GRELHA", "tipo": "grelha", "nome": "Grelha de ventilação",
+      "parede": "frente", "daEsquerda": 210, "largura": 60, "altura": 30, "doPiso": 240,
+      "status": "definido"
+    },
+
+    { "id": "DES-T1", "tipo": "tomada", "parede": "frente", "daEsquerda": 45,  "doPiso": 110, "uso": "bancada", "status": "definido" },
+    { "id": "DES-T2", "tipo": "tomada", "parede": "frente", "daEsquerda": 143, "doPiso": 110, "uso": "bancada", "status": "definido" },
+    { "id": "DES-T3", "tipo": "tomada", "parede": "frente", "daEsquerda": 245, "doPiso": 110, "uso": "bancada", "status": "definido" },
+    { "id": "DES-T4", "tipo": "tomada", "parede": "fundos", "daEsquerda": 247, "doPiso": 200, "uso": "freezer", "atrasDe": "DES-TORRE", "status": "a-confirmar", "obs": "Posição original da maquete: fica atrás da torre, não atrás do freezer. Conferir." },
+
+    { "id": "DES-L1", "tipo": "plafon", "nome": "Plafon com sensor de presença", "daEsquerda": 142, "dosFundos": 100, "diametro": 30, "sensor": true, "status": "definido", "obs": "Potência e temperatura de cor a definir." },
+
+    { "id": "DES-OBJ1", "tipo": "objeto", "nome": "Objeto de bancada (ilustrativo)", "daEsquerda": 18, "daFrente": 11, "doPiso": 90, "largura": 22, "profundidade": 31, "altura": 21, "material": "eletro-branco", "sobre": "DES-BANCADA" },
+    { "id": "DES-OBJ2", "tipo": "objeto", "nome": "Objeto de bancada (ilustrativo)", "daEsquerda": 226, "daFrente": 14, "doPiso": 90, "largura": 22, "profundidade": 27, "altura": 18, "material": "eletro-preto", "sobre": "DES-BANCADA" }
+  ]
+}

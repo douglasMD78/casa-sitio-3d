@@ -1,0 +1,69 @@
+{
+  "projeto": "Casa do Sítio — Estêvão / Alagoinhas-BA",
+  "revisao": "01",
+  "data": "2026-11-12",
+  "fonte": "Planta baixa de marcação, folhas 1/3 a 3/3, rev. 00",
+  "unidade": "cm",
+
+  "peDireito": 300,
+  "espessuraParede": 15,
+  "corteMaquete": 110,
+
+  "acabamentos": {
+    "paredeInterna": "parede-branca",
+    "fachada": "fachada-verde",
+    "corte": "corte-parede",
+    "soleira": "granito-cinza"
+  },
+
+  "comodos": [
+    { "id": "closet",          "nome": "Closet",          "uso": "intimo",     "x": 0,   "z": 0,    "largura": 425, "profundidade": 200, "piso": "porcelanato-claro" },
+    { "id": "suite",           "nome": "Quarto suíte",    "uso": "intimo",     "x": 0,   "z": 215,  "largura": 425, "profundidade": 325, "piso": "porcelanato-claro", "conjunto": "suite" },
+    { "id": "banho-suite",     "nome": "Banheiro suíte",  "uso": "banho",      "x": 0,   "z": 555,  "largura": 300, "profundidade": 150, "piso": "ceramica-banho" },
+    { "id": "suite-entrada",   "nome": "Suíte (entrada)", "uso": "intimo", "x": 315, "z": 555,  "largura": 110, "profundidade": 150, "piso": "porcelanato-claro", "conjunto": "suite" },
+    { "id": "banho-social",    "nome": "Banheiro social", "uso": "banho",      "x": 0,   "z": 720,  "largura": 300, "profundidade": 150, "piso": "ceramica-banho" },
+    { "id": "corredor",        "nome": "Corredor",        "uso": "circulacao", "x": 315, "z": 720,  "largura": 110, "profundidade": 515, "piso": "porcelanato-claro" },
+    { "id": "quarto2",         "nome": "Quarto 2",        "uso": "intimo",     "x": 0,   "z": 885,  "largura": 300, "profundidade": 350, "piso": "porcelanato-claro" },
+    { "id": "quarto1",         "nome": "Quarto 1",        "uso": "intimo",     "x": 0,   "z": 1250, "largura": 425, "profundidade": 300, "piso": "porcelanato-claro" },
+    { "id": "cozinha",         "nome": "Cozinha",         "uso": "social",     "x": 440, "z": 370,  "largura": 450, "profundidade": 330, "piso": "porcelanato-bege", "conjunto": "social" },
+    { "id": "jantar",          "nome": "Sala de jantar",  "uso": "social",     "x": 440, "z": 700,  "largura": 450, "profundidade": 300, "piso": "porcelanato-bege", "conjunto": "social" },
+    { "id": "estar",           "nome": "Sala de estar",   "uso": "social",     "x": 440, "z": 1000, "largura": 450, "profundidade": 400, "piso": "porcelanato-bege", "conjunto": "social" },
+    { "id": "lavanderia",      "nome": "Lavanderia",      "uso": "servico",    "x": 905, "z": 370,  "largura": 285, "profundidade": 200, "piso": "porcelanato-bege" },
+    { "id": "despensa",        "nome": "Despensa",        "uso": "servico",    "x": 905, "z": 585,  "largura": 285, "profundidade": 200, "piso": "porcelanato-bege" },
+    { "id": "varanda-lateral", "nome": "Varanda lateral", "uso": "externo",    "x": 905, "z": 800,  "largura": 300, "profundidade": 815, "piso": "cimento-varanda", "conjunto": "varanda", "aberto": true },
+    { "id": "varanda-frente",  "nome": "Varanda frontal", "uso": "externo",    "x": 440, "z": 1415, "largura": 465, "profundidade": 200, "piso": "cimento-varanda", "conjunto": "varanda", "aberto": true }
+  ],
+
+  "aberturas": [
+    { "id": "P1", "tipo": "porta", "comodo": "estar",        "parede": "frente",   "daEsquerda": 135, "largura": 180, "altura": 210, "folhas": 2, "abrePara": "estar", "modelo": "almofadada", "material": "madeira-mel", "nome": "Entrada principal", "status": "definido" },
+    { "id": "P2", "tipo": "porta", "comodo": "jantar",       "parede": "direita",  "dosFundos": 150,  "largura": 180, "altura": 210, "folhas": 2, "abrePara": "varanda-lateral", "modelo": "almofadada", "material": "madeira-mel", "nome": "Sala de jantar – varanda", "status": "definido" },
+    { "id": "P3", "tipo": "porta", "comodo": "corredor",     "parede": "frente",   "daEsquerda": 10,  "largura": 80,  "altura": 210, "abrePara": "quarto1", "dobradica": "direita", "material": "madeira-mel", "nome": "Corredor – quarto 1", "status": "a-confirmar", "obs": "Largura da tabela de esquadrias; posição lida do desenho, sem cota." },
+    { "id": "P4", "tipo": "porta", "comodo": "quarto2",      "parede": "direita",  "dosFundos": 5,    "largura": 80,  "altura": 210, "abrePara": "quarto2", "dobradica": "fundos", "material": "madeira-mel", "nome": "Corredor – quarto 2", "status": "a-confirmar", "obs": "Largura da tabela de esquadrias; posição lida do desenho, sem cota." },
+    { "id": "P5", "tipo": "porta", "comodo": "banho-social", "parede": "direita",  "dosFundos": 65,   "largura": 70,  "altura": 210, "abrePara": "banho-social", "dobradica": "frente", "material": "madeira-mel", "nome": "Corredor – banheiro social", "status": "a-confirmar", "obs": "Largura da tabela de esquadrias; posição lida do desenho, sem cota." },
+    { "id": "P6", "tipo": "porta", "comodo": "banho-suite",  "parede": "direita",  "dosFundos": 65,   "largura": 70,  "altura": 210, "abrePara": "banho-suite", "dobradica": "frente", "material": "madeira-mel", "nome": "Quarto suíte – banheiro suíte", "status": "a-confirmar", "obs": "Largura da tabela de esquadrias; posição lida do desenho, sem cota." },
+    { "id": "P7", "tipo": "porta", "comodo": "suite-entrada",         "parede": "frente",   "daEsquerda": 15,  "largura": 80,  "altura": 210, "abrePara": "suite-entrada", "dobradica": "direita", "material": "madeira-mel", "nome": "Corredor – quarto suíte", "status": "a-confirmar", "obs": "Largura da tabela de esquadrias; posição lida do desenho, sem cota." },
+    { "id": "P8", "tipo": "porta", "comodo": "lavanderia",   "parede": "fundos",   "daEsquerda": 20,  "largura": 80,  "altura": 210, "abrePara": "lavanderia", "dobradica": "esquerda", "material": "madeira-mel", "nome": "Externa – lavanderia", "status": "definido" },
+    { "id": "P9", "tipo": "porta", "comodo": "despensa",     "parede": "esquerda", "dosFundos": 35,   "largura": 80,  "altura": 210, "modelo": "correr", "lado": "cozinha", "correPara": "frente", "material": "madeira-mel", "nome": "Cozinha – despensa", "status": "proposta", "obs": "A planta desenha porta de giro abrindo para dentro da despensa. A maquete da despensa adotou porta de correr pelo lado da cozinha. Confirmar." },
+
+    { "id": "V1", "tipo": "vao", "comodo": "closet",   "parede": "frente",  "daEsquerda": 315, "largura": 100, "altura": 210, "nome": "Quarto suíte – closet", "status": "definido" },
+    { "id": "V2", "tipo": "vao", "comodo": "suite-entrada",     "parede": "fundos",  "daEsquerda": 0,   "largura": 110, "altura": 300, "integrado": true, "nome": "Quarto suíte – entrada (sem parede)", "status": "definido", "obs": "Não há parede entre o quarto e a entrada: é tudo o mesmo cômodo." },
+    { "id": "V3", "tipo": "vao", "comodo": "despensa", "parede": "fundos",  "daEsquerda": 20,  "largura": 100, "altura": 210, "nome": "Lavanderia – despensa", "status": "a-confirmar", "obs": "Planta: vão de 1,00 m com ponta de alvenaria de 20 cm. A maquete antiga usava vão sem a ponta. Confirmar." },
+    { "id": "V4", "tipo": "vao", "comodo": "corredor", "parede": "direita", "dosFundos": 80,   "largura": 110, "altura": 210, "nome": "Corredor – sala de jantar", "status": "definido" },
+
+    { "id": "J1", "tipo": "janela", "comodo": "quarto1",      "parede": "frente",   "daEsquerda": 123,  "largura": 180, "altura": 120, "peitoril": 90,  "modelo": "correr", "nome": "Quarto 1 – fachada frontal", "status": "definido" },
+    { "id": "J2", "tipo": "janela", "comodo": "suite",        "parede": "esquerda", "dosFundos": 102.5, "largura": 120, "altura": 120, "peitoril": 90,  "modelo": "correr", "nome": "Quarto suíte – fachada esquerda", "status": "a-confirmar", "obs": "Peitoril a definir na planta (adotado 90). Tamanho não atende 1/6 do piso; verificar com o engenheiro." },
+    { "id": "J3", "tipo": "janela", "comodo": "quarto2",      "parede": "esquerda", "dosFundos": 115,   "largura": 120, "altura": 120, "peitoril": 90,  "modelo": "correr", "nome": "Quarto 2 – fachada esquerda", "status": "a-confirmar", "obs": "Peitoril a definir na planta (adotado 90). Tamanho não atende 1/6 do piso; verificar com o engenheiro." },
+    { "id": "J4", "tipo": "janela", "comodo": "banho-suite",  "parede": "esquerda", "dosFundos": 45,    "largura": 60,  "altura": 60,  "peitoril": 150, "modelo": "basculante", "nome": "Banheiro suíte – fachada esquerda", "status": "a-confirmar", "obs": "Peitoril a definir na planta (adotado 150)." },
+    { "id": "J5", "tipo": "janela", "comodo": "banho-social", "parede": "esquerda", "dosFundos": 45,    "largura": 60,  "altura": 60,  "peitoril": 150, "modelo": "basculante", "nome": "Banheiro social – fachada esquerda", "status": "a-confirmar", "obs": "Peitoril a definir na planta (adotado 150)." },
+    { "id": "J6", "tipo": "janela", "comodo": "cozinha",      "parede": "fundos",   "daEsquerda": 135,  "largura": 180, "altura": 100, "peitoril": 110, "modelo": "correr", "nome": "Cozinha – fachada dos fundos", "status": "a-confirmar", "obs": "Peitoril a definir na planta (adotado 110). Tamanho não atende 1/6 do piso; verificar com o engenheiro." }
+  ],
+
+  "varanda": {
+    "status": "proposta",
+    "obs": "A planta diz: pilares e estrutura a definir. Posições abaixo são proposta para visualização.",
+    "pilares": { "diametro": 18, "material": "madeira-mel", "posicoes": [[1196, 809], [1196, 1075], [1196, 1341], [1196, 1606], [822, 1606], [449, 1606]] },
+    "vigas": { "altura": 20, "largura": 12, "material": "madeira-mel", "trechos": [[1196, 809, 1196, 1606], [449, 1606, 1196, 1606]] }
+  },
+
+  "pessoa": { "altura": 158 }
+}
