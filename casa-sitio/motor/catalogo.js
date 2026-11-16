@@ -218,7 +218,16 @@ reg('ilha-gravacao', { rotulo: 'Ilha de gravação · MDF e Fischer 25L', dimens
     torre.cx(0,8.5,0,2,0,8.5,'metal-preto');
     torre.cx(1,7.5,2,18,1,7.5,'metal-preto');
     for(const y of [5,10.5,16]) torre.cx(2,6.5,y-1,y+1,0.3,1,'placa-branca',{sombra:false});
-    M.acao('Erguer torre de tomadas (ilustrativa)',v=>{torre.g.position.y=A-esp-(1-v)*16;},false);
+    // Revisão 12: tampa camuflada em Branco Itaúnas. Fechada, cobre o vão da torre
+    // e acompanha visualmente o granito; aberta, oculta a tampa e exibe tomadas.
+    // O modelo real exige mecanismo próprio, tampa em pedra e recorte dimensionados
+    // pelo fabricante e marmoraria; não é uma tampa estrutural especificada.
+    const tampa=M.sub(79,A-0.3,12);
+    tampa.cx(-0.4,8.9,0,0.3,-0.4,8.9,granito,{sombra:false});
+    M.acao('Abrir torre camuflada em Itaúnas (ilustrativa)',v=>{
+      torre.g.position.y=A-esp-(1-v)*16;
+      tampa.g.visible=v<0.5;
+    },false);
   }
 });
 
