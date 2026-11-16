@@ -134,6 +134,49 @@ reg('bancada', { rotulo: 'Bancada / ilha', dimensoes: () => ({ largura: 120, pro
     else for (const [x, z] of [[3, 3], [L - 9, 3], [3, P - 9], [L - 9, P - 9]]) M.cx(x, x + 6, 0, A - esp, z, z + 6, p.corpo || 'madeira-clara');
   } });
 
+// Ilha de gravação: simulação de volume, marcenaria e equipamentos; não é detalhamento de ventilação.
+reg('ilha-gravacao', { rotulo: 'Ilha de apoio / gravação', dimensoes: () => ({ largura: 180, profundidade: 90, altura: 90 }),
+  material: p => (p.tampo && p.tampo.material) || 'granito-branco-itaunas',
+  construir(M, p, { L, P, A }) {
+    const esp = num(p.tampo && p.tampo.espessura, 2), mat = (p.tampo && p.tampo.material) || 'granito-branco-itaunas';
+    const rec = num(p.recuo, 30), fim = P - rec, e = 2;
+    // Lateral esquerda e direita até o chão; marcenaria de MDF branco com fechamento posterior recuado.
+    M.cx(0, e, 0, A - esp, 0, fim, 'mdf-branco');
+    M.cx(L - e, L, 0, A - esp, 0, fim, 'mdf-branco');
+    M.cx(0, L, 0, 3, 0, fim, 'mdf-branco');
+    M.cx(0, L, 3, A - esp, fim - e, fim, 'mdf-branco');
+    // Parede frontal da marcenaria voltada à cozinha com nicho central reservado para Fischer.
+    const mw = 59.5, mx = (L - mw) / 2, my = 23, mh = 39, mdepth = 55;
+    M.cx(0, mx - 0.5, 3, A - esp, 0, e, 'mdf-branco');
+    M.cx(mx + mw + 0.5, L, 3, A - esp, 0, e, 'mdf-branco');
+    M.cx(mx - 0.5, mx + mw + 0.5, 3, my, 0, e, 'mdf-branco');
+    M.cx(mx - 0.5, mx + mw + 0.5, my + mh, A - esp, 0, e, 'mdf-branco');
+    // Portas de armário laterais interativas.
+    const porta = (x0, x1, lado) => {
+      const piv = lado === 'esquerda' ? x0 : x1;
+      const obj = M.sub(piv, 0, 0);
+      obj.cx(x0 - piv, x1 - piv, 7, A - 5, -1.2, 0, 'mdf-branco');
+      obj.cx(x0 - piv + 1, x1 - piv - 1, 10, A - 8, -1.5, -1.2, 'madeira-clara', { sombra: false });
+      return v => {obj.g.rotation.y = (lado === 'esquerda' ? -1 : 1) * v * 1.35;};
+    };
+    const openL = porta(3, mx - 3, 'esquerda'), openR = porta(mx + mw + 3, L - 3, 'direita');
+    M.acao('Abrir armários inferiores', v => { openL(v); openR(v); }, !!p.aberto);
+    // Mockup exterior Fischer Infinity Touch 25 L preto; instalação exige nicho e chaminé superior aprovados.
+    const face = M.sub(mx, my, -2);
+    face.cx(0, mw, 0, mh, -0.5, 0.5, '#101114');
+    face.cx(3, mw - 3, 5, mh - 6, -0.8, -0.4, '#202329', { sombra: false });
+    face.cx(5, mw - 5, mh - 8, mh - 5, -1.8, -0.5, 'inox', { sombra: false });
+    face.cx(mw * 0.48, mw * 0.64, mh - 3, mh - 1.8, -0.9, -0.4, '#1e78b3', { sombra: false });
+    // Torre retrátil ilustrativa, sobre o tampo e no canto da lateral cozinha.
+    const tx = L - 18, tz = 14, torre = M.sub(tx, A - esp, tz);
+    torre.cx(0, 9, 0, 2.5, 0, 9, 'metal-preto');
+    torre.cx(1, 8, 2.5, 19, 1, 8, 'metal-preto');
+    for (const y of [6, 11.5, 17]) torre.cx(2, 7, y - 1.2, y + 1.2, 0.7, 1.2, 'placa-branca', { sombra: false });
+    M.acao('Erguer torre de tomadas (ilustrativa)', v => { torre.g.position.y = A - esp - (1-v) * 16; }, false);
+    M.cx(0, L, A - esp, A, 0, P, mat);
+  }
+});
+
 reg('armario', { rotulo: 'Armário', dimensoes: p => ({ largura: 80, profundidade: num(p.doPiso, 0) > 100 ? 35 : 55, altura: num(p.doPiso, 0) > 100 ? 70 : 240 }),
   construir(M, p, { L, P, A, y0 }) {
     const r = y0 < 1 ? num(p.rodape, 0) : 0;
