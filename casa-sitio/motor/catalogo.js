@@ -167,7 +167,7 @@ reg('ilha-gravacao', { rotulo: 'Ilha de gravação · MDF e Fischer 25L', dimens
     const inferior = M.sub(3.4, 0, -0.8);
     inferior.cx(0, divisor-6.5, 4.5, suporteY-4, -1.5, 0.6, 'mdf-branco');
     inferior.cx(divisor-13, divisor-11, 14, 27, -2.3, -1.5, 'madeira-mel', {sombra:false});
-    M.acao('Abrir armário sob o Fischer', v => { inferior.g.rotation.y = -v*1.6; }, !!p.aberto);
+    M.acao('Abrir armário sob o Fischer', v => { inferior.g.rotation.y = v*1.6; }, !!p.aberto);
     // Duas portas amplas no módulo direito: 2 dobradiças independentes.
     const dx0=divisor+3, dx1=L-e-1.5, meia=(dx0+dx1)/2;
     const d1=M.sub(dx0,0,-0.8), d2=M.sub(dx1,0,-0.8);
@@ -175,8 +175,8 @@ reg('ilha-gravacao', { rotulo: 'Ilha de gravação · MDF e Fischer 25L', dimens
     d2.cx(meia-dx1+0.6,0,4.5,A-esp-2,-1.5,0.6,'mdf-branco');
     d1.cx(meia-dx0-6,meia-dx0-4,38,52,-2.3,-1.5,'madeira-mel',{sombra:false});
     d2.cx(meia-dx1+4,meia-dx1+6,38,52,-2.3,-1.5,'madeira-mel',{sombra:false});
-    M.acao('Abrir porta direita 1',v=>{d1.g.rotation.y=-v*1.6;},false);
-    M.acao('Abrir porta direita 2',v=>{d2.g.rotation.y=v*1.6;},false);
+    M.acao('Abrir porta direita 1',v=>{d1.g.rotation.y=v*1.6;},false);
+    M.acao('Abrir porta direita 2',v=>{d2.g.rotation.y=-v*1.6;},false);
     // Prateleira interna do armário direito.
     M.cx(divisor+e+1,L-e-1,41,42.8,5,caixa-5,'mdf-branco');
     // Fischer 25L — painel e cavidade volumétrica acima do armário inferior.
@@ -186,11 +186,12 @@ reg('ilha-gravacao', { rotulo: 'Ilha de gravação · MDF e Fischer 25L', dimens
     M.cx(xFace+3,xFace+wFace-3,frontY+5,frontY+30,-1.8,-1.3,'#24282c',{sombra:false});
     M.cx(xFace+6,xFace+wFace-6,frontY+31.5,frontY+33.7,-3.1,-1.8,'inox',{sombra:false});
     M.cx(xFace+26,xFace+37,frontY+35.4,frontY+37.2,-2.4,-1.2,'#2d85b7',{sombra:false});
-    // Porta ilustrativa da cavidade: abre para a esquerda, botões não funcionais.
-    const portaMicro=M.sub(xFace+1.8,frontY+4,-2.8);
-    portaMicro.cx(0,wFace-3.6,0,27,-1.2,0.9,'vidro-escuro',{sombra:false});
-    portaMicro.cx(wFace-9,wFace-7,10,19,-1.8,-1.1,'inox',{sombra:false});
-    M.acao('Abrir porta do micro-ondas (ilustrativo)',v=>{portaMicro.g.rotation.y=-v*1.7;},false);
+    // Porta ilustrativa Fischer: dobradiça HORIZONTAL inferior, abre para fora e para baixo.
+    // Eixo local X no rodapé da porta; ângulo negativo conduz a borda superior ao exterior (z<0).
+    const portaMicro=M.sub(xFace+1.8,frontY+3.5,-2.8);
+    portaMicro.cx(0,wFace-3.6,0,28,-1.2,0.9,'vidro-escuro',{sombra:false});
+    portaMicro.cx(5,wFace-8,25.8,27.5,-1.8,-1.1,'inox',{sombra:false});
+    M.acao('Abrir porta do micro-ondas para baixo (ilustrativo)',v=>{portaMicro.g.rotation.x=-v*1.48;},false);
     // Volume interno do micro: exato apenas em caixa externa, não instalação definitiva.
     M.cx(xFace+3,xFace+55,frontY+1,frontY+35,4,42,'#3b4149',{sombra:false});
     // Alternativa de ventilação LATERAL ESQUERDA: caminho conceitual, ainda NÃO homologado.
