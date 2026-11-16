@@ -1,7 +1,7 @@
 {
   "comodo": "lavanderia",
-  "revisao": "11",
-  "obs": "Revisão 08: tanquinho deslocado 20 cm para esquerda ao longo da parede dos fundos, aumentando separação lateral da lavadora de 18,5 para 38,5 cm sem invadir a porta P8. Tomadas dos equipamentos reposicionadas atrás de seus corpos, fora de vista direta, mas acessíveis por deslocamento dos aparelhos; confirmar alcance dos cabos, proteção DR ≤30mA, aterramento e circuitos com profissional. Lavadora LED13: saída 90–140 cm segundo guia Electrolux, conexão água 3/4 pol. Tanquinho Suggar: saída baixa de gravidade a confirmar manual exato. Pontos hidráulicos e ralo seguem propostas, não projeto executivo. Revisão 09: tampo alterado para material exclusivo granito-branco-itaunas; garagem do robô e armário de limpeza em estudo, ainda não posicionados para não prejudicar circulação. Revisão 10: armazenamento compacto proposto na parede esquerda, com armário de vassouras e módulo superior; garagem de robô reservada como requisito de marcenaria sob gabinete da pia, pendente de modelo e verificação do sifão (não representada como volume independente para evitar sobreposição). Revisão 11: garagem de robô e cesto deslocados para a parede da frente, no trecho à direita do vão V3, sem alterar a estrutura. Garagem é representação volumétrica provisória, sem abertura frontal modelada; dimensões finais dependem do robô escolhido.",
+  "revisao": "12",
+  "obs": "Revisão 08: tanquinho deslocado 20 cm para esquerda ao longo da parede dos fundos, aumentando separação lateral da lavadora de 18,5 para 38,5 cm sem invadir a porta P8. Tomadas dos equipamentos reposicionadas atrás de seus corpos, fora de vista direta, mas acessíveis por deslocamento dos aparelhos; confirmar alcance dos cabos, proteção DR ≤30mA, aterramento e circuitos com profissional. Lavadora LED13: saída 90–140 cm segundo guia Electrolux, conexão água 3/4 pol. Tanquinho Suggar: saída baixa de gravidade a confirmar manual exato. Pontos hidráulicos e ralo seguem propostas, não projeto executivo. Revisão 09: tampo alterado para material exclusivo granito-branco-itaunas; garagem do robô e armário de limpeza em estudo, ainda não posicionados para não prejudicar circulação. Revisão 10: armazenamento compacto proposto na parede esquerda, com armário de vassouras e módulo superior; garagem de robô reservada como requisito de marcenaria sob gabinete da pia, pendente de modelo e verificação do sifão (não representada como volume independente para evitar sobreposição). Revisão 12: cesto de roupas removido; garagem do robô na parede frontal e demais itens preservados.",
   "pecas": [
     {
       "id": "LAV-TANQUE",
@@ -290,19 +290,6 @@
       "decor": "caixas",
       "status": "proposta",
       "obs": "Prateleira superior acima do armário, com cestos leves; conferir alcance e fixação."
-    },
-    {
-      "id": "LAV-CESTO-ROUPAS",
-      "tipo": "cesto",
-      "nome": "Cesto removível de roupas",
-      "daEsquerda": 182,
-      "dosFundos": 166,
-      "largura": 35,
-      "profundidade": 28,
-      "altura": 45,
-      "status": "proposta",
-      "obs": "Cesto removível posicionado junto à parede da frente, ao lado da garagem do robô, à direita do vão de acesso. Conferir abertura de passagem e circulação.",
-      "parede": "frente"
     },
     {
       "id": "LAV-GARAGEM-ROBO",
