@@ -433,12 +433,12 @@
       "parede": "fundos",
       "daEsquerda": 135,
       "largura": 180,
-      "altura": 100,
-      "peitoril": 110,
+      "altura": 110,
+      "peitoril": 100,
       "modelo": "correr",
       "nome": "Cozinha – fachada dos fundos",
-      "status": "a-confirmar",
-      "obs": "Peitoril a definir na planta (adotado 110). Tamanho não atende 1/6 do piso; verificar com o engenheiro."
+      "status": "definido",
+      "obs": "Janela J6 largura 180 cm, peitoril 100 cm e topo 210 cm. Moldura de madeira nos quatro lados representada em peças da cozinha. Confirmar compatibilidade com bancada de 90 cm e acabamento de peitoril."
     },
     {
       "id": "J7",
