@@ -22,6 +22,16 @@ Após a aprovação do layout de cada cômodo, produzir **duas representações 
 - [ ] Registrar faixas embutidas com cotas e fotos antes de reboco/fechamento, para consulta futura ao furar paredes.
 - [ ] Submeter documentação e instalação à conferência e responsabilidade de profissionais habilitados; não tratar maquete como projeto executivo aprovado.
 
+### Registro futuro obrigatório: elétrica da ilha da cozinha (revisão 11 · 16/11/2026)
+- [ ] Recuperar o memorial em `ESTUDO-EXECUTIVO-ILHA-COZINHA.md` e a peça `COZ-ILHA-APOIO` em `dados/comodos/cozinha.json` antes do desenho de circuitos.
+- [ ] Coordenadas previstas da torre retrátil no tampo Branco Itaúnas da ilha 180×90: início **x=79 cm da lateral esquerda** e **z=12 cm da borda voltada à cozinha**; centro aproximado **x=83,25 cm, z=16,25 cm**. Não executar furação até definir modelo e gabarito da torre.
+- [ ] Confirmar que a torre se encaixa no volume acima do armário direito, à direita do módulo esquerdo do micro; medir volume de retração, folgas de dobradiças, apoio da pedra, divisórias e caminho dos cabos.
+- [ ] Prever alimentação elétrica da **torre** e ponto de tomada **separado e acessível para o Fischer Infinity Touch Grill 25 L**; não alimentar o forno pela torre. Validar potência, tensão da unidade, circuitos, DR/aterramento, bitolas, carga simultânea e proteções.
+- [ ] Definir acesso dos eletrodutos pelo piso/contrapiso e pontos de inspeção, compatibilizando com a estrutura, impermeabilização, travessas do móvel e zona de ventilação.
+- [ ] Resolver com a Fischer se o trajeto até a **grelha lateral esquerda** da ilha é autorizado: o manual prescreve saída superior. Manter cabos afastados do duto quente; **não fabricar a solução lateral sem validação expressa do fabricante**.
+- [ ] Registrar em planta elétrica 2D e camada 3D técnica os pontos, alturas, trajeto, circuito e manutenção da ilha, quando essa etapa for solicitada.
+
+
 ### Primeiro piloto: lavanderia
 - [ ] Usar a lavanderia como cômodo piloto, **apenas quando solicitado**.
 - [ ] Revisar interferências entre água, esgoto e elétrica e acesso para manutenção.
