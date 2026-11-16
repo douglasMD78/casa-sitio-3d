@@ -16,7 +16,7 @@
 - **Esquerda, superior:** Fischer Infinity Touch Grill 25 L, face preta, abertura frontal ilustrativa na altura **39–78 cm do piso**, a revisar por ergonomia e manual.
 - **Esquerda, inferior:** porta MDF articulada PARA FORA, compartimento para armazenamento leve; base de suporte do eletro dimensionada para carga real.
 - **Direita:** duas portas MDF articuladas PARA FORA com prateleira intermediária; dobradiças e folgas a detalhar para fabricação.
-- **Tampo, extremidade direita:** torre retrátil de tomadas, apenas representação visual; revisar IP, acessibilidade, proximidade de líquidos, reforço e alimentação elétrica.
+- **Tampo, à direita do Fischer:** torre retrátil de tomadas, apenas representação visual; posição inicial x=79 cm da lateral esquerda e z=12 cm da borda voltada à cozinha (vista de frente); base ilustrativa 8,5 × 8,5 cm, centro x=83,25 cm e z=16,25 cm. Verificar flange, dimensões e recorte reais da peça escolhida, IP, proximidade de líquidos e reforço estrutural.
 
 ## Fischer: informações oficiais que precisam orientar a fabricação
 - Dimensões externas com moldura: **595 × 390 × 382 mm** (largura × altura × profundidade).
@@ -24,6 +24,16 @@
 - Manual: módulo com **largura mínima 600 mm**, recorte frontal **565 × 365 mm**, profundidade indicada do móvel **550 mm**, espaço posterior esquematizado de **100 mm** e saída superior de ar quente.
 - A Fischer recomenda instalação por assistência autorizada. Tomada aterrada, dimensionada, de fácil acesso; não compartilhar ponto com torre retrátil nem com outros equipamentos.
 - **IMPORTANTE:** a Fischer descreve saída superior de ar, mas a ilha usa uma **rota ALTERNATIVA proposta até a grelha lateral esquerda de 30 × 12 cm no MDF**, que **não foi aprovada pelo fabricante**. O tampo de granito está inteiro, sem recorte. Não fabricar o nicho com base apenas na maquete: confirmar por escrito se o desvio lateral é admissível e se mantém a garantia. Conferir dimensões livres de ventilação, trajeto quente, proximidade do MDF e riscos térmicos.
+
+## Revisão 11 — Torre de tomadas e diretrizes para o futuro projeto elétrico (16/11/2026)
+- **Decisão de layout:** transferir a torre do extremo direito para o tampo **à direita do Fischer**, concentrando a zona de eletrodomésticos, tomadas e manutenção da ilha. O restante do tampo fica mais livre para gravação de receitas.
+- **Coordenadas da maquete da ilha** (180 × 90 cm, olhando da cozinha): canto da base retrátil em **x=79 cm** a partir da lateral esquerda, **z=12 cm** a partir da borda voltada à cozinha; centro aproximado **x=83,25 cm**, **z=16,25 cm**. Base visual 8,5 × 8,5 cm, não é o recorte homologado. Distância nominal do início da torre ao divisor do módulo esquerdo x≈70 cm: 9 cm; o centro fica a 13,25 cm desse divisor.
+- **Não executar o corte no granito** antes de escolher a torre exata e validar ferragem, espaço de retração abaixo do tampo, passagem do cabo, separação dos volumes do micro e interferências com armários, portas e duto de ventilação.
+- **Fischer:** alimentação de uso exclusivo, tomada aterrada e acessível para manutenção, tensão e corrente confirmadas na etiqueta e manual; **não ligar o Fischer na torre**.
+- **Torre retrátil:** alimentação própria adequada ao conjunto de tomadas e aparelhos previstos; circuito, capacidade total, bitolas, proteções e posição de caixa a dimensionar com eletricista/projetista conforme NBR 5410, sem prescrever ligação definitiva agora.
+- **Entrada elétrica da ilha:** planejar eletrodutos pelo piso/contrapiso até a ilha, com posição compatibilizada com a obra e evitando perfuração de impermeabilização/elementos estruturais sem orientação técnica; prever acesso de manutenção ao ponto elétrico, sem emendas inacessíveis.
+- **Fiação e ventilação:** o agrupamento da zona elétrica não autoriza passar condutores por duto quente do Fischer nem eliminar afastamentos térmicos. A grelha lateral esquerda é alternativa de ventilação **sem aprovação Fischer** e não foi modificada na revisão 11.
+- **Status:** posicionamento registrado para modelagem e elétrica futura, **não liberado para compra, corte de granito ou fabricação da marcenaria**.
 
 ## Validações impeditivas antes de executar
 - [ ] Enviar à **Fischer** corte cotado da ilha, canal posterior e **saída alternativa lateral esquerda** para aprovação EXPRESSA por escrito (o manual exige saída superior); verificar garantia e limites térmicos.
