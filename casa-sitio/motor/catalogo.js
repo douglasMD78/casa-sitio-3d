@@ -140,22 +140,34 @@ reg('ilha-gravacao', { rotulo: 'Ilha de apoio / gravação', dimensoes: () => ({
   construir(M, p, { L, P, A }) {
     const esp = num(p.tampo && p.tampo.espessura, 2), mat = (p.tampo && p.tampo.material) || 'granito-branco-itaunas';
     const rec = num(p.recuo, 30), fundoArmario = P - rec, e = 2;
-    // As duas laterais brancas atravessam TODA a profundidade até o piso.
-    // O miolo recua 30 cm para as pernas, sem vazar as laterais.
+    // Laterais inteiras de MDF até o piso, incluindo a área de pernas das banquetas.
     M.cx(0, e, 0, A - esp, 0, P, 'mdf-branco');
     M.cx(L - e, L, 0, A - esp, 0, P, 'mdf-branco');
     M.cx(e, L - e, 0, 3, 0, fundoArmario, 'mdf-branco');
     M.cx(e, L - e, 3, A - esp, fundoArmario - e, fundoArmario, 'mdf-branco');
-    const esquerda = M.sub(e, 0, -1);
-    esquerda.cx(0, L / 2 - e, 4, A - esp - 1, 0, 1.8, 'mdf-branco');
-    const direita = M.sub(L / 2, 0, -1);
-    direita.cx(0, L / 2 - e, 4, A - esp - 1, 0, 1.8, 'mdf-branco');
-    M.acao('Abrir portas do armário da ilha', v => {
-      esquerda.g.rotation.y = -v * 1.5;
-      direita.g.position.x = L / 2; direita.g.rotation.y = v * 1.5;
-    }, !!p.aberto);
-    // Torre retrátil apenas visual; instalar circuito próprio após projeto elétrico.
-    const tx = L - 18, tz = 14, torre = M.sub(tx, A - esp, tz);
+    // Nicho na parte SUPERIOR ESQUERDA do corpo da ilha, voltado para a cozinha.
+    // A instalação Fischer real exige percurso de exaustão superior aprovado pelo fabricante.
+    const nichoX = 3, nichoW = 66, nichoY = 45, nichoH = 42;
+    M.cx(nichoW + 1, nichoW + 3, 3, A - esp, 0, fundoArmario, 'mdf-branco');
+    M.cx(nichoX, nichoW + 1, nichoY - 2, nichoY, 0, fundoArmario, 'mdf-branco');
+    M.cx(nichoX, nichoW + 1, nichoY + nichoH, A - esp, 0, fundoArmario, 'mdf-branco');
+    const forno = M.sub(nichoX + 3, nichoY + 1, -1.6);
+    forno.cx(0, 59.5, 0, 39, -0.5, 1.4, '#151619');
+    forno.cx(3, 56.5, 4, 33, 1.4, 2.1, '#292d34', { sombra: false });
+    forno.cx(6, 53.5, 33, 35, 2.3, 3.2, 'inox', { sombra: false });
+    forno.cx(25, 37, 36, 37.5, 1.4, 2.3, '#307bad', { sombra: false });
+    // Armário inferior sob o micro e armário alto à direita, ambos de ABRIR.
+    const porta = (nome, x0, x1, y0, y1, hinge) => {
+      const eixo = hinge === 'esquerda' ? x0 : x1;
+      const g = M.sub(eixo, 0, -1);
+      g.cx(x0 - eixo, x1 - eixo, y0, y1, -1, 0.6, 'mdf-branco');
+      g.cx(hinge === 'esquerda' ? x1 - eixo - 5 : x0 - eixo + 4, hinge === 'esquerda' ? x1 - eixo - 3 : x0 - eixo + 6, (y0 + y1) / 2 - 5, (y0 + y1) / 2 + 5, -1.8, -1, 'madeira-mel', { sombra: false });
+      M.acao(nome, v => { g.g.rotation.y = (hinge === 'esquerda' ? -1 : 1) * v * 1.5; }, false);
+    };
+    porta('Abrir armário sob micro-ondas', 3, nichoW, 5, nichoY - 3, 'esquerda');
+    porta('Abrir porta do armário direito da ilha', nichoW + 4, L - 3, 5, A - esp - 2, 'direita');
+    // Torre de tomadas ilustrativa, sem simular circuito elétrico.
+    const torre = M.sub(L - 18, A - esp, 14);
     torre.cx(0, 9, 0, 2.5, 0, 9, 'metal-preto');
     torre.cx(1, 8, 2.5, 19, 1, 8, 'metal-preto');
     for (const y of [6, 11.5, 17]) torre.cx(2, 7, y - 1.2, y + 1.2, 0.7, 1.2, 'placa-branca', { sombra: false });
