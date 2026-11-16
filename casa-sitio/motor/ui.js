@@ -76,6 +76,22 @@ export function fichaPeca({ p, r, sala, acoes, luz, problemas, editar, mats, fol
   }
   for (const pr of problemas) h += `<p class="alerta ${pr.nivel}">${esc(pr.msg)}</p>`;
 
+  if (!editar && p.tipo === 'geladeira-midea-rm905') {
+    const ate = [
+      ['Parede esquerda', e.x0],
+      ['Parede direita', W - e.x1],
+      ['Parede dos fundos', e.z0],
+      ['Parede da frente', D - e.z1]
+    ];
+    const bancada = (folgas || []).find(f => f.lado === 'Esquerda' && /BANCADA/i.test(f.quem || ''));
+    const folgaBancada = bancada ? bancada.dist : (typeof p.daEsquerda === 'number' ? Math.max(0, p.daEsquerda - 331.5) : null);
+    h += '<section id="rm905-distancias" class="rm905-distancias" style="border:1px solid #9aafbc;border-radius:10px;padding:12px;margin:12px 0">';
+    h += '<h4 style="margin:0 0 8px">📐 Distâncias da geladeira</h4>';
+    h += '<p class="obs">Medidas da caixa externa da geladeira fechada até as faces internas das paredes e até a bancada. Clique na geladeira para consultar.</p>';
+    h += linhas(ate.map(([nome, valor]) => [nome, '<b>' + cm(valor) + ' cm</b>']));
+    if (folgaBancada !== null) h += linhas([['Até a bancada Branco Itaúnas', '<b>' + cm(folgaBancada) + ' cm</b>']]);
+    h += '<p class="obs">As cotas são estáticas e não incluem o volume varrido pelas portas abertas nem as folgas de ventilação exigidas pelo fabricante.</p></section>';
+  }
   if (!editar) {
     const pos = ponto
       ? [['Parede', esc(p.parede || '—')], ['Eixo até a esquerda', `${cm(cx)} cm`], ['Eixo até a direita', `${cm(W - cx)} cm`], ['Eixo até os fundos', `${cm(cz)} cm`], ['Eixo até a frente', `${cm(D - cz)} cm`], ['Eixo até o piso', `<b>${cm(cy)} cm</b>`]]
