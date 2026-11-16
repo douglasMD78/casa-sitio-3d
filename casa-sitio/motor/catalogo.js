@@ -135,44 +135,82 @@ reg('bancada', { rotulo: 'Bancada / ilha', dimensoes: () => ({ largura: 120, pro
   } });
 
 // Ilha de gravação: simulação de volume, marcenaria e equipamentos; não é detalhamento de ventilação.
-reg('ilha-gravacao', { rotulo: 'Ilha de apoio / gravação', dimensoes: () => ({ largura: 180, profundidade: 90, altura: 90 }),
+// Ilha de gravação: modelo de marcenaria ilustrativo, em cm.
+// Fischer Infinity Touch Grill 25L: dimensões oficiais 59,5 x 39 x 38,2;
+// nicho de instalação e chaminé segundo manual 40737 rev00.
+// ATENÇÃO: duto/grelha no tampo da ILHA são hipótese NÃO HOMOLOGADA.
+// Não executar corte na pedra ou fechar nicho sem aprovação da Fischer e da marmoraria.
+reg('ilha-gravacao', { rotulo: 'Ilha de gravação · MDF e Fischer 25L', dimensoes: () => ({ largura: 180, profundidade: 90, altura: 90 }),
   material: p => (p.tampo && p.tampo.material) || 'granito-branco-itaunas',
   construir(M, p, { L, P, A }) {
-    const esp = num(p.tampo && p.tampo.espessura, 2), mat = (p.tampo && p.tampo.material) || 'granito-branco-itaunas';
-    const rec = num(p.recuo, 30), fundoArmario = P - rec, e = 2;
-    // Laterais inteiras de MDF até o piso, incluindo a área de pernas das banquetas.
+    const e = 1.8, esp = num(p.tampo && p.tampo.espessura, 2);
+    const granito = (p.tampo && p.tampo.material) || 'granito-branco-itaunas';
+    const joelho = num(p.recuo, 30), caixa = P - joelho;
+    const xMicro0 = 5, xMicro1 = 66.5, divisor = 70;
+    // Estrutura integral: painéis nas laterais até o piso e por TODA profundidade.
     M.cx(0, e, 0, A - esp, 0, P, 'mdf-branco');
-    M.cx(L - e, L, 0, A - esp, 0, P, 'mdf-branco');
-    M.cx(e, L - e, 0, 3, 0, fundoArmario, 'mdf-branco');
-    M.cx(e, L - e, 3, A - esp, fundoArmario - e, fundoArmario, 'mdf-branco');
-    // Nicho na parte SUPERIOR ESQUERDA do corpo da ilha, voltado para a cozinha.
-    // A instalação Fischer real exige percurso de exaustão superior aprovado pelo fabricante.
-    const nichoX = 3, nichoW = 66, nichoY = 45, nichoH = 42;
-    M.cx(nichoW + 1, nichoW + 3, 3, A - esp, 0, fundoArmario, 'mdf-branco');
-    M.cx(nichoX, nichoW + 1, nichoY - 2, nichoY, 0, fundoArmario, 'mdf-branco');
-    M.cx(nichoX, nichoW + 1, nichoY + nichoH, A - esp, 0, fundoArmario, 'mdf-branco');
-    const forno = M.sub(nichoX + 3, nichoY + 1, -1.6);
-    forno.cx(0, 59.5, 0, 39, -0.5, 1.4, '#151619');
-    forno.cx(3, 56.5, 4, 33, 1.4, 2.1, '#292d34', { sombra: false });
-    forno.cx(6, 53.5, 33, 35, 2.3, 3.2, 'inox', { sombra: false });
-    forno.cx(25, 37, 36, 37.5, 1.4, 2.3, '#307bad', { sombra: false });
-    // Armário inferior sob o micro e armário alto à direita, ambos de ABRIR.
-    const porta = (nome, x0, x1, y0, y1, hinge) => {
-      const eixo = hinge === 'esquerda' ? x0 : x1;
-      const g = M.sub(eixo, 0, -1);
-      g.cx(x0 - eixo, x1 - eixo, y0, y1, -1, 0.6, 'mdf-branco');
-      g.cx(hinge === 'esquerda' ? x1 - eixo - 5 : x0 - eixo + 4, hinge === 'esquerda' ? x1 - eixo - 3 : x0 - eixo + 6, (y0 + y1) / 2 - 5, (y0 + y1) / 2 + 5, -1.8, -1, 'madeira-mel', { sombra: false });
-      M.acao(nome, v => { g.g.rotation.y = (hinge === 'esquerda' ? -1 : 1) * v * 1.5; }, false);
-    };
-    porta('Abrir armário sob micro-ondas', 3, nichoW, 5, nichoY - 3, 'esquerda');
-    porta('Abrir porta do armário direito da ilha', nichoW + 4, L - 3, 5, A - esp - 2, 'direita');
-    // Torre de tomadas ilustrativa, sem simular circuito elétrico.
-    const torre = M.sub(L - 18, A - esp, 14);
-    torre.cx(0, 9, 0, 2.5, 0, 9, 'metal-preto');
-    torre.cx(1, 8, 2.5, 19, 1, 8, 'metal-preto');
-    for (const y of [6, 11.5, 17]) torre.cx(2, 7, y - 1.2, y + 1.2, 0.7, 1.2, 'placa-branca', { sombra: false });
-    M.acao('Erguer torre de tomadas (ilustrativa)', v => { torre.g.position.y = A - esp - (1-v) * 16; }, false);
-    M.cx(0, L, A - esp, A, 0, P, mat);
+    M.cx(L-e, L, 0, A - esp, 0, P, 'mdf-branco');
+    M.cx(e, L-e, 0, 2.5, 0, caixa, 'mdf-branco');
+    // Fundo recuado para vão das pernas das três banquetas.
+    M.cx(e, L-e, 2.5, A - esp, caixa-e, caixa, 'mdf-branco');
+    // Divisória alta entre eletrodoméstico e armário de portas.
+    M.cx(divisor, divisor+e, 2.5, A - esp, 0, caixa, 'mdf-branco');
+    // Suporte nivelado do micro, base inferior independente, ajustável na execução.
+    const suporteY = 37;
+    M.cx(e, divisor, suporteY-2.5, suporteY, 0, 48, 'mdf-branco');
+    // Porta de abrir sob o micro (sem trilhos de correr).
+    const inferior = M.sub(3.4, 0, -0.8);
+    inferior.cx(0, divisor-6.5, 4.5, suporteY-4, -1.5, 0.6, 'mdf-branco');
+    inferior.cx(divisor-13, divisor-11, 14, 27, -2.3, -1.5, 'madeira-mel', {sombra:false});
+    M.acao('Abrir armário sob o Fischer', v => { inferior.g.rotation.y = -v*1.6; }, !!p.aberto);
+    // Duas portas amplas no módulo direito: 2 dobradiças independentes.
+    const dx0=divisor+3, dx1=L-e-1.5, meia=(dx0+dx1)/2;
+    const d1=M.sub(dx0,0,-0.8), d2=M.sub(dx1,0,-0.8);
+    d1.cx(0,meia-dx0-0.6,4.5,A-esp-2,-1.5,0.6,'mdf-branco');
+    d2.cx(meia-dx1+0.6,0,4.5,A-esp-2,-1.5,0.6,'mdf-branco');
+    d1.cx(meia-dx0-6,meia-dx0-4,38,52,-2.3,-1.5,'madeira-mel',{sombra:false});
+    d2.cx(meia-dx1+4,meia-dx1+6,38,52,-2.3,-1.5,'madeira-mel',{sombra:false});
+    M.acao('Abrir porta direita 1',v=>{d1.g.rotation.y=-v*1.6;},false);
+    M.acao('Abrir porta direita 2',v=>{d2.g.rotation.y=v*1.6;},false);
+    // Prateleira interna do armário direito.
+    M.cx(divisor+e+1,L-e-1,41,42.8,5,caixa-5,'mdf-branco');
+    // Fischer 25L — painel e cavidade volumétrica acima do armário inferior.
+    const frontY=39, wFace=59.5, hFace=39, xFace=xMicro0;
+    M.cx(xMicro0-1,xMicro1+1,frontY-1.5,frontY+hFace+1,4,5.2,'mdf-branco');
+    M.cx(xFace,xFace+wFace,frontY,frontY+hFace,-1.5,1.2,'#101114');
+    M.cx(xFace+3,xFace+wFace-3,frontY+5,frontY+30,-1.8,-1.3,'#24282c',{sombra:false});
+    M.cx(xFace+6,xFace+wFace-6,frontY+31.5,frontY+33.7,-3.1,-1.8,'inox',{sombra:false});
+    M.cx(xFace+26,xFace+37,frontY+35.4,frontY+37.2,-2.4,-1.2,'#2d85b7',{sombra:false});
+    // Porta ilustrativa da cavidade: abre para a esquerda, botões não funcionais.
+    const portaMicro=M.sub(xFace+1.8,frontY+4,-2.8);
+    portaMicro.cx(0,wFace-3.6,0,27,-1.2,0.9,'vidro-escuro',{sombra:false});
+    portaMicro.cx(wFace-9,wFace-7,10,19,-1.8,-1.1,'inox',{sombra:false});
+    M.acao('Abrir porta do micro-ondas (ilustrativo)',v=>{portaMicro.g.rotation.y=-v*1.7;},false);
+    // Volume interno do micro: exato apenas em caixa externa, não instalação definitiva.
+    M.cx(xFace+3,xFace+55,frontY+1,frontY+35,4,42,'#3b4149',{sombra:false});
+    // Representação da chaminé no fundo, separada do compartimento de armários.
+    // Cor/visibilidade da rota podem ser alternadas pela ficha da peça.
+    const duto=M.sub(0,0,0);
+    duto.cx(9,61,frontY+23,A-esp,49,58,'#67bfd3',{sombra:false});
+    duto.cx(9,61,frontY+23,frontY+25,40,58,'#67bfd3',{sombra:false});
+    duto.g.visible=false;
+    M.acao('Mostrar caminho de ventilação proposto',v=>{duto.g.visible=v>0.5;},false);
+    // Tampo em Itaúnas dividido APENAS para visualização da hipótese de grelha.
+    // Abertura 52x9cm na porção esquerda posterior do tampo — ainda sem homologação.
+    const gx0=9,gx1=61,gz0=49,gz1=58;
+    M.cx(0,L,A-esp,A,0,gz0,granito);
+    M.cx(0,gx0,A-esp,A,gz0,gz1,granito);
+    M.cx(gx1,L,A-esp,A,gz0,gz1,granito);
+    M.cx(0,L,A-esp,A,gz1,P,granito);
+    // Grelha superior (simulação de material não inflamável; não especificada para execução).
+    M.cx(gx0,gx1,A-esp,A-0.5,gz0,gz1,'metal-preto',{sombra:false});
+    for(let x=gx0+3;x<gx1-2;x+=5) M.cx(x,x+1.1,A-0.4,A+0.15,gz0+1,gz1-1,'inox',{sombra:false});
+    // Torre de tomadas na extremidade oposta, fora do nicho do micro-ondas.
+    const torre=M.sub(L-17,A-esp,12);
+    torre.cx(0,8.5,0,2,0,8.5,'metal-preto');
+    torre.cx(1,7.5,2,18,1,7.5,'metal-preto');
+    for(const y of [5,10.5,16]) torre.cx(2,6.5,y-1,y+1,0.3,1,'placa-branca',{sombra:false});
+    M.acao('Erguer torre de tomadas (ilustrativa)',v=>{torre.g.position.y=A-esp-(1-v)*16;},false);
   }
 });
 
