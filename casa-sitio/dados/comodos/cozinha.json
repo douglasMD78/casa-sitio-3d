@@ -1,6 +1,94 @@
 {
   "comodo": "cozinha",
-  "revisao": "00",
-  "obs": "Cômodo vazio. Preencher por prompt, seguindo o LEIA-ME-IA.md.",
-  "pecas": []
+  "revisao": "01",
+  "obs": "Bancada em L limitada à cozinha 450×330 cm. Parede dos fundos 450 cm; lateral esquerda do z=60 até z=330 cm, evitando sobreposição física no canto. A divisão invisível com a sala de jantar em z=330 cm deve ser respeitada. Moldura de madeira na janela J6 com peitoril 100 e topo 210 cm. Proposta inicial sem cuba/cooktop ou eletros, a definir em etapa posterior.",
+  "pecas": [
+    {
+      "id": "COZ-BANCADA-FUNDOS",
+      "tipo": "bancada",
+      "nome": "Bancada Branco Itaúnas — parede dos fundos",
+      "parede": "fundos",
+      "daEsquerda": 0,
+      "largura": 450,
+      "profundidade": 60,
+      "altura": 90,
+      "base": "aberta",
+      "tampo": {
+        "material": "granito-branco-itaunas",
+        "espessura": 2
+      },
+      "status": "proposta",
+      "obs": "Bancada contínua de 450×60 cm, sem cuba e cooktop por enquanto; respeitar janela J6 e pontos futuros."
+    },
+    {
+      "id": "COZ-BANCADA-ESQUERDA",
+      "tipo": "bancada",
+      "nome": "Bancada Branco Itaúnas — parede esquerda até limite da cozinha",
+      "parede": "esquerda",
+      "dosFundos": 60,
+      "largura": 270,
+      "profundidade": 60,
+      "altura": 90,
+      "base": "aberta",
+      "tampo": {
+        "material": "granito-branco-itaunas",
+        "espessura": 2
+      },
+      "status": "proposta",
+      "obs": "Trecho de 270 cm após o canto ocupado pela bancada dos fundos (60 cm); termina em z=330 cm, sem invadir a sala de jantar. Comprimento total de bancada ao longo da parede esquerda, incluindo o canto, 330 cm."
+    },
+    {
+      "id": "COZ-J6-MOLDURA-ESQ",
+      "tipo": "caixa",
+      "nome": "Guarnição esquerda da janela J6",
+      "parede": "fundos",
+      "daEsquerda": 130,
+      "doPiso": 96,
+      "largura": 5,
+      "profundidade": 3,
+      "altura": 118,
+      "material": "madeira-mel",
+      "status": "proposta",
+      "obs": "Guarnição de madeira 5 cm na lateral esquerda da abertura J6; conferir encaixe do tipo caixa e renderização."
+    },
+    {
+      "id": "COZ-J6-MOLDURA-DIR",
+      "tipo": "caixa",
+      "nome": "Guarnição direita da janela J6",
+      "parede": "fundos",
+      "daEsquerda": 315,
+      "doPiso": 96,
+      "largura": 5,
+      "profundidade": 3,
+      "altura": 118,
+      "material": "madeira-mel",
+      "status": "proposta"
+    },
+    {
+      "id": "COZ-J6-MOLDURA-INF",
+      "tipo": "caixa",
+      "nome": "Guarnição inferior da janela J6",
+      "parede": "fundos",
+      "daEsquerda": 135,
+      "doPiso": 96,
+      "largura": 180,
+      "profundidade": 3,
+      "altura": 4,
+      "material": "madeira-mel",
+      "status": "proposta"
+    },
+    {
+      "id": "COZ-J6-MOLDURA-SUP",
+      "tipo": "caixa",
+      "nome": "Guarnição superior da janela J6",
+      "parede": "fundos",
+      "daEsquerda": 135,
+      "doPiso": 210,
+      "largura": 180,
+      "profundidade": 3,
+      "altura": 4,
+      "material": "madeira-mel",
+      "status": "proposta"
+    }
+  ]
 }
