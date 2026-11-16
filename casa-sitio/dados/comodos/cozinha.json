@@ -1,7 +1,7 @@
 {
   "comodo": "cozinha",
-  "revisao": "09",
-  "obs": "Bancada em L limitada à cozinha 450×330 cm. Parede dos fundos 450 cm; lateral esquerda do z=60 até z=330 cm, evitando sobreposição física no canto. A divisão invisível com a sala de jantar em z=330 cm deve ser respeitada. Moldura de madeira na janela J6 com peitoril 100 e topo 210 cm. Proposta inicial sem cuba/cooktop ou eletros, a definir em etapa posterior. Revisão 02: ambas as bancadas de pia receberam base visual em Branco Itaúnas no lugar dos pés de madeira. Cuba, torneira, cooktop e demais itens serão definidos na próxima etapa. Revisão 03: Midea RM905 no canto direito da parede dos fundos, com folgas propostas de 25 cm à direita, 10 cm à esquerda e 7,5 cm atrás. Bancada dos fundos reduzida a 331,5 cm para não invadir o vão. As portas da RM905 abrem até ~130 graus; verificar gabarito real antes da marcenaria. Render 3D de geladeira é genérico e não representa as 3 portas do modelo. Revisão 04: substituído modelo genérico por representação dedicada RM905 com ações de abertura individuais e interior ilustrativo. Manual Midea rev.04 maio 2026; detalhes internos não cotados são aproximações. Revisão 05: ilha de 150×75 cm com tampo Branco Itaúnas, bancada de apoio sem cooktop/cuba, estrutura recuada 30 cm para pernas, 3 banquetas compactas voltadas para sala de jantar, todos os volumes dentro da cozinha. Posicionamento provisório z155..230 cm e banquetas z233..271 cm. Verificar ergonomia/circulação real e suportes do balanço de pedra. Revisão 06: ilha alterada de 150×75 para 180×90 cm, recuada para z175 (115 cm de circulação até bancada da pia), x150 (90 cm da bancada esquerda), três banquetas compactas, acabamento MDF branco fechado nas laterais, micro-ondas Fischer Infinity Touch 25 L embutido como MOCKUP e torre de tomadas retrátil ilustrativa. Chaminé obrigatória do Fischer sob tampo de granito precisa de aprovação técnica antes de fabricar a marcenaria. Revisão 07: micro-ondas retirado da parte baixa da ilha e representado na parte superior de módulo suspenso na parede esquerda. Armário superior lateral usa porta articulada, não de correr. Laterais da ilha fechadas em MDF branco do piso ao tampo em toda profundidade 90 cm, sem vazios laterais. Micro e marcenaria são propostas técnicas preliminares, não nicho de execução homologado. Revisão 08: esclarecimento do usuário: Fischer pertence à própria ilha, na face voltada à cozinha, parte SUPERIOR ESQUERDA de seu gabinete, imediatamente abaixo do tampo. Removido módulo suspenso da parede esquerda; laterais MDF integrais e três banquetas preservadas. Ventilação é pendência crítica antes de executar. Revisão 09: ilha recebeu detalhamento 3D de MDF fechado até piso, nicho Fischer esquerdo superior, portas inferiores de abrir independentes, torre de tomadas e modelo de duto/grelha superior INSPECIONÁVEL por ação. Duto e furo em granito são hipóteses, condicionados à homologação Fischer e marmoraria; projeto não está liberado para execução.",
+  "revisao": "10",
+  "obs": "Bancada em L limitada à cozinha 450×330 cm. Parede dos fundos 450 cm; lateral esquerda do z=60 até z=330 cm, evitando sobreposição física no canto. A divisão invisível com a sala de jantar em z=330 cm deve ser respeitada. Moldura de madeira na janela J6 com peitoril 100 e topo 210 cm. Proposta inicial sem cuba/cooktop ou eletros, a definir em etapa posterior. Revisão 02: ambas as bancadas de pia receberam base visual em Branco Itaúnas no lugar dos pés de madeira. Cuba, torneira, cooktop e demais itens serão definidos na próxima etapa. Revisão 03: Midea RM905 no canto direito da parede dos fundos, com folgas propostas de 25 cm à direita, 10 cm à esquerda e 7,5 cm atrás. Bancada dos fundos reduzida a 331,5 cm para não invadir o vão. As portas da RM905 abrem até ~130 graus; verificar gabarito real antes da marcenaria. Render 3D de geladeira é genérico e não representa as 3 portas do modelo. Revisão 04: substituído modelo genérico por representação dedicada RM905 com ações de abertura individuais e interior ilustrativo. Manual Midea rev.04 maio 2026; detalhes internos não cotados são aproximações. Revisão 05: ilha de 150×75 cm com tampo Branco Itaúnas, bancada de apoio sem cooktop/cuba, estrutura recuada 30 cm para pernas, 3 banquetas compactas voltadas para sala de jantar, todos os volumes dentro da cozinha. Posicionamento provisório z155..230 cm e banquetas z233..271 cm. Verificar ergonomia/circulação real e suportes do balanço de pedra. Revisão 06: ilha alterada de 150×75 para 180×90 cm, recuada para z175 (115 cm de circulação até bancada da pia), x150 (90 cm da bancada esquerda), três banquetas compactas, acabamento MDF branco fechado nas laterais, micro-ondas Fischer Infinity Touch 25 L embutido como MOCKUP e torre de tomadas retrátil ilustrativa. Chaminé obrigatória do Fischer sob tampo de granito precisa de aprovação técnica antes de fabricar a marcenaria. Revisão 07: micro-ondas retirado da parte baixa da ilha e representado na parte superior de módulo suspenso na parede esquerda. Armário superior lateral usa porta articulada, não de correr. Laterais da ilha fechadas em MDF branco do piso ao tampo em toda profundidade 90 cm, sem vazios laterais. Micro e marcenaria são propostas técnicas preliminares, não nicho de execução homologado. Revisão 08: esclarecimento do usuário: Fischer pertence à própria ilha, na face voltada à cozinha, parte SUPERIOR ESQUERDA de seu gabinete, imediatamente abaixo do tampo. Removido módulo suspenso da parede esquerda; laterais MDF integrais e três banquetas preservadas. Ventilação é pendência crítica antes de executar. Revisão 09: ilha recebeu detalhamento 3D de MDF fechado até piso, nicho Fischer esquerdo superior, portas inferiores de abrir independentes, torre de tomadas e modelo de duto/grelha superior INSPECIONÁVEL por ação. Duto e furo em granito são hipóteses, condicionados à homologação Fischer e marmoraria; projeto não está liberado para execução. Revisão 10: tampo Itaúnas restaurado inteiro, grelha e percurso de ventilação ilustrativos na lateral esquerda da ilha, SEM homologação Fischer; portas dos armários corrigidas para abrir PARA FORA e porta do micro simulada basculando de cima para baixo.",
   "pecas": [
     {
       "id": "COZ-BANCADA-FUNDOS",
@@ -148,7 +148,7 @@
         }
       ],
       "status": "proposta",
-      "obs": "PROPOSTA TÉCNICA DE MARCENARIA, NÃO LIBERADA PARA FABRICAÇÃO: Ilha 180×90×90, granito Branco Itaúnas 2cm; duas laterais MDF branco inteiras até o piso e até a borda posterior; miolo recuado 30cm para pernas das 3 banquetas. Micro Fischer Infinity Touch Grill 25L (59,5×39×38,2 cm) em nicho SUPERIOR ESQUERDO da própria ilha, face voltada à cozinha, frente ilustrativa de h=39 a78cm. Porta de abrir inferior sob micro e duas portas articuladas à direita. Torre retrátil oposta ao micro. Canal de ar traseiro e grelha sobre o granito 52×9cm são SOMENTE HIPÓTESE VISUAL; fabricante exige saída superior de ar, não homologou essa instalação em ilha. Não cortar granito nem fabricar móvel sem aprovação expressa Fischer e avaliação técnica da marmoraria, elétrica e ergonomia. O 3D contém ação Mostrar caminho de ventilação proposto. Superfície útil comprometida pela grelha; avaliar alternativa que preserve área de gravação.",
+      "obs": "ESTUDO DE MARCENARIA, NÃO LIBERADO PARA FABRICAÇÃO. Ilha 180×90×90 cm, granito Branco Itaúnas contínuo 2cm, três banquetas, laterais em MDF branco inteiras até o piso e ao longo de 90cm. Micro Fischer Infinity Touch Grill 25L no nicho superior esquerdo da PRÓPRIA ILHA, face voltada para cozinha, com porta ilustrativa que abre de CIMA PARA BAIXO pela dobradiça inferior. Abaixo dele, armário com porta articulada PARA FORA; à direita duas portas articuladas PARA FORA. Torre retrátil ilustrativa no canto direito da ilha. Grelha proposta de ventilação 30×12cm na LATERAL ESQUERDA do MDF e canal técnico inspecionável (ação 3D), sem furar o granito; não atende automaticamente à saída superior de ar quente pedida pelo fabricante. Confirmar aprovação expressa da Fischer e dimensionamento/isolamento antes de cortar MDF, instalar forno ou fabricar móvel. Abertura do micro é mockup visual, confirmar mecanismo real no modelo adquirido.",
       "torreTomadas": {
         "tipo": "retratil",
         "posicao": "canto direito do lado cozinha",
@@ -176,15 +176,18 @@
           "tomada": "acessível e exclusiva de uso; aterramento; não usar torre de tomadas"
         },
         "ventilacao": {
-          "fonte": "Manual Fischer Infinity Touch 25L rev00 pagina 9",
+          "fonte": "Manual Fischer Infinity Touch Grill 25 L, verificar versão do produto",
           "canalPosteriorIndicativoCm": 10,
-          "saidaSuperior": "obrigatória",
-          "grelhaTampoHipoteseCm": [
-            52,
-            9
+          "saidaManual": "superior obrigatória",
+          "saidaProposta": "grelha LATERAL ESQUERDA da ilha, 30×12 cm (hipótese sem homologação)",
+          "grelhaLateralHipoteseCm": [
+            30,
+            12
           ],
-          "status": "NÃO APROVADA PELO FABRICANTE OU MARMORARIA"
-        }
+          "tampoGranito": "inteiriço, SEM recorte para grelha",
+          "status": "AGUARDANDO APROVAÇÃO ESCRITA DA FISCHER; não fabricar"
+        },
+        "porta3D": "basculante com dobradiça horizontal inferior; gira para fora e para baixo (representação segundo orientação do usuário)"
       },
       "marcenaria": {
         "acabamento": "MDF branco",
@@ -192,7 +195,8 @@
         "divisorias": "módulo esquerdo nicho superior + porta inferior; direito duas portas de abrir",
         "recuoBanquetasCm": 30,
         "balancoGranito": "verificar reforço estrutural e recorte de grelha com marmoraria",
-        "manutencao": "acesso removível ao forno, cabeamento elétrico e canal posterior; não selar o nicho"
+        "manutencao": "acesso removível ao forno, cabeamento elétrico e canal posterior; não selar o nicho",
+        "portas": "portas do armário sob o Fischer e duas à direita com dobradiças, abrindo PARA FORA; nenhuma de correr"
       }
     },
     {
