@@ -209,8 +209,12 @@ reg('ilha-gravacao', { rotulo: 'Ilha de gravação · MDF e Fischer 25L', dimens
     for(let z=20;z<47;z+=3.4) M.cx(-1.2,-0.7,63,73,z,z+1,'inox',{sombra:false});
     // Tampo Branco Itaúnas CONTÍNUO, sem frestas e sem recortes de exaustão.
     M.cx(0,L,A-esp,A,0,P,granito);
-    // Torre de tomadas na extremidade oposta, fora do nicho do micro-ondas.
-    const torre=M.sub(L-17,A-esp,12);
+    // Revisão 11: torre no tampo à direita do Fischer, na MESMA zona técnica.
+    // x=79 cm da borda esquerda, z=12 cm da borda voltada à cozinha.
+    // Posição do centro: x≈83,25 cm; reservar corte/ferragem conforme modelo adquirido.
+    // O Fischer tem alimentação independente. Conferir folgas, dobradiças, fiação
+    // e possível interferência do nicho/duto antes de executar marcenaria.
+    const torre=M.sub(79,A-esp,12);
     torre.cx(0,8.5,0,2,0,8.5,'metal-preto');
     torre.cx(1,7.5,2,18,1,7.5,'metal-preto');
     for(const y of [5,10.5,16]) torre.cx(2,6.5,y-1,y+1,0.3,1,'placa-branca',{sombra:false});
