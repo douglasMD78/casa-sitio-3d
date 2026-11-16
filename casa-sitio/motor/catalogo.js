@@ -148,7 +148,12 @@ reg('ilha-gravacao', { rotulo: 'Ilha de gravação · MDF e Fischer 25L', dimens
     const joelho = num(p.recuo, 30), caixa = P - joelho;
     const xMicro0 = 5, xMicro1 = 66.5, divisor = 70;
     // Estrutura integral: painéis nas laterais até o piso e por TODA profundidade.
-    M.cx(0, e, 0, A - esp, 0, P, 'mdf-branco');
+    // Lateral esquerda íntegra até o chão, exceto abertura técnica alta para a grelha proposta.
+    // Abertura em y=62..74, z=18..48; preserva bordas e travessas contínuas.
+    M.cx(0, e, 0, 62, 0, P, 'mdf-branco');
+    M.cx(0, e, 74, A - esp, 0, P, 'mdf-branco');
+    M.cx(0, e, 62, 74, 0, 18, 'mdf-branco');
+    M.cx(0, e, 62, 74, 48, P, 'mdf-branco');
     M.cx(L-e, L, 0, A - esp, 0, P, 'mdf-branco');
     M.cx(e, L-e, 0, 2.5, 0, caixa, 'mdf-branco');
     // Fundo recuado para vão das pernas das três banquetas.
@@ -188,23 +193,21 @@ reg('ilha-gravacao', { rotulo: 'Ilha de gravação · MDF e Fischer 25L', dimens
     M.acao('Abrir porta do micro-ondas (ilustrativo)',v=>{portaMicro.g.rotation.y=-v*1.7;},false);
     // Volume interno do micro: exato apenas em caixa externa, não instalação definitiva.
     M.cx(xFace+3,xFace+55,frontY+1,frontY+35,4,42,'#3b4149',{sombra:false});
-    // Representação da chaminé no fundo, separada do compartimento de armários.
-    // Cor/visibilidade da rota podem ser alternadas pela ficha da peça.
+    // Alternativa de ventilação LATERAL ESQUERDA: caminho conceitual, ainda NÃO homologado.
+    // Tampo inteiriço sem abertura. Conduto indica desvio do ar pela caixa técnica;
+    // a viabilidade termo-fluidodinâmica e as cotas do duto dependem do fabricante.
     const duto=M.sub(0,0,0);
-    duto.cx(9,61,frontY+23,A-esp,49,58,'#67bfd3',{sombra:false});
-    duto.cx(9,61,frontY+23,frontY+25,40,58,'#67bfd3',{sombra:false});
+    duto.cx(9,61,62,74,44,56,'#67bfd3',{sombra:false});
+    duto.cx(2,10,62,74,18,48,'#67bfd3',{sombra:false});
+    duto.cx(3,10,62,74,40,49,'#67bfd3',{sombra:false});
     duto.g.visible=false;
-    M.acao('Mostrar caminho de ventilação proposto',v=>{duto.g.visible=v>0.5;},false);
-    // Tampo em Itaúnas dividido APENAS para visualização da hipótese de grelha.
-    // Abertura 52x9cm na porção esquerda posterior do tampo — ainda sem homologação.
-    const gx0=9,gx1=61,gz0=49,gz1=58;
-    M.cx(0,L,A-esp,A,0,gz0,granito);
-    M.cx(0,gx0,A-esp,A,gz0,gz1,granito);
-    M.cx(gx1,L,A-esp,A,gz0,gz1,granito);
-    M.cx(0,L,A-esp,A,gz1,P,granito);
-    // Grelha superior (simulação de material não inflamável; não especificada para execução).
-    M.cx(gx0,gx1,A-esp,A-0.5,gz0,gz1,'metal-preto',{sombra:false});
-    for(let x=gx0+3;x<gx1-2;x+=5) M.cx(x,x+1.1,A-0.4,A+0.15,gz0+1,gz1-1,'inox',{sombra:false});
+    M.acao('Mostrar caminho lateral de ventilação proposto',v=>{duto.g.visible=v>0.5;},false);
+    // Grelha fixa na LATERAL ESQUERDA, não no granito.
+    // Face lisa do MDF com recorte técnico previsto de 30 x 12 cm (hipotético).
+    M.cx(-0.8,0,62,74,18,48,'metal-preto',{sombra:false});
+    for(let z=20;z<47;z+=3.4) M.cx(-1.2,-0.7,63,73,z,z+1,'inox',{sombra:false});
+    // Tampo Branco Itaúnas CONTÍNUO, sem frestas e sem recortes de exaustão.
+    M.cx(0,L,A-esp,A,0,P,granito);
     // Torre de tomadas na extremidade oposta, fora do nicho do micro-ondas.
     const torre=M.sub(L-17,A-esp,12);
     torre.cx(0,8.5,0,2,0,8.5,'metal-preto');
