@@ -1,48 +1,256 @@
 {
-  "parede-branca":     { "cor": "#edebe5", "rugosidade": 0.93 },
-  "fachada-verde":     { "cor": "#a8bc9d", "rugosidade": 0.95 },
-  "corte-parede":      { "cor": "#48504b", "rugosidade": 1 },
-  "forro-branco":      { "cor": "#fbfaf6", "rugosidade": 0.96 },
-
-  "porcelanato-bege":  { "cor": "#d9d2c6", "textura": "porcelanato", "tamanho": [60, 60], "rugosidade": 0.5 },
-  "porcelanato-claro": { "cor": "#e6e2d9", "textura": "porcelanato", "tamanho": [80, 80], "rugosidade": 0.5 },
-  "ceramica-banho":    { "cor": "#e3e8e6", "textura": "porcelanato", "tamanho": [45, 45], "rugosidade": 0.45 },
-  "cimento-varanda":   { "cor": "#c6c1b6", "textura": "concreto", "tamanho": [240, 240], "rugosidade": 0.9 },
-  "grama":             { "cor": "#86a06a", "textura": "grama", "tamanho": [300, 300], "rugosidade": 1 },
-
-  "mdf-branco":        { "cor": "#f5f3ed", "rugosidade": 0.7 },
-  "mdf-cinza":         { "cor": "#9da3a1", "rugosidade": 0.7 },
-  "mdf-preto":         { "cor": "#2b2e2f", "rugosidade": 0.65 },
-  "mdf-verde":         { "cor": "#7d9482", "rugosidade": 0.7 },
-  "madeira-clara":     { "cor": "#dcc5a4", "textura": "madeira", "tamanho": [140, 60], "rugosidade": 0.62 },
-  "madeira-mel":       { "cor": "#b98a55", "textura": "madeira", "tamanho": [140, 60], "rugosidade": 0.6 },
-  "madeira-escura":    { "cor": "#6b4a30", "textura": "madeira", "tamanho": [140, 60], "rugosidade": 0.6 },
-
-  "granito-cinza":     { "cor": "#8b8e8d", "textura": "granito", "tamanho": [90, 90], "rugosidade": 0.32 },
-  "granito-preto":     { "cor": "#2a2c2d", "textura": "granito", "tamanho": [90, 90], "rugosidade": 0.25 },
-  "granito-exemplo":   { "cor": "#c4bcb0", "imagem": "texturas/granito-exemplo.jpg", "tamanho": [80, 80], "rugosidade": 0.3 },
-  "pedra-clara":       { "cor": "#e7e3da", "textura": "granito", "tamanho": [90, 90], "rugosidade": 0.3 },
-
-  "inox":              { "cor": "#c2c7c9", "metal": 0.85, "rugosidade": 0.34 },
-  "metal-preto":       { "cor": "#1f2223", "metal": 0.5, "rugosidade": 0.5 },
-  "metal-dourado":     { "cor": "#c9a45c", "metal": 0.9, "rugosidade": 0.3 },
-  "aluminio":          { "cor": "#b9bdbd", "metal": 0.7, "rugosidade": 0.45 },
-  "vidro":             { "cor": "#d5ebee", "opacidade": 0.26, "rugosidade": 0.06 },
-  "vidro-escuro":      { "cor": "#15191b", "rugosidade": 0.15, "metal": 0.2 },
-  "espelho":           { "cor": "#dfe7ea", "metal": 1, "rugosidade": 0.04 },
-
-  "eletro-branco":     { "cor": "#f1f2f3", "rugosidade": 0.35 },
-  "eletro-inox":       { "cor": "#b8bfc2", "metal": 0.6, "rugosidade": 0.4 },
-  "eletro-preto":      { "cor": "#34393c", "rugosidade": 0.45 },
-
-  "louca-branca":      { "cor": "#fafaf8", "rugosidade": 0.18 },
-  "placa-branca":      { "cor": "#fbfbf9", "rugosidade": 0.4 },
-  "placa-furo":        { "cor": "#3a3d3e", "rugosidade": 0.6 },
-
-  "palha":             { "cor": "#ab885c", "textura": "palha", "tamanho": [16, 16], "rugosidade": 0.95 },
-  "tecido-cru":        { "cor": "#e0d8c8", "textura": "tecido", "tamanho": [30, 30], "rugosidade": 0.95 },
-  "tecido-cinza":      { "cor": "#9aa09f", "textura": "tecido", "tamanho": [30, 30], "rugosidade": 0.95 },
-  "tecido-verde":      { "cor": "#7f9580", "textura": "tecido", "tamanho": [30, 30], "rugosidade": 0.95 },
-  "folhagem":          { "cor": "#55805a", "rugosidade": 0.9 },
-  "ceramica-vaso":     { "cor": "#c9b79c", "rugosidade": 0.8 }
+  "parede-branca": {
+    "cor": "#edebe5",
+    "rugosidade": 0.93
+  },
+  "fachada-verde": {
+    "cor": "#a8bc9d",
+    "rugosidade": 0.95
+  },
+  "corte-parede": {
+    "cor": "#48504b",
+    "rugosidade": 1
+  },
+  "forro-branco": {
+    "cor": "#fbfaf6",
+    "rugosidade": 0.96
+  },
+  "porcelanato-bege": {
+    "cor": "#d9d2c6",
+    "textura": "porcelanato",
+    "tamanho": [
+      60,
+      60
+    ],
+    "rugosidade": 0.5
+  },
+  "porcelanato-claro": {
+    "cor": "#e6e2d9",
+    "textura": "porcelanato",
+    "tamanho": [
+      80,
+      80
+    ],
+    "rugosidade": 0.5
+  },
+  "ceramica-banho": {
+    "cor": "#e3e8e6",
+    "textura": "porcelanato",
+    "tamanho": [
+      45,
+      45
+    ],
+    "rugosidade": 0.45
+  },
+  "cimento-varanda": {
+    "cor": "#c6c1b6",
+    "textura": "concreto",
+    "tamanho": [
+      240,
+      240
+    ],
+    "rugosidade": 0.9
+  },
+  "grama": {
+    "cor": "#86a06a",
+    "textura": "grama",
+    "tamanho": [
+      300,
+      300
+    ],
+    "rugosidade": 1
+  },
+  "mdf-branco": {
+    "cor": "#f5f3ed",
+    "rugosidade": 0.7
+  },
+  "mdf-cinza": {
+    "cor": "#9da3a1",
+    "rugosidade": 0.7
+  },
+  "mdf-preto": {
+    "cor": "#2b2e2f",
+    "rugosidade": 0.65
+  },
+  "mdf-verde": {
+    "cor": "#7d9482",
+    "rugosidade": 0.7
+  },
+  "madeira-clara": {
+    "cor": "#dcc5a4",
+    "textura": "madeira",
+    "tamanho": [
+      140,
+      60
+    ],
+    "rugosidade": 0.62
+  },
+  "madeira-mel": {
+    "cor": "#b98a55",
+    "textura": "madeira",
+    "tamanho": [
+      140,
+      60
+    ],
+    "rugosidade": 0.6
+  },
+  "madeira-escura": {
+    "cor": "#6b4a30",
+    "textura": "madeira",
+    "tamanho": [
+      140,
+      60
+    ],
+    "rugosidade": 0.6
+  },
+  "granito-cinza": {
+    "cor": "#8b8e8d",
+    "textura": "granito",
+    "tamanho": [
+      90,
+      90
+    ],
+    "rugosidade": 0.32
+  },
+  "granito-preto": {
+    "cor": "#2a2c2d",
+    "textura": "granito",
+    "tamanho": [
+      90,
+      90
+    ],
+    "rugosidade": 0.25
+  },
+  "granito-exemplo": {
+    "cor": "#c4bcb0",
+    "imagem": "texturas/granito-exemplo.jpg",
+    "tamanho": [
+      80,
+      80
+    ],
+    "rugosidade": 0.3
+  },
+  "pedra-clara": {
+    "cor": "#e7e3da",
+    "textura": "granito",
+    "tamanho": [
+      90,
+      90
+    ],
+    "rugosidade": 0.3
+  },
+  "inox": {
+    "cor": "#c2c7c9",
+    "metal": 0.85,
+    "rugosidade": 0.34
+  },
+  "metal-preto": {
+    "cor": "#1f2223",
+    "metal": 0.5,
+    "rugosidade": 0.5
+  },
+  "metal-dourado": {
+    "cor": "#c9a45c",
+    "metal": 0.9,
+    "rugosidade": 0.3
+  },
+  "aluminio": {
+    "cor": "#b9bdbd",
+    "metal": 0.7,
+    "rugosidade": 0.45
+  },
+  "vidro": {
+    "cor": "#d5ebee",
+    "opacidade": 0.26,
+    "rugosidade": 0.06
+  },
+  "vidro-escuro": {
+    "cor": "#15191b",
+    "rugosidade": 0.15,
+    "metal": 0.2
+  },
+  "espelho": {
+    "cor": "#dfe7ea",
+    "metal": 1,
+    "rugosidade": 0.04
+  },
+  "eletro-branco": {
+    "cor": "#f1f2f3",
+    "rugosidade": 0.35
+  },
+  "eletro-inox": {
+    "cor": "#b8bfc2",
+    "metal": 0.6,
+    "rugosidade": 0.4
+  },
+  "eletro-preto": {
+    "cor": "#34393c",
+    "rugosidade": 0.45
+  },
+  "louca-branca": {
+    "cor": "#fafaf8",
+    "rugosidade": 0.18
+  },
+  "placa-branca": {
+    "cor": "#fbfbf9",
+    "rugosidade": 0.4
+  },
+  "placa-furo": {
+    "cor": "#3a3d3e",
+    "rugosidade": 0.6
+  },
+  "palha": {
+    "cor": "#ab885c",
+    "textura": "palha",
+    "tamanho": [
+      16,
+      16
+    ],
+    "rugosidade": 0.95
+  },
+  "tecido-cru": {
+    "cor": "#e0d8c8",
+    "textura": "tecido",
+    "tamanho": [
+      30,
+      30
+    ],
+    "rugosidade": 0.95
+  },
+  "tecido-cinza": {
+    "cor": "#9aa09f",
+    "textura": "tecido",
+    "tamanho": [
+      30,
+      30
+    ],
+    "rugosidade": 0.95
+  },
+  "tecido-verde": {
+    "cor": "#7f9580",
+    "textura": "tecido",
+    "tamanho": [
+      30,
+      30
+    ],
+    "rugosidade": 0.95
+  },
+  "folhagem": {
+    "cor": "#55805a",
+    "rugosidade": 0.9
+  },
+  "ceramica-vaso": {
+    "cor": "#c9b79c",
+    "rugosidade": 0.8
+  },
+  "granito-branco-itaunas": {
+    "cor": "#e8e1d5",
+    "textura": "granito",
+    "tamanho": [
+      85,
+      85
+    ],
+    "rugosidade": 0.27,
+    "descricao": "Aproximação procedural do granito Branco Itaúnas polido: fundo creme claro e pontilhado fino; não é fotografia da chapa real."
+  }
 }
