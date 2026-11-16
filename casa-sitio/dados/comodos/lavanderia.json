@@ -1,19 +1,19 @@
 {
   "comodo": "lavanderia",
-  "revisao": "06",
-  "obs": "Layout otimizado para circulação: todos os 3 equipamentos alinhados na parede direita (fundos: Suggar 20kg; meio: lavadora substituível; frente: bancada com cuba). Corredor livre nominal mínimo em largura de 218,5 cm, antes de folgas operacionais. Porta P8 e passagem V3 mantidas desobstruídas; janela J7 e revestimento integral da parede direita preservados. Estudo conceitual: confirmar folgas do fabricante, movimento das tampas e instalações com responsáveis.",
+  "revisao": "07",
+  "obs": "Proposta v07: parede direita com lavadora substituível junto aos fundos e bancada de 100 cm com cuba inox centralizada 50×44 cm próxima à frente. Tanquinho Suggar 20 kg voltou à parede dos fundos, à direita da porta P8 e abaixo da janela J7. Reposicionados pontos de água/esgoto/energia e ralo para o novo layout; conferir em obra a abertura de portas/tampas, as folgas de manutenção e os caimentos. Revestimento integral da parede direita e iluminação preservados.",
   "pecas": [
     {
       "id": "LAV-TANQUE",
       "tipo": "bancada",
-      "nome": "Gabinete branco de lavanderia com cuba inox e pedra clara",
+      "nome": "Bancada de lavanderia 100 cm com cuba inox centralizada 50×44",
       "parede": "direita",
-      "dosFundos": 129,
-      "largura": 65,
-      "profundidade": 55,
+      "dosFundos": 96,
+      "largura": 100,
+      "profundidade": 60,
       "altura": 90,
       "status": "proposta",
-      "obs": "Gabinete compacto de 65 cm com cuba inox de 48 cm e duas portas, reduzido em 5 cm para permitir folga frontal de 6 cm e melhor instalação na parede de 2 m. Tampo pedra clara; verificar folgas reais na obra.",
+      "obs": "Bancada de 100 × 60 cm, cuba inox de 50 × 44 cm centralizada, margens nominais de 25 cm nas extremidades e 8 cm na frente e atrás (antes de bordas, recortes e torneira). Gabinete branco de duas portas e pedra clara. Conferir recorte do fabricante e estrutura do tampo.",
       "base": "portas",
       "corpo": "mdf-branco",
       "frente": "mdf-branco",
@@ -29,10 +29,11 @@
         "espessura": 2
       },
       "cuba": {
-        "largura": 48,
-        "profundidade": 37,
+        "largura": 50,
+        "profundidade": 44,
         "fundura": 18,
-        "material": "inox"
+        "material": "inox",
+        "centralizada": true
       }
     },
     {
@@ -42,108 +43,111 @@
       "categoriaInventario": "lavadora",
       "modelo": "lavadora-superior",
       "parede": "direita",
-      "dosFundos": 64,
+      "dosFundos": 24,
       "largura": 59.1,
       "profundidade": 66.5,
       "altura": 105.2,
       "status": "proposta",
-      "obs": "Lavadora superior no meio da parede direita; porta frontal alternativa no inventário. Espaço entre máquinas de aproximadamente 5 cm. Conferir folga de instalação real e abertura da tampa."
+      "obs": "Lavadora superior ao lado da bancada, na parede direita; ocupa de 24 a 83,1 cm desde os fundos, com 12,9 cm de distância nominal da bancada. Inventário mantém alternativa frontal. Testar ambas as aberturas e folgas."
     },
     {
       "id": "LAV-TANQUINHO",
       "tipo": "eletro",
       "modelo": "tanquinho-suggar-eco20",
       "nome": "Suggar Lavamax Eco 20 kg — LE2021/LE2022",
-      "parede": "direita",
+      "parede": "fundos",
       "largura": 55,
       "profundidade": 59.5,
       "altura": 95.7,
       "status": "proposta",
-      "obs": "Suggar Lavamax Eco 20kg LE2021/LE2022; lateral direita, junto aos fundos. Tampa superior interativa; manter acima vão livre até a primeira prateleira e garantir mangueiras/deságue acessíveis.",
+      "obs": "Suggar Lavamax Eco 20kg na parede dos fundos, x=145..200 cm (direita da porta P8), sob a janela J7 cujo peitoril fica a 150 cm. Distância nominal lateral até a lavadora: 18,5 cm. Confirmar espaço para tampa e conexões.",
       "material": "eletro-branco",
-      "dosFundos": 4
+      "daEsquerda": 145
     },
     {
       "id": "LAV-AGUA-TANQUE",
       "tipo": "ponto-agua",
       "nome": "Água fria do tanque",
       "parede": "direita",
-      "dosFundos": 164,
       "doPiso": 110,
-      "status": "proposta"
+      "status": "proposta",
+      "obs": "Registro da cuba acessível dentro do gabinete, afastado de tomada.",
+      "dosFundos": 148
     },
     {
       "id": "LAV-ESG-TANQUE",
       "tipo": "ponto-esgoto",
       "nome": "Esgoto do tanque Ø 50 mm — sifonado",
       "parede": "direita",
-      "dosFundos": 165,
       "doPiso": 45,
       "diametro": 50,
-      "status": "proposta"
+      "status": "proposta",
+      "obs": "Esgoto Ø50 mm do gabinete, com sifão inspecionável e ventilação conforme projeto.",
+      "dosFundos": 146
     },
     {
       "id": "LAV-AGUA-MAQ",
       "tipo": "ponto-agua",
       "nome": "Ponto exclusivo água lavadora",
       "parede": "direita",
-      "dosFundos": 94,
       "doPiso": 120,
       "status": "proposta",
-      "obs": "Registro individual acessível na lateral, sem obstruir o equipamento."
+      "obs": "Registro exclusivo da lavadora acessível; não ocultar atrás do equipamento.",
+      "dosFundos": 48
     },
     {
       "id": "LAV-ESG-MAQ",
       "tipo": "ponto-esgoto",
       "nome": "Deságue independente lavadora Ø 50 mm",
       "parede": "direita",
-      "dosFundos": 105,
       "doPiso": 80,
       "diametro": 50,
       "status": "proposta",
-      "obs": "Altura final e conexão da mangueira devem seguir manual do modelo adquirido; prever sifonagem/ventilação conforme projeto hidrossanitário."
+      "obs": "Ponto Ø50 mm de deságue da lavadora; altura final segundo manual do modelo escolhido, conexão adequada sem refluxo.",
+      "dosFundos": 73
     },
     {
       "id": "LAV-TOM-MAQ",
       "tipo": "tomada",
       "nome": "Tomada dedicada à lavadora",
       "parede": "direita",
-      "dosFundos": 117,
       "doPiso": 125,
       "amperagem": 20,
       "status": "proposta",
-      "obs": "Corrente, tensão e circuito definidos pelo eletricista após escolha do modelo; tomada acessível fora da zona de respingos."
+      "obs": "Tomada dedicada fora de respingos e acessível; confirmar circuito, DR, aterramento e tensão.",
+      "dosFundos": 87
     },
     {
       "id": "LAV-AGUA-TANQUINHO",
       "tipo": "ponto-agua",
       "nome": "Água do tanquinho",
-      "parede": "direita",
+      "parede": "fundos",
       "doPiso": 125,
       "status": "proposta",
-      "dosFundos": 33
+      "obs": "Ponto de água do Suggar na parede dos fundos, com registro individual.",
+      "daEsquerda": 179
     },
     {
       "id": "LAV-ESG-TANQUINHO",
       "tipo": "ponto-esgoto",
       "nome": "Deságue do tanquinho Ø 50 mm",
-      "parede": "direita",
-      "doPiso": 35,
+      "parede": "fundos",
+      "doPiso": 25,
       "diametro": 50,
       "status": "proposta",
-      "obs": "Altura da saída depende do tanquinho real; alguns exigem descarga por gravidade próxima do piso.",
-      "dosFundos": 43
+      "obs": "Ponto Ø50 mm para drenagem do Suggar; altura final deve permitir saída por gravidade segundo manual, sem elevar indevidamente a mangueira.",
+      "daEsquerda": 183
     },
     {
       "id": "LAV-TOM-TANQUINHO",
       "tipo": "tomada",
       "nome": "Tomada dedicada ao tanquinho",
-      "parede": "direita",
+      "parede": "fundos",
       "doPiso": 125,
       "amperagem": 10,
       "status": "proposta",
-      "obs": "Confirmar a tensão, amperagem e afastamento de pontos de água no projeto elétrico.",
-      "dosFundos": 54
+      "obs": "Tomada do Suggar na parede dos fundos, lateral ao equipamento, afastada de respingos.",
+      "daEsquerda": 205
     },
     {
       "id": "LAV-TOM-APOIO",
@@ -160,12 +164,12 @@
       "id": "LAV-RALO",
       "tipo": "ralo",
       "nome": "Ralo sifonado do piso",
-      "daEsquerda": 175,
-      "dosFundos": 104,
+      "daEsquerda": 207,
+      "dosFundos": 92,
       "largura": 15,
       "profundidade": 15,
       "status": "proposta",
-      "obs": "Ralo sifonado na circulação próxima aos equipamentos, sem mangueiras soltas. Declividade/impermeabilização do piso e dimensionamento exigem avaliação técnica."
+      "obs": "Caixa sifonada/ralo de piso em ponto acessível entre o tanquinho e a lavadora, fora das bases; prever caimento e impermeabilização. Esgotos dos equipamentos devem ter pontos próprios adequados, não mangueiras soltas sobre o ralo."
     },
     {
       "id": "LAV-ILUM-TETO",
@@ -211,8 +215,8 @@
       "tipo": "prateleiras",
       "nome": "Duas prateleiras flutuantes de madeira clara",
       "parede": "direita",
-      "dosFundos": 18,
-      "largura": 166,
+      "dosFundos": 32,
+      "largura": 163,
       "profundidade": 24,
       "niveis": [
         177,
@@ -222,14 +226,14 @@
       "material": "madeira-clara",
       "decor": "caixas",
       "status": "proposta",
-      "obs": "Duas prateleiras flutuantes na parede direita acima dos equipamentos; níveis superiores liberam abertura de tampas. Confirmar alcance, sustentação e afastamento das tampas do modelo final."
+      "obs": "Duas prateleiras na parede direita acima da lavadora e bancada; manter abertura livre da tampa superior e verificar altura das prateleiras."
     },
     {
       "id": "LAV-PLANTA-1",
       "tipo": "planta",
       "nome": "Planta pendente decorativa sobre prateleira",
       "parede": "direita",
-      "dosFundos": 24,
+      "dosFundos": 45,
       "doPiso": 229,
       "largura": 22,
       "profundidade": 20,
