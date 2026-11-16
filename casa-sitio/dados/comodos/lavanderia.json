@@ -1,7 +1,7 @@
 {
   "comodo": "lavanderia",
-  "revisao": "08",
-  "obs": "Revisão 08: tanquinho deslocado 20 cm para esquerda ao longo da parede dos fundos, aumentando separação lateral da lavadora de 18,5 para 38,5 cm sem invadir a porta P8. Tomadas dos equipamentos reposicionadas atrás de seus corpos, fora de vista direta, mas acessíveis por deslocamento dos aparelhos; confirmar alcance dos cabos, proteção DR ≤30mA, aterramento e circuitos com profissional. Lavadora LED13: saída 90–140 cm segundo guia Electrolux, conexão água 3/4 pol. Tanquinho Suggar: saída baixa de gravidade a confirmar manual exato. Pontos hidráulicos e ralo seguem propostas, não projeto executivo.",
+  "revisao": "09",
+  "obs": "Revisão 08: tanquinho deslocado 20 cm para esquerda ao longo da parede dos fundos, aumentando separação lateral da lavadora de 18,5 para 38,5 cm sem invadir a porta P8. Tomadas dos equipamentos reposicionadas atrás de seus corpos, fora de vista direta, mas acessíveis por deslocamento dos aparelhos; confirmar alcance dos cabos, proteção DR ≤30mA, aterramento e circuitos com profissional. Lavadora LED13: saída 90–140 cm segundo guia Electrolux, conexão água 3/4 pol. Tanquinho Suggar: saída baixa de gravidade a confirmar manual exato. Pontos hidráulicos e ralo seguem propostas, não projeto executivo. Revisão 09: tampo alterado para material exclusivo granito-branco-itaunas; garagem do robô e armário de limpeza em estudo, ainda não posicionados para não prejudicar circulação.",
   "pecas": [
     {
       "id": "LAV-TANQUE",
@@ -13,7 +13,7 @@
       "profundidade": 60,
       "altura": 90,
       "status": "proposta",
-      "obs": "Bancada de 100 × 60 cm, cuba inox de 50 × 44 cm centralizada, margens nominais de 25 cm nas extremidades e 8 cm na frente e atrás (antes de bordas, recortes e torneira). Gabinete branco de duas portas e pedra clara. Conferir recorte do fabricante e estrutura do tampo.",
+      "obs": "Bancada de 100 × 60 cm, cuba inox de 50 × 44 cm centralizada, margens nominais de 25 cm nas extremidades e 8 cm na frente e atrás (antes de bordas, recortes e torneira). Gabinete branco de duas portas e granito Branco Itaúnas polido (aproximação procedural na maquete). Conferir recorte do fabricante e estrutura do tampo.",
       "base": "portas",
       "corpo": "mdf-branco",
       "frente": "mdf-branco",
@@ -25,7 +25,7 @@
         }
       ],
       "tampo": {
-        "material": "pedra-clara",
+        "material": "granito-branco-itaunas",
         "espessura": 2
       },
       "cuba": {
