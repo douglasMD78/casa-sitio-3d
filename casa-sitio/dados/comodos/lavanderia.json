@@ -1,7 +1,7 @@
 {
   "comodo": "lavanderia",
-  "revisao": "07",
-  "obs": "Proposta v07: parede direita com lavadora substituível junto aos fundos e bancada de 100 cm com cuba inox centralizada 50×44 cm próxima à frente. Tanquinho Suggar 20 kg voltou à parede dos fundos, à direita da porta P8 e abaixo da janela J7. Reposicionados pontos de água/esgoto/energia e ralo para o novo layout; conferir em obra a abertura de portas/tampas, as folgas de manutenção e os caimentos. Revestimento integral da parede direita e iluminação preservados.",
+  "revisao": "08",
+  "obs": "Revisão 08: tanquinho deslocado 20 cm para esquerda ao longo da parede dos fundos, aumentando separação lateral da lavadora de 18,5 para 38,5 cm sem invadir a porta P8. Tomadas dos equipamentos reposicionadas atrás de seus corpos, fora de vista direta, mas acessíveis por deslocamento dos aparelhos; confirmar alcance dos cabos, proteção DR ≤30mA, aterramento e circuitos com profissional. Lavadora LED13: saída 90–140 cm segundo guia Electrolux, conexão água 3/4 pol. Tanquinho Suggar: saída baixa de gravidade a confirmar manual exato. Pontos hidráulicos e ralo seguem propostas, não projeto executivo.",
   "pecas": [
     {
       "id": "LAV-TANQUE",
@@ -60,9 +60,9 @@
       "profundidade": 59.5,
       "altura": 95.7,
       "status": "proposta",
-      "obs": "Suggar Lavamax Eco 20kg na parede dos fundos, x=145..200 cm (direita da porta P8), sob a janela J7 cujo peitoril fica a 150 cm. Distância nominal lateral até a lavadora: 18,5 cm. Confirmar espaço para tampa e conexões.",
+      "obs": "Suggar 20 kg na parede dos fundos, x=125..180 cm, 25 cm após o fim da porta P8 e com 38,5 cm de separação lateral nominal até a face da lavadora na parede direita. Sob janela J7. Garantir tampa livre, saída por gravidade e folgas de serviço.",
       "material": "eletro-branco",
-      "daEsquerda": 145
+      "daEsquerda": 125
     },
     {
       "id": "LAV-AGUA-TANQUE",
@@ -92,62 +92,62 @@
       "parede": "direita",
       "doPiso": 120,
       "status": "proposta",
-      "obs": "Registro exclusivo da lavadora acessível; não ocultar atrás do equipamento.",
-      "dosFundos": 48
+      "obs": "Registro exclusivo acessível na lateral da lavadora, conexão 3/4 pol conforme guia Electrolux LED13; afastado da tomada oculta.",
+      "dosFundos": 89
     },
     {
       "id": "LAV-ESG-MAQ",
       "tipo": "ponto-esgoto",
       "nome": "Deságue independente lavadora Ø 50 mm",
       "parede": "direita",
-      "doPiso": 80,
+      "doPiso": 100,
       "diametro": 50,
       "status": "proposta",
-      "obs": "Ponto Ø50 mm de deságue da lavadora; altura final segundo manual do modelo escolhido, conexão adequada sem refluxo.",
-      "dosFundos": 73
+      "obs": "Saída da Electrolux LED13 proposta a 100 cm, dentro da faixa de 90 a 140 cm informada no guia oficial. Revisar se trocar para modelo frontal; garantir conexão adequada e sifonagem.",
+      "dosFundos": 77
     },
     {
       "id": "LAV-TOM-MAQ",
       "tipo": "tomada",
       "nome": "Tomada dedicada à lavadora",
       "parede": "direita",
-      "doPiso": 125,
+      "doPiso": 65,
       "amperagem": 20,
       "status": "proposta",
-      "obs": "Tomada dedicada fora de respingos e acessível; confirmar circuito, DR, aterramento e tensão.",
-      "dosFundos": 87
+      "obs": "Tomada 2P+T oculta pela lavadora, mas acessível deslocando o equipamento; não instalar em zona de vazamento ou atrás da conexão hidráulica. Verificar comprimento do cabo, tensão, corrente, aterramento e DR ≤30 mA. A corrente real define 10/20A e circuito individual quando >10A.",
+      "dosFundos": 58
     },
     {
       "id": "LAV-AGUA-TANQUINHO",
       "tipo": "ponto-agua",
       "nome": "Água do tanquinho",
       "parede": "fundos",
-      "doPiso": 125,
+      "doPiso": 120,
       "status": "proposta",
-      "obs": "Ponto de água do Suggar na parede dos fundos, com registro individual.",
-      "daEsquerda": 179
+      "obs": "Registro de alimentação do Suggar lateral ao equipamento e acessível, sem contato com tomada. Conexão final segundo manual do modelo adquirido.",
+      "daEsquerda": 185
     },
     {
       "id": "LAV-ESG-TANQUINHO",
       "tipo": "ponto-esgoto",
       "nome": "Deságue do tanquinho Ø 50 mm",
       "parede": "fundos",
-      "doPiso": 25,
+      "doPiso": 15,
       "diametro": 50,
       "status": "proposta",
-      "obs": "Ponto Ø50 mm para drenagem do Suggar; altura final deve permitir saída por gravidade segundo manual, sem elevar indevidamente a mangueira.",
-      "daEsquerda": 183
+      "obs": "Ponto baixo de deságue DN50 proposto para saída por gravidade do Suggar; conferir posição e altura máxima admitida no manual exato. Não interligar diretamente ao ralo de piso sem solução sifonada adequada.",
+      "daEsquerda": 170
     },
     {
       "id": "LAV-TOM-TANQUINHO",
       "tipo": "tomada",
       "nome": "Tomada dedicada ao tanquinho",
       "parede": "fundos",
-      "doPiso": 125,
+      "doPiso": 65,
       "amperagem": 10,
       "status": "proposta",
-      "obs": "Tomada do Suggar na parede dos fundos, lateral ao equipamento, afastada de respingos.",
-      "daEsquerda": 205
+      "obs": "Tomada 2P+T oculta atrás do tanquinho, acessível por deslocamento do aparelho; não diretamente abaixo da entrada de água. Confirmar comprimento do cabo, tensão, corrente e proteção DR ≤30 mA. Não usar extensões.",
+      "daEsquerda": 152
     },
     {
       "id": "LAV-TOM-APOIO",
@@ -164,12 +164,12 @@
       "id": "LAV-RALO",
       "tipo": "ralo",
       "nome": "Ralo sifonado do piso",
-      "daEsquerda": 207,
-      "dosFundos": 92,
+      "daEsquerda": 200,
+      "dosFundos": 96,
       "largura": 15,
       "profundidade": 15,
       "status": "proposta",
-      "obs": "Caixa sifonada/ralo de piso em ponto acessível entre o tanquinho e a lavadora, fora das bases; prever caimento e impermeabilização. Esgotos dos equipamentos devem ter pontos próprios adequados, não mangueiras soltas sobre o ralo."
+      "obs": "Ralo sifonado no piso, acessível fora das bases e próximo à zona molhada; prever caimento, impermeabilização e ventilação/dimensionamento da rede conforme projeto hidrossanitário. Não substituir os deságues dedicados dos equipamentos."
     },
     {
       "id": "LAV-ILUM-TETO",
