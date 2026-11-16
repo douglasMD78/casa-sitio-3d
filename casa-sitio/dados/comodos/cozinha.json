@@ -1,7 +1,7 @@
 {
   "comodo": "cozinha",
-  "revisao": "06",
-  "obs": "Bancada em L limitada à cozinha 450×330 cm. Parede dos fundos 450 cm; lateral esquerda do z=60 até z=330 cm, evitando sobreposição física no canto. A divisão invisível com a sala de jantar em z=330 cm deve ser respeitada. Moldura de madeira na janela J6 com peitoril 100 e topo 210 cm. Proposta inicial sem cuba/cooktop ou eletros, a definir em etapa posterior. Revisão 02: ambas as bancadas de pia receberam base visual em Branco Itaúnas no lugar dos pés de madeira. Cuba, torneira, cooktop e demais itens serão definidos na próxima etapa. Revisão 03: Midea RM905 no canto direito da parede dos fundos, com folgas propostas de 25 cm à direita, 10 cm à esquerda e 7,5 cm atrás. Bancada dos fundos reduzida a 331,5 cm para não invadir o vão. As portas da RM905 abrem até ~130 graus; verificar gabarito real antes da marcenaria. Render 3D de geladeira é genérico e não representa as 3 portas do modelo. Revisão 04: substituído modelo genérico por representação dedicada RM905 com ações de abertura individuais e interior ilustrativo. Manual Midea rev.04 maio 2026; detalhes internos não cotados são aproximações. Revisão 05: ilha de 150×75 cm com tampo Branco Itaúnas, bancada de apoio sem cooktop/cuba, estrutura recuada 30 cm para pernas, 3 banquetas compactas voltadas para sala de jantar, todos os volumes dentro da cozinha. Posicionamento provisório z155..230 cm e banquetas z233..271 cm. Verificar ergonomia/circulação real e suportes do balanço de pedra. Revisão 06: ilha alterada de 150×75 para 180×90 cm, recuada para z175 (115 cm de circulação até bancada da pia), x150 (90 cm da bancada esquerda), três banquetas compactas, acabamento MDF branco fechado nas laterais, micro-ondas Fischer Infinity Touch 25 L embutido como MOCKUP e torre de tomadas retrátil ilustrativa. Chaminé obrigatória do Fischer sob tampo de granito precisa de aprovação técnica antes de fabricar a marcenaria.",
+  "revisao": "07",
+  "obs": "Bancada em L limitada à cozinha 450×330 cm. Parede dos fundos 450 cm; lateral esquerda do z=60 até z=330 cm, evitando sobreposição física no canto. A divisão invisível com a sala de jantar em z=330 cm deve ser respeitada. Moldura de madeira na janela J6 com peitoril 100 e topo 210 cm. Proposta inicial sem cuba/cooktop ou eletros, a definir em etapa posterior. Revisão 02: ambas as bancadas de pia receberam base visual em Branco Itaúnas no lugar dos pés de madeira. Cuba, torneira, cooktop e demais itens serão definidos na próxima etapa. Revisão 03: Midea RM905 no canto direito da parede dos fundos, com folgas propostas de 25 cm à direita, 10 cm à esquerda e 7,5 cm atrás. Bancada dos fundos reduzida a 331,5 cm para não invadir o vão. As portas da RM905 abrem até ~130 graus; verificar gabarito real antes da marcenaria. Render 3D de geladeira é genérico e não representa as 3 portas do modelo. Revisão 04: substituído modelo genérico por representação dedicada RM905 com ações de abertura individuais e interior ilustrativo. Manual Midea rev.04 maio 2026; detalhes internos não cotados são aproximações. Revisão 05: ilha de 150×75 cm com tampo Branco Itaúnas, bancada de apoio sem cooktop/cuba, estrutura recuada 30 cm para pernas, 3 banquetas compactas voltadas para sala de jantar, todos os volumes dentro da cozinha. Posicionamento provisório z155..230 cm e banquetas z233..271 cm. Verificar ergonomia/circulação real e suportes do balanço de pedra. Revisão 06: ilha alterada de 150×75 para 180×90 cm, recuada para z175 (115 cm de circulação até bancada da pia), x150 (90 cm da bancada esquerda), três banquetas compactas, acabamento MDF branco fechado nas laterais, micro-ondas Fischer Infinity Touch 25 L embutido como MOCKUP e torre de tomadas retrátil ilustrativa. Chaminé obrigatória do Fischer sob tampo de granito precisa de aprovação técnica antes de fabricar a marcenaria. Revisão 07: micro-ondas retirado da parte baixa da ilha e representado na parte superior de módulo suspenso na parede esquerda. Armário superior lateral usa porta articulada, não de correr. Laterais da ilha fechadas em MDF branco do piso ao tampo em toda profundidade 90 cm, sem vazios laterais. Micro e marcenaria são propostas técnicas preliminares, não nicho de execução homologado.",
   "pecas": [
     {
       "id": "COZ-BANCADA-FUNDOS",
@@ -125,7 +125,7 @@
     {
       "id": "COZ-ILHA-APOIO",
       "tipo": "ilha-gravacao",
-      "nome": "Ilha de gravação 180 × 90 · Itaúnas · Fischer Infinity 25L",
+      "nome": "Ilha para gravações 180×90 · 3 banquetas · MDF integral",
       "daEsquerda": 150,
       "dosFundos": 175,
       "frentePara": "frente",
@@ -148,22 +148,7 @@
         }
       ],
       "status": "proposta",
-      "obs": "Estudo de ilha para vídeos de receitas: x150..330, z175..265, tamanho 180×90, totalmente dentro da cozinha. Corredor da bancada dos fundos: 115 cm (até frente da bancada de profundidade 60); lateral esquerda 90 cm; direita 120 cm; até divisa jantar 65 cm. Três banquetas compactas do lado do jantar, recuo de 30 cm para pernas. Laterais do MDF vão até piso, sem pernas vazadas. Micro-ondas Fischer Infinity Touch Grill 25L preto REPRESENTADO VISUALMENTE, dimensões externas 59,5×39×38,2, nicho projetado conforme manual: vão 56,5×36,5 cm, profundidade 55 cm, módulo mínimo 60 cm. ATENÇÃO: chaminé superior obrigatória inviabiliza embutimento convencional sob granito inteiriço; NÃO EXECUTAR até validar com Fischer rota independente de exaustão/alternativa de instalação. Torre de tomadas retrátil é apenas mockup não energizado. Banquetas recolhidas dentro da cozinha; passagem por trás durante uso se dá pela sala de jantar integrada.",
-      "microondas": {
-        "marca": "Fischer",
-        "modelo": "Infinity Touch 25L Grill preto",
-        "largura": 59.5,
-        "altura": 39,
-        "profundidade": 38.2,
-        "potenciaW": 1400,
-        "nicho": {
-          "larguraMinimaExterna": 60,
-          "vaoLargura": 56.5,
-          "vaoAltura": 36.5,
-          "profundidade": 55
-        },
-        "ventilacao": "SAÍDA SUPERIOR OBRIGATÓRIA. Não executar sob tampo fechado sem solução aprovada pelo fabricante."
-      },
+      "obs": "Ilha de gravação 180×90, tampo Itaúnas; MDF branco até o piso em AMBAS as laterais por toda a profundidade de 90 cm; miolo recuado 30 cm para pernas; duas portas de abrir na frente voltada à cozinha; 3 banquetas. Torre de tomadas retrátil ilustrativa, elétrica a definir. O micro-ondas saiu da base e foi levado para módulo superior na parede esquerda. Circulação 115 cm até bancada dos fundos, 90 cm até bancada esquerda, 120 cm à direita; medidas provisórias.",
       "torreTomadas": {
         "tipo": "retratil",
         "posicao": "canto direito do lado cozinha",
@@ -218,6 +203,27 @@
       "estofado": "tecido-cru",
       "status": "proposta",
       "obs": "Banqueta compacta sem braços 42×38 e altura 63 cm, direcionada à ilha e à sala de jantar. Recolhida z268..306, portanto 24 cm da linha invisível z330. Ao sentar, a circulação precisa utilizar a área integrada da sala de jantar; conferir ergonomia e interferências."
+    },
+    {
+      "id": "COZ-MODULO-SUP-FISCHER",
+      "tipo": "modulo-alto-fischer",
+      "nome": "Armário superior parede esquerda com micro-ondas Fischer Infinity 25L Grill",
+      "parede": "esquerda",
+      "dosFundos": 100,
+      "largura": 140,
+      "profundidade": 55,
+      "altura": 76,
+      "doPiso": 145,
+      "status": "proposta",
+      "microondas": {
+        "marca": "Fischer",
+        "modelo": "Infinity Touch Grill 25 L preto",
+        "largura": 59.5,
+        "altura": 39,
+        "profundidade": 38.2,
+        "potenciaW": 1400
+      },
+      "obs": "Proposta de módulo alto na parede esquerda: extensão de 140 cm ao longo da parede, z100..240, profundidade55 cm, base a 145 cm e topo 221 cm. Micro-ondas visual de 59,5×39×38,2 no módulo de 66 cm + armário lateral com PORTA DE ABRIR. MANTER somente como estudo: fabricante exige exaustão superior; confirmar nicho, folgas, ventilação, altura ergonômica, tomada adequada e posição real das saídas antes da marcenaria. Evitar conflito com equipamentos da bancada esquerda."
     }
   ]
 }
