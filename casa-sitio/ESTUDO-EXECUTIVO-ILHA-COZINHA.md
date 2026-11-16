@@ -10,7 +10,7 @@
 - Folgas nominais fechadas: **115 cm** até bancada dos fundos, **90 cm** até bancada esquerda, **120 cm** até parede direita; **65 cm** entre borda da ilha e limite cozinha/jantar.
 - Banquetas: três (42 cm de largura cada) na face voltada à sala de jantar. Atenção: circulação por trás das pessoas sentadas não cabe nos 65 cm livres até a linha divisória; usar a continuidade da sala de jantar.
 - Base da ilha: MDF branco, **laterais integrais por toda profundidade e até o piso**. Marcenaria central recuada **30 cm** do lado das banquetas; balanço da pedra e pontos de apoio precisam de dimensionamento estrutural.
-- Tampo útil para gravação: granito contínuo sem grelha; apenas a torre retrátil ocupa área. Grelha lateral esquerda de 30 × 12 cm é estudo NÃO homologado.
+- Tampo útil para gravação: granito contínuo sem grelha; a torre retrátil fica disfarçada por tampa de Branco Itaúnas quando fechada, preservando a estética do tampo. Grelha lateral esquerda de 30 × 12 cm é estudo NÃO homologado.
 
 ## Elevação da face voltada à cozinha
 - **Esquerda, superior:** Fischer Infinity Touch Grill 25 L, face preta, abertura frontal ilustrativa na altura **39–78 cm do piso**, a revisar por ergonomia e manual.
@@ -28,7 +28,7 @@
 ## Revisão 11 — Torre de tomadas e diretrizes para o futuro projeto elétrico (16/11/2026)
 - **Decisão de layout:** transferir a torre do extremo direito para o tampo **à direita do Fischer**, concentrando a zona de eletrodomésticos, tomadas e manutenção da ilha. O restante do tampo fica mais livre para gravação de receitas.
 - **Coordenadas da maquete da ilha** (180 × 90 cm, olhando da cozinha): canto da base retrátil em **x=79 cm** a partir da lateral esquerda, **z=12 cm** a partir da borda voltada à cozinha; centro aproximado **x=83,25 cm**, **z=16,25 cm**. Base visual 8,5 × 8,5 cm, não é o recorte homologado. Distância nominal do início da torre ao divisor do módulo esquerdo x≈70 cm: 9 cm; o centro fica a 13,25 cm desse divisor.
-- **Não executar o corte no granito** antes de escolher a torre exata e validar ferragem, espaço de retração abaixo do tampo, passagem do cabo, separação dos volumes do micro e interferências com armários, portas e duto de ventilação.
+- **Não executar o corte no granito** antes de escolher a torre exata, verificar se aceita tampa de granito e calcular peso/espessura da pedra e validar ferragem, espaço de retração abaixo do tampo, passagem do cabo, separação dos volumes do micro e interferências com armários, portas e duto de ventilação.
 - **Fischer:** alimentação de uso exclusivo, tomada aterrada e acessível para manutenção, tensão e corrente confirmadas na etiqueta e manual; **não ligar o Fischer na torre**.
 - **Torre retrátil:** alimentação própria adequada ao conjunto de tomadas e aparelhos previstos; circuito, capacidade total, bitolas, proteções e posição de caixa a dimensionar com eletricista/projetista conforme NBR 5410, sem prescrever ligação definitiva agora.
 - **Entrada elétrica da ilha:** planejar eletrodutos pelo piso/contrapiso até a ilha, com posição compatibilizada com a obra e evitando perfuração de impermeabilização/elementos estruturais sem orientação técnica; prever acesso de manutenção ao ponto elétrico, sem emendas inacessíveis.
