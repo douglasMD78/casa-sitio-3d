@@ -1,7 +1,7 @@
 {
   "comodo": "lavanderia",
-  "revisao": "09",
-  "obs": "Revisão 08: tanquinho deslocado 20 cm para esquerda ao longo da parede dos fundos, aumentando separação lateral da lavadora de 18,5 para 38,5 cm sem invadir a porta P8. Tomadas dos equipamentos reposicionadas atrás de seus corpos, fora de vista direta, mas acessíveis por deslocamento dos aparelhos; confirmar alcance dos cabos, proteção DR ≤30mA, aterramento e circuitos com profissional. Lavadora LED13: saída 90–140 cm segundo guia Electrolux, conexão água 3/4 pol. Tanquinho Suggar: saída baixa de gravidade a confirmar manual exato. Pontos hidráulicos e ralo seguem propostas, não projeto executivo. Revisão 09: tampo alterado para material exclusivo granito-branco-itaunas; garagem do robô e armário de limpeza em estudo, ainda não posicionados para não prejudicar circulação.",
+  "revisao": "10",
+  "obs": "Revisão 08: tanquinho deslocado 20 cm para esquerda ao longo da parede dos fundos, aumentando separação lateral da lavadora de 18,5 para 38,5 cm sem invadir a porta P8. Tomadas dos equipamentos reposicionadas atrás de seus corpos, fora de vista direta, mas acessíveis por deslocamento dos aparelhos; confirmar alcance dos cabos, proteção DR ≤30mA, aterramento e circuitos com profissional. Lavadora LED13: saída 90–140 cm segundo guia Electrolux, conexão água 3/4 pol. Tanquinho Suggar: saída baixa de gravidade a confirmar manual exato. Pontos hidráulicos e ralo seguem propostas, não projeto executivo. Revisão 09: tampo alterado para material exclusivo granito-branco-itaunas; garagem do robô e armário de limpeza em estudo, ainda não posicionados para não prejudicar circulação. Revisão 10: armazenamento compacto proposto na parede esquerda, com armário de vassouras e módulo superior; garagem de robô reservada como requisito de marcenaria sob gabinete da pia, pendente de modelo e verificação do sifão (não representada como volume independente para evitar sobreposição).",
   "pecas": [
     {
       "id": "LAV-TANQUE",
@@ -13,7 +13,7 @@
       "profundidade": 60,
       "altura": 90,
       "status": "proposta",
-      "obs": "Bancada de 100 × 60 cm, cuba inox de 50 × 44 cm centralizada, margens nominais de 25 cm nas extremidades e 8 cm na frente e atrás (antes de bordas, recortes e torneira). Gabinete branco de duas portas e granito Branco Itaúnas polido (aproximação procedural na maquete). Conferir recorte do fabricante e estrutura do tampo.",
+      "obs": "Bancada de 100 × 60 cm, cuba inox de 50 × 44 cm centralizada, margens nominais de 25 cm nas extremidades e 8 cm na frente e atrás (antes de bordas, recortes e torneira). Gabinete branco de duas portas e granito Branco Itaúnas polido (aproximação procedural na maquete). Conferir recorte do fabricante e estrutura do tampo. Reservar nicho de acesso frontal para base de robô aspirador na marcenaria inferior, apenas se compatível com cuba, sifão e base do modelo adquirido; não cortar gabinete sem medidas finais.",
       "base": "portas",
       "corpo": "mdf-branco",
       "frente": "mdf-branco",
@@ -252,6 +252,56 @@
       "profundidade": 18,
       "altura": 22,
       "status": "proposta"
+    },
+    {
+      "id": "LAV-ARM-LIMPEZA",
+      "tipo": "armario",
+      "nome": "Armário vertical raso para vassouras, rodo e mop",
+      "parede": "esquerda",
+      "dosFundos": 102,
+      "largura": 45,
+      "profundidade": 30,
+      "altura": 220,
+      "corpo": "mdf-branco",
+      "frente": "mdf-branco",
+      "base": "portas",
+      "modulos": [
+        {
+          "tipo": "portas",
+          "portas": 1
+        }
+      ],
+      "status": "proposta",
+      "obs": "Armário de 45×30×220 cm na parede esquerda, fora do giro nominal da porta dos fundos. Suportes internos verticais para vassouras/mop e bandeja lavável; confirmar interferências com vão da despensa e movimentação das portas."
+    },
+    {
+      "id": "LAV-CABIDEIRO",
+      "tipo": "prateleiras",
+      "nome": "Prateleira alta para cestos e produtos de limpeza",
+      "parede": "esquerda",
+      "dosFundos": 103,
+      "largura": 45,
+      "profundidade": 27,
+      "niveis": [
+        236
+      ],
+      "chapa": 3,
+      "material": "madeira-clara",
+      "decor": "caixas",
+      "status": "proposta",
+      "obs": "Prateleira superior acima do armário, com cestos leves; conferir alcance e fixação."
+    },
+    {
+      "id": "LAV-CESTO-ROUPAS",
+      "tipo": "cesto",
+      "nome": "Cesto removível de roupas",
+      "daEsquerda": 100,
+      "dosFundos": 115,
+      "largura": 35,
+      "profundidade": 28,
+      "altura": 45,
+      "status": "proposta",
+      "obs": "Cesto removível; conferir posição real de circulação e portas, pode ser guardado no armário se necessário."
     }
   ]
 }
