@@ -1,7 +1,7 @@
 {
   "comodo": "cozinha",
-  "revisao": "04",
-  "obs": "Bancada em L limitada à cozinha 450×330 cm. Parede dos fundos 450 cm; lateral esquerda do z=60 até z=330 cm, evitando sobreposição física no canto. A divisão invisível com a sala de jantar em z=330 cm deve ser respeitada. Moldura de madeira na janela J6 com peitoril 100 e topo 210 cm. Proposta inicial sem cuba/cooktop ou eletros, a definir em etapa posterior. Revisão 02: ambas as bancadas de pia receberam base visual em Branco Itaúnas no lugar dos pés de madeira. Cuba, torneira, cooktop e demais itens serão definidos na próxima etapa. Revisão 03: Midea RM905 no canto direito da parede dos fundos, com folgas propostas de 25 cm à direita, 10 cm à esquerda e 7,5 cm atrás. Bancada dos fundos reduzida a 331,5 cm para não invadir o vão. As portas da RM905 abrem até ~130 graus; verificar gabarito real antes da marcenaria. Render 3D de geladeira é genérico e não representa as 3 portas do modelo. Revisão 04: substituído modelo genérico por representação dedicada RM905 com ações de abertura individuais e interior ilustrativo. Manual Midea rev.04 maio 2026; detalhes internos não cotados são aproximações.",
+  "revisao": "05",
+  "obs": "Bancada em L limitada à cozinha 450×330 cm. Parede dos fundos 450 cm; lateral esquerda do z=60 até z=330 cm, evitando sobreposição física no canto. A divisão invisível com a sala de jantar em z=330 cm deve ser respeitada. Moldura de madeira na janela J6 com peitoril 100 e topo 210 cm. Proposta inicial sem cuba/cooktop ou eletros, a definir em etapa posterior. Revisão 02: ambas as bancadas de pia receberam base visual em Branco Itaúnas no lugar dos pés de madeira. Cuba, torneira, cooktop e demais itens serão definidos na próxima etapa. Revisão 03: Midea RM905 no canto direito da parede dos fundos, com folgas propostas de 25 cm à direita, 10 cm à esquerda e 7,5 cm atrás. Bancada dos fundos reduzida a 331,5 cm para não invadir o vão. As portas da RM905 abrem até ~130 graus; verificar gabarito real antes da marcenaria. Render 3D de geladeira é genérico e não representa as 3 portas do modelo. Revisão 04: substituído modelo genérico por representação dedicada RM905 com ações de abertura individuais e interior ilustrativo. Manual Midea rev.04 maio 2026; detalhes internos não cotados são aproximações. Revisão 05: ilha de 150×75 cm com tampo Branco Itaúnas, bancada de apoio sem cooktop/cuba, estrutura recuada 30 cm para pernas, 3 banquetas compactas voltadas para sala de jantar, todos os volumes dentro da cozinha. Posicionamento provisório z155..230 cm e banquetas z233..271 cm. Verificar ergonomia/circulação real e suportes do balanço de pedra.",
   "pecas": [
     {
       "id": "COZ-BANCADA-FUNDOS",
@@ -121,6 +121,82 @@
       "material": "eletro-inox",
       "status": "proposta",
       "obs": "Modelo 3D dedicado à Midea MDRM905MMD463, com 83,5×71,8×184,5 cm, duas portas superiores articuladas individualmente até 130°, porta inferior do freezer e cinco gavetas internas interativas. Layout interno e dobradiça inferior são aproximações ilustrativas, sem cotas de fábrica. Vão atual: 25 cm à direita, 10 cm à esquerda, 7,5 cm atrás. Conferir no visualizador possíveis interferências ao abrir 130° e retirar gavetas; a posição não está homologada para marcenaria."
+    },
+    {
+      "id": "COZ-ILHA-APOIO",
+      "tipo": "bancada",
+      "nome": "Ilha de apoio Branco Itaúnas — 150 × 75 cm",
+      "daEsquerda": 165,
+      "dosFundos": 155,
+      "frentePara": "frente",
+      "largura": 150,
+      "profundidade": 75,
+      "altura": 90,
+      "tampo": {
+        "material": "granito-branco-itaunas",
+        "espessura": 2
+      },
+      "corpo": "mdf-branco",
+      "frente": "mdf-branco",
+      "base": "portas",
+      "puxador": "nenhum",
+      "recuo": 30,
+      "modulos": [
+        {
+          "tipo": "portas",
+          "portas": 2
+        }
+      ],
+      "status": "proposta",
+      "obs": "Ilha de apoio dentro da cozinha, x165..315 e z155..230 cm, paralela à janela. Lado das banquetas voltado para a sala de jantar, com balanço frontal de 30 cm; marcenaria útil de 45 cm de profundidade voltada para a cozinha, destinada futuramente a eletroportáteis e armazenamento. Sem cuba nem cooktop. Tampo de granito Branco Itaúnas de 2 cm: dimensionar suportes para balanço de 30 cm com marmoraria. Vão entre ilha e bancada dos fundos ≈95 cm; bancada esquerda ≈105 cm; parede direita ≈135 cm. Fim da ilha z230, limite cozinha/jantar z330. Modelagem de armários provisória."
+    },
+    {
+      "id": "COZ-BANQUETA-1",
+      "tipo": "banqueta",
+      "nome": "Banqueta compacta 1 de 3 — lado sala de jantar",
+      "daEsquerda": 170,
+      "dosFundos": 233,
+      "frentePara": "fundos",
+      "largura": 40,
+      "profundidade": 38,
+      "altura": 63,
+      "material": "madeira-mel",
+      "estrutura": "madeira-mel",
+      "estofado": "tecido-cru",
+      "status": "proposta",
+      "obs": "Assento compacto sem braços, 40×38 cm, 63 cm de altura; voltado para a ilha. Banquetas recolhidas x170..210, 220..260, 270..310 e z233..271, sem cruzar a linha invisível z330. Espaço nominal da borda das banquetas ao limite da cozinha: 59 cm, não é corredor confortável durante uso. Permitir ajuste da posição ao sentar."
+    },
+    {
+      "id": "COZ-BANQUETA-2",
+      "tipo": "banqueta",
+      "nome": "Banqueta compacta 2 de 3 — lado sala de jantar",
+      "daEsquerda": 220,
+      "dosFundos": 233,
+      "frentePara": "fundos",
+      "largura": 40,
+      "profundidade": 38,
+      "altura": 63,
+      "material": "madeira-mel",
+      "estrutura": "madeira-mel",
+      "estofado": "tecido-cru",
+      "status": "proposta",
+      "obs": "Assento compacto sem braços, 40×38 cm, 63 cm de altura; voltado para a ilha. Banquetas recolhidas x170..210, 220..260, 270..310 e z233..271, sem cruzar a linha invisível z330. Espaço nominal da borda das banquetas ao limite da cozinha: 59 cm, não é corredor confortável durante uso. Permitir ajuste da posição ao sentar."
+    },
+    {
+      "id": "COZ-BANQUETA-3",
+      "tipo": "banqueta",
+      "nome": "Banqueta compacta 3 de 3 — lado sala de jantar",
+      "daEsquerda": 270,
+      "dosFundos": 233,
+      "frentePara": "fundos",
+      "largura": 40,
+      "profundidade": 38,
+      "altura": 63,
+      "material": "madeira-mel",
+      "estrutura": "madeira-mel",
+      "estofado": "tecido-cru",
+      "status": "proposta",
+      "obs": "Assento compacto sem braços, 40×38 cm, 63 cm de altura; voltado para a ilha. Banquetas recolhidas x170..210, 220..260, 270..310 e z233..271, sem cruzar a linha invisível z330. Espaço nominal da borda das banquetas ao limite da cozinha: 59 cm, não é corredor confortável durante uso. Permitir ajuste da posição ao sentar."
     }
   ]
 }
