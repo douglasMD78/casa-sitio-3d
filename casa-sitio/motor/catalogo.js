@@ -178,6 +178,63 @@ const ELETROS = {
   airfryer: [30, 36, 34, 'eletro-preto'], fogao: [76, 62, 90, 'eletro-inox'], 'lava-roupas': [60, 65, 100, 'eletro-branco'], 'lavadora-frontal': [60, 65.9, 85, 'eletro-branco'], 'lavadora-superior': [59.1, 66.5, 105.2, 'eletro-branco'], tanquinho: [58, 58, 95, 'eletro-branco'], 'tanquinho-suggar-eco20': [55, 59.5, 95.7, 'eletro-branco'], 'lava-loucas': [60, 60, 82, 'eletro-inox'],
   cafeteira: [22, 30, 34, 'eletro-preto'], liquidificador: [18, 18, 40, 'eletro-preto'], generico: [40, 35, 30, 'eletro-inox'],
 };
+// Modelo dedicado Midea RM905 (MDRM905MMD463), dimensões externas e portas conforme manual 2026 rev.04.
+// Prateleiras/gavetas internas ilustrativas: o fabricante não fornece todas as cotas internas.
+// As ações são independentes: duas portas superiores, porta inferior do freezer e três gavetas.
+reg('geladeira-midea-rm905', { rotulo: 'Midea RM905 Multidoor 672 L', dimensoes: () => ({ largura: 83.5, profundidade: 71.8, altura: 184.5 }),
+  material: () => 'eletro-inox',
+  construir(M, p, { L, P, A }) {
+    const cor = p.material || 'eletro-inox', frente = P - 2.5, meio = L / 2;
+    const pisoFreezer = A * 0.35, topo = A - 2.5, base = 2.5;
+    // Corpo e cavidades: fundo, laterais, teto e divisão entre freezer e refrigerador.
+    M.cx(0, L, 0, A, 0, 4, cor);
+    M.cx(0, 3.5, 2, A, 4, frente, cor); M.cx(L - 3.5, L, 2, A, 4, frente, cor);
+    M.cx(3.5, L - 3.5, A - 4, A, 4, frente, 'mdf-branco');
+    M.cx(3.5, L - 3.5, pisoFreezer - 2, pisoFreezer + 2, 4, frente, 'mdf-branco');
+    M.cx(3.5, L - 3.5, 2, 5, 4, frente, 'mdf-branco');
+    // Interior branco, prateleiras de vidro e gavetas.
+    M.cx(4, L - 4, pisoFreezer + 3, topo, 4.1, 5, 'mdf-branco', { sombra: false });
+    for (const y of [pisoFreezer + 40, pisoFreezer + 60, pisoFreezer + 80, pisoFreezer + 100]) {
+      if (y < topo - 4) M.cx(4.5, L - 4.5, y, y + 0.7, 7, frente - 4, 'vidro', { sombra: false });
+    }
+    // Iluminação interna estilizada.
+    M.cx(35, 48, topo - 5, topo - 3.5, 6, 7, '#fff8dc', { sombra: false });
+    // Gavetas refrigeradas: duas hortifruti e uma grande (curso ilustrativo).
+    const gav = (nome, x0, x1, y, h, z0, z1, curso) => {
+      const g = M.sub(0, 0, 0);
+      g.cx(x0, x1, y, y + h, z0, z1, 'vidro', { sombra: false });
+      g.cx(x0, x1, y, y + 2, z1 - 1, z1 + 0.6, 'mdf-branco', { sombra: false });
+      M.acao(nome, v => { g.g.position.z = curso * v; }, false);
+    };
+    gav('RM905 · gaveta de legumes esquerda', 5, meio - 1, pisoFreezer + 5, 16, 8, frente - 4, 23);
+    gav('RM905 · gaveta de legumes direita', meio + 1, L - 5, pisoFreezer + 5, 16, 8, frente - 4, 23);
+    gav('RM905 · gaveta extra fria', 5, L - 5, pisoFreezer + 23, 12, 8, frente - 4, 22);
+    // Freezer: duas gavetas internas independentes, com ice maker esquemático.
+    gav('RM905 · gaveta freezer superior', 5, L - 5, 31, 18, 8, frente - 4, 23);
+    gav('RM905 · gaveta freezer inferior', 5, L - 5, 7, 20, 8, frente - 4, 23);
+    M.cx(10, 29, 50, 54, 13, 29, 'mdf-branco', { sombra: false });
+    // Portas superiores francesas: 2 folhas ~41 cm, dobradiças externas.
+    const porta = (nome, lado, x0, x1, y0, y1, angulo, prateleiras) => {
+      const eixo = lado === 'esquerda' ? 1.4 : L - 1.4;
+      const g = M.sub(eixo, 0, frente);
+      g.cx(x0 - eixo, x1 - eixo, y0, y1, 0, 3.4, cor);
+      g.cx(x0 - eixo + 1, x1 - eixo - 1, y0 + 1, y1 - 1, 3.4, 3.8, '#9fa7ac', { sombra: false });
+      if (prateleiras) {
+        for (const y of [y0 + 22, y0 + 48, y0 + 76]) if (y < y1 - 6) {
+          g.cx(Math.min(x0 - eixo + 5, x1 - eixo - 5), Math.max(x0 - eixo + 5, x1 - eixo - 5), y, y + 2, -10, 0, 'mdf-branco', { sombra: false });
+        }
+      }
+      M.acao(nome, v => { g.g.rotation.y = (lado === 'esquerda' ? -1 : 1) * angulo * Math.PI / 180 * v; }, false);
+    };
+    porta('RM905 · porta superior esquerda', 'esquerda', 1.4, meio - 0.5, pisoFreezer + 1.5, topo, 130, true);
+    porta('RM905 · porta superior direita', 'direita', meio + 0.5, L - 1.4, pisoFreezer + 1.5, topo, 130, true);
+    // Porta inferior única do freezer, abertura lateral ilustrativa; verificar lado da dobradiça na unidade.
+    porta('RM905 · porta inferior do freezer', 'esquerda', 1.4, L - 1.4, base, pisoFreezer - 0.7, 110, false);
+    M.cx(3, L - 3, 0.5, 2.5, P - 12, P - 3, '#42484d');
+    M.cx(meio - 3, meio + 3, pisoFreezer + 17, pisoFreezer + 32, P + 1, P + 1.3, '#656c72', { sombra: false });
+  }
+});
+
 reg('eletro', { rotulo: 'Eletrodoméstico',
   dimensoes(p) { const e = ELETROS[p.modelo] || ELETROS.generico; return { largura: e[0], profundidade: e[1], altura: e[2] }; },
   material: p => p.material || (ELETROS[p.modelo] || ELETROS.generico)[3],
