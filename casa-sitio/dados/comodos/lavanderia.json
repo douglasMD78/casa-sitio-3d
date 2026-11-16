@@ -1,7 +1,7 @@
 {
   "comodo": "lavanderia",
-  "revisao": "12",
-  "obs": "Revisão 08: tanquinho deslocado 20 cm para esquerda ao longo da parede dos fundos, aumentando separação lateral da lavadora de 18,5 para 38,5 cm sem invadir a porta P8. Tomadas dos equipamentos reposicionadas atrás de seus corpos, fora de vista direta, mas acessíveis por deslocamento dos aparelhos; confirmar alcance dos cabos, proteção DR ≤30mA, aterramento e circuitos com profissional. Lavadora LED13: saída 90–140 cm segundo guia Electrolux, conexão água 3/4 pol. Tanquinho Suggar: saída baixa de gravidade a confirmar manual exato. Pontos hidráulicos e ralo seguem propostas, não projeto executivo. Revisão 09: tampo alterado para material exclusivo granito-branco-itaunas; garagem do robô e armário de limpeza em estudo, ainda não posicionados para não prejudicar circulação. Revisão 10: armazenamento compacto proposto na parede esquerda, com armário de vassouras e módulo superior; garagem de robô reservada como requisito de marcenaria sob gabinete da pia, pendente de modelo e verificação do sifão (não representada como volume independente para evitar sobreposição). Revisão 12: cesto de roupas removido; garagem do robô na parede frontal e demais itens preservados.",
+  "revisao": "13",
+  "obs": "Revisão 08: tanquinho deslocado 20 cm para esquerda ao longo da parede dos fundos, aumentando separação lateral da lavadora de 18,5 para 38,5 cm sem invadir a porta P8. Tomadas dos equipamentos reposicionadas atrás de seus corpos, fora de vista direta, mas acessíveis por deslocamento dos aparelhos; confirmar alcance dos cabos, proteção DR ≤30mA, aterramento e circuitos com profissional. Lavadora LED13: saída 90–140 cm segundo guia Electrolux, conexão água 3/4 pol. Tanquinho Suggar: saída baixa de gravidade a confirmar manual exato. Pontos hidráulicos e ralo seguem propostas, não projeto executivo. Revisão 09: tampo alterado para material exclusivo granito-branco-itaunas; garagem do robô e armário de limpeza em estudo, ainda não posicionados para não prejudicar circulação. Revisão 10: armazenamento compacto proposto na parede esquerda, com armário de vassouras e módulo superior; garagem de robô reservada como requisito de marcenaria sob gabinete da pia, pendente de modelo e verificação do sifão (não representada como volume independente para evitar sobreposição). Revisão 12: cesto de roupas removido; garagem do robô na parede frontal e demais itens preservados. Revisão 13: setorização elétrica/hidráulica, sem simulação de tubulações embutidas. Todas as posições são pontos terminais preliminares. Antes de furar, consultar levantamento as-built com fotos e cotas, localizar redes com detector apropriado e confirmar no local. Não cruzar tubulação hidráulica e elétrica na mesma caixa ou conduíte. Não posicionar conexões sob risco de gotejamento. Robô de base simples conforme imagem enviada, modelo exato não identificado.",
   "pecas": [
     {
       "id": "LAV-TANQUE",
@@ -92,8 +92,8 @@
       "parede": "direita",
       "doPiso": 120,
       "status": "proposta",
-      "obs": "Registro exclusivo acessível na lateral da lavadora, conexão 3/4 pol conforme guia Electrolux LED13; afastado da tomada oculta.",
-      "dosFundos": 89
+      "obs": "Alimentação 3/4 pol na lateral posterior da lavadora, setor hidráulico z91, registro acessível sem desmontar alvenaria; não instalar acima da tomada elétrica z49. Confirmar folga e mangueira.",
+      "dosFundos": 91
     },
     {
       "id": "LAV-ESG-MAQ",
@@ -103,19 +103,19 @@
       "doPiso": 100,
       "diametro": 50,
       "status": "proposta",
-      "obs": "Saída da Electrolux LED13 proposta a 100 cm, dentro da faixa de 90 a 140 cm informada no guia oficial. Revisar se trocar para modelo frontal; garantir conexão adequada e sifonagem.",
-      "dosFundos": 77
+      "obs": "Deságue Ø50 atrás/próximo à lavadora, em setor hidráulico z80, altura 100 cm provisória para LED13 (90–140 cm). Sifonagem, fixação e acesso técnico a validar. Não passar tubulação de água/esgoto pela faixa elétrica z49.",
+      "dosFundos": 80
     },
     {
       "id": "LAV-TOM-MAQ",
       "tipo": "tomada",
       "nome": "Tomada dedicada à lavadora",
       "parede": "direita",
-      "doPiso": 65,
+      "doPiso": 60,
       "amperagem": 20,
       "status": "proposta",
-      "obs": "Tomada 2P+T oculta pela lavadora, mas acessível deslocando o equipamento; não instalar em zona de vazamento ou atrás da conexão hidráulica. Verificar comprimento do cabo, tensão, corrente, aterramento e DR ≤30 mA. A corrente real define 10/20A e circuito individual quando >10A.",
-      "dosFundos": 58
+      "obs": "Tomada 2P+T oculta atrás da lavadora (z49), fora da faixa do esgoto z77 e água z89; prever acesso deslocando máquina, sem contato com mangueiras. Circuito e corrente conforme placa/manual; aterramento e DR 30 mA. Trajeto do eletroduto em faixa vertical própria a partir do teto, sem derivações horizontais ocultas sem registro.",
+      "dosFundos": 49
     },
     {
       "id": "LAV-AGUA-TANQUINHO",
@@ -124,8 +124,8 @@
       "parede": "fundos",
       "doPiso": 120,
       "status": "proposta",
-      "obs": "Registro de alimentação do Suggar lateral ao equipamento e acessível, sem contato com tomada. Conexão final segundo manual do modelo adquirido.",
-      "daEsquerda": 185
+      "obs": "Ponto de água na parede dos fundos, x184, lateral ao tanquinho para registro acessível; não posicionar acima da tomada x136. Checar alcance da mangueira e conexão no modelo exato.",
+      "daEsquerda": 184
     },
     {
       "id": "LAV-ESG-TANQUINHO",
@@ -135,8 +135,8 @@
       "doPiso": 15,
       "diametro": 50,
       "status": "proposta",
-      "obs": "Ponto baixo de deságue DN50 proposto para saída por gravidade do Suggar; conferir posição e altura máxima admitida no manual exato. Não interligar diretamente ao ralo de piso sem solução sifonada adequada.",
-      "daEsquerda": 170
+      "obs": "Saída baixa proposta para deságue por gravidade, x169; não sobrepor à tomada x136. Conferir altura e traçado admissíveis no manual Suggar LE2021/LE2022 antes de executar; garantir sifonagem/ventilação e acesso.",
+      "daEsquerda": 169
     },
     {
       "id": "LAV-TOM-TANQUINHO",
@@ -146,8 +146,8 @@
       "doPiso": 65,
       "amperagem": 10,
       "status": "proposta",
-      "obs": "Tomada 2P+T oculta atrás do tanquinho, acessível por deslocamento do aparelho; não diretamente abaixo da entrada de água. Confirmar comprimento do cabo, tensão, corrente e proteção DR ≤30 mA. Não usar extensões.",
-      "daEsquerda": 152
+      "obs": "Tomada 2P+T oculta atrás do tanquinho, x136, em faixa elétrica independente; manter distante dos terminais hidráulicos x170/185. Acesso por deslocamento do equipamento, cabo sem extensão, DR 30 mA e aterramento. Confirmar posição real da saída de água do aparelho.",
+      "daEsquerda": 136
     },
     {
       "id": "LAV-TOM-APOIO",
@@ -294,15 +294,56 @@
     {
       "id": "LAV-GARAGEM-ROBO",
       "tipo": "caixa",
-      "nome": "Garagem do robô aspirador — módulo provisório",
+      "nome": "Garagem do robô aspirador com base simples — referência da foto",
       "parede": "frente",
       "daEsquerda": 127,
       "largura": 50,
       "profundidade": 38,
-      "altura": 42,
+      "altura": 25,
       "material": "madeira-clara",
       "status": "proposta",
-      "obs": "Módulo indicativo 50×38×42 cm na parede da frente, à direita do vão V3 (20–120 cm). É um volume provisório: o tipo caixa ainda não representa a abertura frontal necessária para entrada do robô. Definir largura, profundidade, altura, ventilação, alimentação elétrica e base de manutenção conforme robô adquirido. Não bloquear a saída do robô."
+      "obs": "Nicho baixo indicativo na parede da frente, x=127..177 cm, para robô de base simples de dois contatos (como foto enviada). Modelo exato e dimensões não confirmados. A representação 3D atual é um bloco fechado, NÃO simula a abertura frontal; na execução, frente totalmente aberta, piso nivelado, ventilação, retirada da base e folga de manobra conforme manual. Tomada separada, atrás da base, ligada a circuito de tomadas, nunca à saída comandada do interruptor."
+    },
+    {
+      "id": "LAV-TOM-ROBO",
+      "tipo": "tomada",
+      "nome": "Tomada exclusiva de posição para base do robô aspirador",
+      "parede": "frente",
+      "daEsquerda": 163,
+      "doPiso": 35,
+      "amperagem": 10,
+      "status": "proposta",
+      "obs": "Tomada 2P+T de uso geral para base simples do robô, atrás da garagem na parede da frente, alinhada à região do interruptor (x145) mas em eletroduto separado e alimentação permanente, NÃO comandada pelo interruptor. Confirmar tensão e potência do carregador; tomada e plugue devem ficar acessíveis retirando a base, protegidos de água e longe de produtos de limpeza. Evitar perfuração na faixa vertical de x163 e conferir posição final com a marcenaria."
     }
-  ]
+  ],
+  "instalacoes": {
+    "status": "estudo_preliminar",
+    "nota": "Não é projeto executivo nem representa tubulações embutidas no 3D. Cotas em centímetros a partir das faces internas e piso acabado; rotas finais devem ser desenhadas e fotografadas antes de fechar paredes.",
+    "eletrica": {
+      "protecao": "DR de alta sensibilidade 30 mA na lavanderia, aterramento, circuitos e disjuntores dimensionados por profissional conforme NBR 5410 e placas dos equipamentos.",
+      "percursos_propostos": [
+        "Parede direita: faixa elétrica vertical na posição z≈49 cm até tomada da lavadora; faixa hidráulica na região z≈80–91 cm. Evitar cruzamentos e furos nas faixas registradas.",
+        "Parede dos fundos: faixa elétrica vertical x≈136 cm para tanquinho; faixa hidráulica x≈169–184 cm.",
+        "Parede frontal: tomada do robô x≈163 cm, h≈35 cm, alimentada permanentemente por circuito de tomadas, com derivação em caixa acessível; não aproveitar o retorno de iluminação do interruptor x145 cm."
+      ],
+      "observacoes": [
+        "Nenhuma tomada deve ficar abaixo de conexão hidráulica sujeita a vazamento.",
+        "Tomadas atrás de aparelhos devem permitir desconexão sem demolição, mediante afastamento seguro do equipamento.",
+        "Fotografar e cotar os eletrodutos antes de rebocar; não furar sem inspeção."
+      ]
+    },
+    "hidraulica": {
+      "percursos_propostos": [
+        "Agrupar água e esgoto da lavadora na zona posterior direita z≈80–91 cm, separados da tomada em z≈49 cm.",
+        "Tanquinho: água x≈184 cm e esgoto baixo x≈169 cm, afastados da tomada x≈136 cm.",
+        "Pia: manter água e esgoto dentro do gabinete, com registro e sifão inspecionáveis."
+      ],
+      "observacoes": [
+        "Manter registros acessíveis, juntas inspecionáveis e tubulação protegida.",
+        "Validar alturas de deságue por modelo, especialmente tanquinho por gravidade.",
+        "Verificar inclinações, ventilação, sifonagem e impermeabilização com responsável técnico."
+      ]
+    },
+    "seguranca_furos": "Desenhar planta de pontos e rotas com medidas de referência, produzir fotos antes do reboco, usar detector adequado antes de furar e conferir no local. Não confiar apenas no modelo 3D."
+  }
 }
