@@ -1,7 +1,7 @@
 {
   "comodo": "cozinha",
-  "revisao": "01",
-  "obs": "Bancada em L limitada à cozinha 450×330 cm. Parede dos fundos 450 cm; lateral esquerda do z=60 até z=330 cm, evitando sobreposição física no canto. A divisão invisível com a sala de jantar em z=330 cm deve ser respeitada. Moldura de madeira na janela J6 com peitoril 100 e topo 210 cm. Proposta inicial sem cuba/cooktop ou eletros, a definir em etapa posterior.",
+  "revisao": "02",
+  "obs": "Bancada em L limitada à cozinha 450×330 cm. Parede dos fundos 450 cm; lateral esquerda do z=60 até z=330 cm, evitando sobreposição física no canto. A divisão invisível com a sala de jantar em z=330 cm deve ser respeitada. Moldura de madeira na janela J6 com peitoril 100 e topo 210 cm. Proposta inicial sem cuba/cooktop ou eletros, a definir em etapa posterior. Revisão 02: ambas as bancadas de pia receberam base visual em Branco Itaúnas no lugar dos pés de madeira. Cuba, torneira, cooktop e demais itens serão definidos na próxima etapa.",
   "pecas": [
     {
       "id": "COZ-BANCADA-FUNDOS",
@@ -12,13 +12,22 @@
       "largura": 450,
       "profundidade": 60,
       "altura": 90,
-      "base": "aberta",
+      "base": "portas",
       "tampo": {
         "material": "granito-branco-itaunas",
         "espessura": 2
       },
       "status": "proposta",
-      "obs": "Bancada contínua de 450×60 cm, sem cuba e cooktop por enquanto; respeitar janela J6 e pontos futuros."
+      "obs": "Bancada contínua de 450×60 cm, sem cuba e cooktop por enquanto; respeitar janela J6 e pontos futuros. Revisão 02: removidos os pés de madeira; base revestida visualmente com granito Branco Itaúnas, como estrutura provisória de bancada de pia. Não representa detalhamento estrutural ou portas definitivas.",
+      "corpo": "granito-branco-itaunas",
+      "frente": "granito-branco-itaunas",
+      "puxador": "nenhum",
+      "modulos": [
+        {
+          "tipo": "portas",
+          "portas": 2
+        }
+      ]
     },
     {
       "id": "COZ-BANCADA-ESQUERDA",
@@ -29,13 +38,22 @@
       "largura": 270,
       "profundidade": 60,
       "altura": 90,
-      "base": "aberta",
+      "base": "portas",
       "tampo": {
         "material": "granito-branco-itaunas",
         "espessura": 2
       },
       "status": "proposta",
-      "obs": "Trecho de 270 cm após o canto ocupado pela bancada dos fundos (60 cm); termina em z=330 cm, sem invadir a sala de jantar. Comprimento total de bancada ao longo da parede esquerda, incluindo o canto, 330 cm."
+      "obs": "Trecho de 270 cm após o canto ocupado pela bancada dos fundos (60 cm); termina em z=330 cm, sem invadir a sala de jantar. Comprimento total de bancada ao longo da parede esquerda, incluindo o canto, 330 cm. Revisão 02: removidos os pés de madeira; base revestida visualmente com granito Branco Itaúnas, como estrutura provisória de bancada de pia. Não representa detalhamento estrutural ou portas definitivas.",
+      "corpo": "granito-branco-itaunas",
+      "frente": "granito-branco-itaunas",
+      "puxador": "nenhum",
+      "modulos": [
+        {
+          "tipo": "portas",
+          "portas": 2
+        }
+      ]
     },
     {
       "id": "COZ-J6-MOLDURA-ESQ",
