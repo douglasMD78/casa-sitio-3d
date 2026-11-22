@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Casa do Sítio — Vista elétrica da parede da TV</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#eef2ee;color:#22362c;font:15px/1.5 system-ui,-apple-system,Segoe UI,sans-serif}.wrap{max-width:1180px;margin:auto;padding:18px}header{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}h1{margin:4px 0;font-size:clamp(21px,3vw,30px)}.panel{background:white;border:1px solid #d6e2d9;border-radius:14px;padding:15px;margin-top:14px}a{color:#186951}.hint{color:#5c6d63;font-size:13px}.ctrl{display:flex;flex-wrap:wrap;gap:10px;align-items:end;padding:8px 0 14px}.ctrl label{font-size:13px;font-weight:700;display:flex;flex-direction:column;gap:4px}.ctrl select,.ctrl button{border:1px solid #adbeaf;border-radius:8px;padding:9px;background:white;font-size:14px}.ctrl button[aria-pressed=true]{background:#246c52;color:#fff}.drawing{width:100%;border-radius:8px;overflow:hidden;background:#faf9f6}.drawing svg{width:100%;height:auto;display:block}.drawing text{font:14px system-ui}.drawing .tag{font-weight:800;fill:#2d3f36}.drawing.arch #pipes,.drawing.arch #boxes{opacity:.15}.drawing.arch #tv,.drawing.arch #rack{opacity:1}.drawing.tech #tv,.drawing.tech #rack{opacity:.17}.drawing.tech #pipes,.drawing.tech #boxes{opacity:1}.cols{display:grid;grid-template-columns:1fr 1fr;gap:14px}table{border-collapse:collapse;width:100%;font-size:13px}th,td{padding:8px;border-bottom:1px solid #e1e7e2;text-align:left}th{background:#f6f8f6}ul{padding-left:19px}li{margin:6px 0}@media(max-width:720px){.cols{grid-template-columns:1fr}.wrap{padding:10px}}@media print{body{background:white}.ctrl,header a{display:none}.panel{break-inside:avoid;border:1px solid #999}}
+</style></head><body><main class="wrap">
+<header><div><small>CASA DO SÍTIO · ESTAR · ESTUDO REV. 08</small><h1>Vista elétrica da parede da TV</h1><span class="hint">Padrão brasileiro: caixas 4×2/4×4 · NBR 5410 / NBR 14136 / NBR 16264</span></div><a href="./#estar">Voltar à maquete 3D</a></header>
+<section class="panel">
+<div class="ctrl">
+<button id="tech" aria-pressed="true">Raio-X elétrico</button><button id="arch" aria-pressed="false">Com TV e rack</button>
+<label>TV<select id="tvSize"><option>55</option><option>65</option><option selected>75</option><option>85</option><option>98</option></select></label>
+<label>Borda inferior<select id="tvBase"><option>70</option><option>80</option></select></label>
+<label>Rack<select id="rackH"><option>35</option><option selected>49</option><option>55</option></select></label>
+<button onclick="print()">Imprimir</button>
+</div>
+<div class="drawing tech" id="drawing"><svg viewBox="0 0 970 660" role="img" aria-label="Vista frontal cotada com duas caixas 4x4 de tomadas no rack, uma 4x2 de tomadas TV, duas caixas de dados, eletrodutos separados e tubo PVC nominal 50 mm para sinal">
+<rect x="80" y="60" width="800" height="540" fill="#f5f3ec" stroke="#7b8e82" stroke-width="3"/><path d="M80 600H880" stroke="#786c60" stroke-width="3"/>
+<rect x="80" y="222" width="60" height="378" fill="#f4e8d6" stroke="#b5a18a" stroke-dasharray="6 5"/><text x="109" y="385" transform="rotate(-90 109 385)" text-anchor="middle" fill="#75604c">P2 — 30 cm dentro do estar</text>
+<text x="480" y="41" font-size="19" text-anchor="middle" font-weight="700">Parede direita · 400 × 300 cm</text><text x="80" y="630">Fundos / jantar</text><text x="880" y="630" text-anchor="end">Frente / entrada</text><text x="480" y="649" text-anchor="middle">400 cm</text>
+<g id="pipes" fill="none" stroke-linecap="round" stroke-linejoin="round">
+<path d="M690 60V322H520V387" stroke="#ce742a" stroke-width="5" stroke-dasharray="10 6"/>
+<path d="M690 322V490H340V530M690 490H540V530" stroke="#ce742a" stroke-width="5" stroke-dasharray="10 6"/>
+<path d="M370 393V445H440V530" stroke="#138b6b" stroke-width="12"/><path d="M370 393V445H440V530" stroke="#bce3d6" stroke-width="2"/>
+<path d="M180 60V365H370V395M180 365V511H440V530" stroke="#2e7fb0" stroke-width="4" stroke-dasharray="5 7"/>
+</g>
+<g id="boxes">
+<rect x="505" y="381" width="32" height="22" rx="2" fill="#ffdfbf" stroke="#be752e" stroke-width="3"/><circle cx="515" cy="392" r="4" fill="#be752e"/><circle cx="527" cy="392" r="4" fill="#be752e"/>
+<text class="tag" x="548" y="381">E-01</text><text x="548" y="397">4×2 · dupla · 115 cm</text>
+<rect x="323" y="521" width="34" height="30" rx="2" fill="#ffdfbf" stroke="#be752e" stroke-width="3"/>
+<rect x="523" y="521" width="34" height="30" rx="2" fill="#ffdfbf" stroke="#be752e" stroke-width="3"/>
+<g fill="#be752e"><circle cx="334" cy="530" r="3"/><circle cx="347" cy="530" r="3"/><circle cx="334" cy="543" r="3"/><circle cx="347" cy="543" r="3"/><circle cx="534" cy="530" r="3"/><circle cx="547" cy="530" r="3"/><circle cx="534" cy="543" r="3"/><circle cx="547" cy="543" r="3"/></g>
+<text class="tag" x="310" y="516" text-anchor="end">E-02</text><text class="tag" x="570" y="517">E-03</text>
+<rect x="352" y="380" width="36" height="29" rx="2" fill="#d8f0e7" stroke="#0c906a" stroke-width="3"/>
+<rect x="422" y="521" width="36" height="30" rx="2" fill="#d8f0e7" stroke="#0c906a" stroke-width="3"/>
+<text class="tag" x="346" y="380" text-anchor="end">S-01</text><text class="tag" x="440" y="570" text-anchor="middle">S-02</text>
+<text x="155" y="453" font-weight="700" fill="#08785d">PVC nominal 50 mm</text><text x="155" y="472" fill="#08785d">HDMI / passagem de sinal</text>
+<text x="707" y="177" fill="#9a5a25">Energia</text><text x="197" y="108" fill="#2f78a8">Rede Cat6</text>
+</g>
+<g id="tv"><rect id="tvRect" x="273" y="300" width="334" height="169" rx="4" fill="#313c45" stroke="#4e5b60" stroke-width="4"/><text id="tvText" x="440" y="390" font-size="25" font-weight="700" fill="white" text-anchor="middle">TV 75”</text></g>
+<g id="rack"><rect id="rackRect" x="250" y="512" width="380" height="88" rx="4" fill="#b99a75" stroke="#947550" stroke-width="3"/><text id="rackText" x="440" y="565" text-anchor="middle" fill="#3d3327" font-weight="700">Rack 49 cm</text></g>
+</svg></div>
+<p class="hint">Cotas do eixo das caixas em centímetros desde o <b>piso acabado</b>. Traçado dos dutos <b>esquemático</b>; o ponto de entrada da energia e da rede ainda será compatibilizado com a obra. As duas linhas não devem ser instaladas no mesmo eletroduto.</p>
+</section>
+<div class="cols"><section class="panel"><h2>Caixas convencionais</h2><table><tr><th>ID</th><th>Material</th><th>Posição (z/h)</th></tr><tr><td>E-01</td><td>4×2 · 2 tomadas 2P+T 10 A</td><td>220 / 115 cm</td></tr><tr><td>E-02</td><td>4×4 · 4 tomadas 2P+T 10 A</td><td>130 / 35 cm</td></tr><tr><td>E-03</td><td>4×4 · 4 tomadas 2P+T 10 A</td><td>230 / 35 cm</td></tr><tr><td>S-01</td><td>4×4 · dados/HDMI</td><td>145 / 115 cm</td></tr><tr><td>S-02</td><td>4×4 · dados/HDMI</td><td>180 / 35 cm</td></tr></table><p class="hint">z = distância desde o limite de fundos da sala; h = altura do eixo da caixa. Posições de dados ainda são reserva técnica, não pontos lançados no JSON.</p></section>
+<section class="panel"><h2>Detalhes de execução</h2><ul><li><b>Energia:</b> 10 tomadas em três caixas. Circuito de tomadas conforme NBR 5410, com PE e proteção dimensionada.</li><li><b>HDMI:</b> duto PVC nominal 50 mm só para sinal, com curvas suaves e conectores testados antes do reboco.</li><li><b>Rede:</b> eletroduto separado para Cat6, vindo do futuro distribuidor residencial.</li><li><b>Caixas:</b> acessíveis atrás da TV removível e por abertura de manutenção do rack.</li><li><b>Alturas:</b> 35 e 115 cm são escolhas do estudo, não alturas obrigatórias da NBR.</li><li><b>Segurança:</b> não passar cabo de força flexível da TV por dentro do duto de HDMI.</li></ul></section></div>
+<section class="panel"><h2>Status</h2><p><b>Pré-projeto para conferência.</b> A revisão 08 simplificou a parede, mas ainda é necessário validar fisicamente: espessura/estrutura de 15 cm, TV e suporte VESA, rack real, circuitos e demanda, origem de internet, proteção e acesso para manutenção. <b>Não cortar pilares/cintas ou rasgar a parede antes dessa conferência.</b></p><p class="hint">Normas de referência: ABNT NBR 5410 (instalações de baixa tensão), NBR 14136 (plugues/tomadas padrão brasileiro) e NBR 16264 (cabeamento estruturado residencial). Estas normas não obrigam a usar exatamente caixas 4×2 ou 4×4 nem a instalar tomadas nas alturas propostas.</p></section>
+</main><script>
+(function(){var data={55:[122,69],65:[145,82],75:[167,94],85:[189,107],98:[218,123]},g=function(id){return document.getElementById(id)};
+function mode(x){g('drawing').className='drawing '+x;g('tech').setAttribute('aria-pressed',x==='tech');g('arch').setAttribute('aria-pressed',x==='arch')}
+function draw(){var n=g('tvSize').value,wh=data[n],base=Number(g('tvBase').value),rh=Number(g('rackH').value),w=wh[0]*2,h=wh[1]*1.8;var a=g('tvRect');a.setAttribute('x',440-w/2);a.setAttribute('y',600-(base+wh[1])*1.8);a.setAttribute('width',w);a.setAttribute('height',h);g('tvText').setAttribute('y',600-(base+wh[1]/2)*1.8+5);g('tvText').textContent='TV '+n+'”';g('rackRect').setAttribute('y',600-rh*1.8);g('rackRect').setAttribute('height',rh*1.8);g('rackText').setAttribute('y',600-rh*.9+6);g('rackText').textContent='Rack '+rh+' cm'}
+g('tech').onclick=function(){mode('tech')};g('arch').onclick=function(){mode('arch')};['tvSize','tvBase','rackH'].forEach(function(id){g(id).onchange=draw});draw();
+})();
+</script></body></html>
