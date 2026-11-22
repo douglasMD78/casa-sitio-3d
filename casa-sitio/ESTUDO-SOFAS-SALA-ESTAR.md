@@ -1,4 +1,7 @@
-# Sala de estar — biblioteca de quatro sofás de medidas comerciais
+# Sala de estar — biblioteca de quatro sofás de medidas comerciais (histórico rev05)
+
+> **Atualização da revisão 07 (22/11/2026):** este arquivo preserva o histórico dos quatro sofás comerciais originais. O 3D agora compara **oito cenários de sofá** (4 comerciais + 4 gabaritos de estilos) e TVs de 55–98 polegadas. As novas posições e folgas, inclusive a porta principal, estão em [ESTUDO-COMPATIBILIDADE-TV-SOFA.md](ESTUDO-COMPATIBILIDADE-TV-SOFA.md). As instruções de controles e posição abaixo documentam a revisão anterior, NÃO a configuração atual.
+
 
 **Versão de estudo:** 22/11/2026. Não é especificação para compra, aprovação de ergonomia nem projeto elétrico executivo.
 
