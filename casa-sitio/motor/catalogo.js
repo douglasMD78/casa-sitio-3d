@@ -552,64 +552,67 @@ reg('sofa', { rotulo: 'Sofá', dimensoes: () => ({ largura: 220, profundidade: 9
 // A representação é VOLUMÉTRICA, não reproduz costuras/estruturas patenteadas.
 // Duas ações binárias combinadas oferecem QUATRO modelos sem sobreposição.
 // Um terceiro controle muda a chaise de extremidade, quando houver opção do fabricante.
-reg('sofa-biblioteca-4', {
-  rotulo: 'Biblioteca de sofás · quatro modelos comerciais',
-  dimensoes: () => ({ largura: 260, profundidade: 164, altura: 105 }),
+// Comparador de sofás da sala integrada: quatro MODELOS COMERCIAIS
+// + quatro GABARITOS DIMENSIONAIS de estilos adicionais, sem marca associada.
+// Todos compartilham um envelope de 260cm (eixo longo) x 190cm (prof. max).
+// A escolha afeta apenas o volume visível, nunca pontos elétricos.
+reg('sofa-biblioteca-8', {
+  rotulo: 'Comparador de sofás · oito cenários',
+  dimensoes: () => ({ largura: 260, profundidade: 190, altura: 105 }),
   material: p => p.material || 'tecido-cru',
-  construir(M, p, { L, P }) {
-    const estofado = p.material || 'tecido-cru';
-    const base = M.sub(0,0,0);
-    // Modelo, largura do eixo longo, profundidade total, altura e profundidade do assento comum.
-    // Profundidade comum não indicada pelo fabricante? Apenas estimativa da representação visual.
-    const tipos = [
-      { nome:'Pierri 240x160', largura:240, profundidade:160, altura:82, comum:85 },
-      { nome:'Mercúrio 250x153', largura:250, profundidade:153, altura:89, comum:90 },
-      { nome:'Canyon 250x160', largura:250, profundidade:160, altura:105, comum:100 },
-      { nome:'Beny 260x164', largura:260, profundidade:164, altura:82, comum:80 }
+  construir(M,p,{L}) {
+    const tecido=p.material || 'tecido-cru';
+    const tipos=[
+      {nome:'Pierri 240x160',l:240,p:160,h:82,c:85,f:'chaise'},
+      {nome:'Mercúrio 250x153',l:250,p:153,h:89,c:90,f:'chaise'},
+      {nome:'Canyon 250x160',l:250,p:160,h:105,c:100,f:'chaise'},
+      {nome:'Beny 260x164',l:260,p:164,h:82,c:80,f:'chaise'},
+      {nome:'Reto compacto 220x95',l:220,p:95,h:85,c:95,f:'reto'},
+      {nome:'Reto grande 260x105',l:260,p:105,h:85,c:105,f:'reto'},
+      {nome:'Retrátil ABERTO 250x180',l:250,p:180,h:100,c:100,f:'retratil'},
+      {nome:'Canto em L 260x190',l:260,p:190,h:85,c:95,f:'canto'}
     ];
-    const grupos = [];
-    let bit1 = !!p.selecaoBit1, bit2 = !!p.selecaoBit2, lado = !!p.chaiseNaPontaFundos;
-    for (const t of tipos) {
-      // Todos os sofás têm o mesmo centro ao longo da sala (alinhamento TV).
-      const m = base.sub((L-t.largura)/2,0,0);
-      grupos.push(m);
-      const prof=t.profundidade, comum=t.comum, h=t.altura, seat=43, cb=19, br=14;
-      // Superfície principal e encosto contínuo visto pelo jantar.
-      m.cx(0,t.largura,5,seat-5,0,comum,estofado);
-      m.cx(0,t.largura,seat-5,h,0,cb,estofado);
-      m.cx(0,br,seat-5,seat+15,cb,comum,estofado);
-      m.cx(t.largura-br,t.largura,seat-5,seat+15,cb,comum,estofado);
-      const n=3,w=(t.largura-br*2)/n;
+    const elementos=[];
+    let a=!!p.selecaoBit1,b=!!p.selecaoBit2,c=!!p.selecaoBit3,lado=!!p.chaiseNaPontaFundos;
+    for(const t of tipos){
+      const m=M.sub((L-t.l)/2,0,0);elementos.push(m);
+      const ass=43,br=14,enc=19;
+      m.cx(0,t.l,5,ass-5,0,t.c,tecido);
+      m.cx(0,t.l,ass-5,t.h,0,enc,tecido);
+      m.cx(0,br,ass-5,ass+15,enc,t.c,tecido);
+      m.cx(t.l-br,t.l,ass-5,ass+15,enc,t.c,tecido);
+      const n=3,div=(t.l-2*br)/n;
       for(let i=0;i<n;i++){
-        m.cx(br+i*w+1,br+(i+1)*w-1,seat-4,seat,cb,comum-1,estofado);
-        m.cx(br+i*w+2,br+(i+1)*w-2,seat,h-7,cb,cb+15,estofado);
+        m.cx(br+i*div+1,br+(i+1)*div-1,ass-4,ass,enc,t.c-1,tecido);
+        m.cx(br+i*div+2,br+(i+1)*div-2,ass,t.h-7,enc,enc+15,tecido);
       }
-      for(const ax of [6,t.largura-11]) for(const dz of [8,comum-12])
-        m.cx(ax,ax+5,0,5,dz,dz+5,'madeira-mel');
-      // Chaise: trecho junto a UMA extremidade do eixo longo, projeta em direção à TV.
-      // Os dois grupos são mutuamente exclusivos.
-      const chaises=[];
-      for(const noFundo of [false,true]){
-        const ch=m.sub();
-        const x0=noFundo?0:t.largura-78;
-        const x1=x0+78;
-        ch.cx(x0,x1,5,seat,comum-1,prof,estofado);
-        ch.cx(x0+4,x1-4,seat,seat+4,comum+3,prof-5,estofado);
-        ch.cx(x0,x0+br,seat-5,seat+12,comum,prof-5,estofado);
-        chaises.push(ch);
+      // O mecanismo retrátil aberto ocupa toda a largura; o fechado fica no corpo base.
+      if(t.f==='retratil') {
+        m.cx(br,t.l-br,5,ass,t.c-1,t.p,tecido);
+        m.cx(br+2,t.l-br-2,ass,ass+3,t.c,t.p-4,tecido);
       }
-      m.g.userData.chaiseGrupos=chaises.map(x=>x.g);
+      const ch=[];
+      if(t.f==='chaise'||t.f==='canto')for(const noFundo of [false,true]){
+        const mod=m.sub(),ext=t.f==='canto'?90:78;
+        const x0=noFundo?0:t.l-ext,x1=x0+ext;
+        mod.cx(x0,x1,5,ass,t.c-1,t.p,tecido);
+        mod.cx(x0+4,x1-4,ass,ass+3,t.c,t.p-4,tecido);
+        mod.cx(x0,x0+br,ass-5,ass+12,t.c,t.p-5,tecido);
+        ch.push(mod.g);
+      }
+      m.g.userData.chaiseGrupos=ch;
     }
     const atualizar=()=>{
-      const ativo=(bit1?1:0)+(bit2?2:0);
-      grupos.forEach((m,i)=>{
+      const ativo=(a?1:0)+(b?2:0)+(c?4:0);
+      elementos.forEach((m,i)=>{
         m.g.visible=i===ativo;
-        m.g.userData.chaiseGrupos.forEach((g,k)=>{g.visible=(k===(lado?1:0));});
+        m.g.userData.chaiseGrupos.forEach((ch,k)=>{ch.visible=k===(lado?1:0);});
       });
     };
-    M.acao('Sofás: opção 1 ↔ 2 / 3 ↔ 4',v=>{bit1=v>=0.5;atualizar();},bit1);
-    M.acao('Sofás: grupo 1–2 ↔ grupo 3–4',v=>{bit2=v>=0.5;atualizar();},bit2);
-    M.acao('Chaise na ponta frente ↔ fundos (estudo)',v=>{lado=v>=0.5;atualizar();},lado);
+    M.acao('Sofá bit 1: 1/3/5/7 ↔ 2/4/6/8',v=>{a=v>=0.5;atualizar();},a);
+    M.acao('Sofá bit 2: grupo (1–2/5–6) ↔ (3–4/7–8)',v=>{b=v>=0.5;atualizar();},b);
+    M.acao('Sofá bit 3: comerciais ↔ outros estilos',v=>{c=v>=0.5;atualizar();},c);
+    M.acao('Chaise: ponta da frente ↔ fundos (se aplicável)',v=>{lado=v>=0.5;atualizar();},lado);
     atualizar();
   }
 });
@@ -617,6 +620,43 @@ reg('sofa-biblioteca-4', {
 reg('tapete', { rotulo: 'Tapete', camada: 'decoracao', colide: false, dimensoes: () => ({ largura: 200, profundidade: 150, altura: 1 }), material: p => p.material || 'tecido-cru',
   construir(M, p, { L, P }) { M.cx(0, L, 0, 1, 0, P, p.material || 'tecido-cru', { sombra: false }); } });
 
+// TVs de 55, 65, 75, 85 e 98 polegadas, 16:9, SEM reproduzir marcas.
+// Borda inferior inicial = doPiso (70cm), permitindo rack de 35–55cm.
+// O segundo modo eleva a tela em 10cm para comparar rack mais alto.
+// Ponto de energia NÃO se move com a televisão: continua como proposta separada.
+reg('tv-comparador', {
+  rotulo: 'Comparador de TV · 55/65/75/85/98 polegadas',
+  fixacao:'parede', colide:false,
+  dimensoes: () => ({largura:220,profundidade:5,altura:126,doPiso:70}),
+  material: () => 'vidro-escuro',
+  construir(M,p,{L}){
+    const telas=[
+      {pol:55,w:122,h:69},
+      {pol:65,w:145,h:82},
+      {pol:75,w:167,h:94},
+      {pol:85,w:189,h:107},
+      {pol:98,w:218,h:123}
+    ];
+    const suporte=M.sub(0,0,0),grupos=[];
+    for(const t of telas){
+      const g=suporte.sub((L-t.w)/2,0,0);grupos.push(g);
+      g.cx(0,t.w,0,t.h,0,4.5,'metal-preto',{sombra:false});
+      g.cx(1,t.w-1,1,t.h-1,4.5,4.8,'vidro-escuro',{sombra:false});
+      g.cx(t.w*0.37,t.w*0.63,t.h*0.3,t.h*0.7,0,1.3,'metal-preto',{sombra:false});
+    }
+    let b1=!!p.tvBit1,b2=!!p.tvBit2,grande=!!p.tv98,elevada=!!p.tvElevada;
+    const atualizar=()=>{
+      const i=grande?4:(b1?1:0)+(b2?2:0);
+      grupos.forEach((g,k)=>{g.g.visible=k===i;});
+      suporte.g.position.y=elevada?10:0;
+    };
+    M.acao('TV: 55↔65 / 75↔85',v=>{b1=v>=0.5;atualizar();},b1);
+    M.acao('TV: grupo 55/65 ↔ 75/85',v=>{b2=v>=0.5;atualizar();},b2);
+    M.acao('TV: modo extra 98 polegadas',v=>{grande=v>=0.5;atualizar();},grande);
+    M.acao('TV: borda inferior 70 ↔ 80 cm',v=>{elevada=v>=0.5;atualizar();},elevada);
+    atualizar();
+  }
+});
 reg('tv', { rotulo: 'TV', fixacao: 'parede', colide: false, dimensoes: () => ({ largura: 123, profundidade: 5, altura: 71, doPiso: 105 }), material: () => 'vidro-escuro',
   construir(M, p, { L, P, A }) { M.cx(0, L, 0, A, 1.5, P, 'metal-preto'); M.cx(1, L - 1, 1, A - 1, P, P + 0.2, 'vidro-escuro', { sombra: false }); M.cx(L * 0.3, L * 0.7, A * 0.3, A * 0.7, 0, 1.5, 'metal-preto'); } });
 reg('espelho', { rotulo: 'Espelho', fixacao: 'parede', camada: 'decoracao', colide: false, dimensoes: () => ({ largura: 60, profundidade: 2, altura: 80, doPiso: 100 }), material: () => 'espelho',
