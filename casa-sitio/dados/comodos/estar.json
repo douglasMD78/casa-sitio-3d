@@ -1,7 +1,7 @@
 {
   "comodo": "estar",
-  "revisao": "07",
-  "obs": "REVISÃO 07 — estudo de COMPATIBILIDADE COM MÚLTIPLOS SOFÁS/TVs, sem fixar equipamentos. 8 volumes alternáveis de sofá (4 modelos comerciais anteriores e 4 cenários de estilos comerciais usuais com dimensões hipotéticas claramente identificadas); 5 opções de TV 55,65,75,85,98 polegadas, base 70/80cm ajustável. TV na parede direita centro z180 desde os fundos; sofá de comprimento 220–260cm ocupando z35..295 e x105..295 no envelope, eixo z165 e afastamento nominal 15cm antes do setor de giro da P1. As portas P1/P2, rack de estudo e TODAS as 12 tomadas do pré-projeto elétrico continuam como estavam; nenhum condutor/circuito alterado. Rack e tela ainda não escolhidos; a comparação não substitui detalhamento VESA, rota de abertura P1, carga da TV 98, ergonomia e circulação com modelos reais. QD no interior do corredor, posição exata não informada.",
+  "revisao": "08",
+  "obs": "REVISÃO 08 — pedido por solução RESIDENCIAL BRASILEIRA TRADICIONAL: três caixas de energia (1 caixa 4×2 superior com 2 tomadas padrão NBR 14136 2P+T 10 A a z220,h115; 2 caixas 4×4 inferiores com 4 tomadas cada a z130 e z230,h35). Total DEZ tomadas em TRÊS conjuntos, redução dos 12 pontos provisórios da rev06. Cotas de estudo desde piso acabado, não cotas obrigatórias NBR. Caixas de sinal e tubo PVC DN50 (somente sinal) documentados em PROJETO-PAREDE-TV-PADRAO-BR.md e vista-eletrica-tv.html; NÃO são objetos físicos no 3D nesta revisão. Energia, rede Cat6 e HDMI em infraestruturas separadas. Dados exatos do QD no corredor, suportes VESA, racks e carga ainda por confirmar; projeto não executável sem validação de responsável técnico. Comparadores de sofá e TV e portas preservados.",
   "pecas": [
     {
       "id": "EST-SOFA-BIBLIOTECA",
@@ -64,82 +64,52 @@
       "obs": "Rack de estudo 190×35×49cm, eixo longitudinal na parede direita z180. Nenhum modelo comercial está aprovado; altura e comprimento podem mudar. Compatibilidade em estudo com TV de 55 a 98 polegadas, com borda inferior da TV a 70 ou 80cm. Tomadas baixas permanecem como pré-projeto, não executar antes de confirmar acesso, ventilação e espaço dos conectores. O sofá pode ficar com eixo z165 por conta do giro da P1; desalinhamento longitudinal de 15cm é acomodável visualmente, e deve ser testado no 3D."
     },
     {
-      "id": "EST-TV-ENERGIA-E",
+      "id": "EST-TV-TUG-01",
       "tipo": "tomada",
-      "nome": "TV — duas tomadas 10 A, posição superior esquerda",
-      "parede": "direita",
-      "dosFundos": 140,
-      "doPiso": 115,
-      "modulos": 2,
-      "amperagem": 10,
-      "uso": "TV e reserva de alimentação, lado fundos",
-      "status": "proposta",
-      "obs": "Pré-projeto: eixo da placa em z=140cm, 115cm do piso acabado. Tomadas 2P+T com terra, alimentadas por circuito de tomadas dimensionado. Uma das duas alternativas de alimentação da TV. Somente fechar posição após suporte VESA e área de fixação definidos; manter acessibilidade removendo TV. Eletroduto de energia separado dos de sinal. Não passar cabo de alimentação removível do aparelho embutido na parede."
-    },
-    {
-      "id": "EST-TV-ENERGIA-D",
-      "tipo": "tomada",
-      "nome": "TV — duas tomadas 10 A, posição superior direita",
+      "nome": "TV · caixa 4×2 com 2 tomadas 2P+T 10A",
       "parede": "direita",
       "dosFundos": 220,
       "doPiso": 115,
       "modulos": 2,
       "amperagem": 10,
-      "uso": "TV e reserva de alimentação, lado frente",
+      "largura": 7.5,
+      "altura": 11.5,
+      "profundidade": 1.4,
       "status": "proposta",
-      "obs": "Pré-projeto: eixo da placa em z=220cm, 115cm do piso acabado, alternativa à posição de z140 conforme lado de saída do cabo da TV. Cota vertical/horizontal sujeita ao suporte VESA, fixação, largura da TV e interferência de estrutura. Não usar extensões ocultas na parede."
+      "uso": "alimentação TV + reserva",
+      "obs": "Eixo z=220cm desde fundos do estar, 115cm acima do piso ACABADO. Dois módulos 2P+T 10A em uma caixa brasileira 4×2 com placa compatível. Não é medida normativa de altura. Cota e orientação pendentes da TV real, lado do cabo de alimentação, suporte VESA e acessibilidade. Não levar cabo flexível de alimentação através de duto de sinal."
     },
     {
-      "id": "EST-RACK-ENERGIA-1",
-      "tipo": "tomada",
-      "nome": "Rack — tomadas 1 e 2",
+      "id": "EST-RACK-TUG-01",
+      "tipo": "tomada-quadrupla",
+      "nome": "Rack · caixa 4×4 quatro tomadas 2P+T 10A (A)",
       "parede": "direita",
-      "dosFundos": 135,
-      "doPiso": 30,
-      "modulos": 2,
+      "dosFundos": 130,
+      "doPiso": 35,
       "amperagem": 10,
-      "uso": "Consoles e acessórios multimídia",
+      "modulos": 4,
+      "largura": 12,
+      "altura": 12,
+      "profundidade": 1.5,
       "status": "proposta",
-      "obs": "Primeiro conjunto baixo de duas tomadas 2P+T. Cota provisória do eixo da placa 30cm do piso acabado. Tomadas acessíveis após retirada do rack/painel de inspeção; ajustar após altura e modo de fixação do rack definidos."
+      "uso": "videogame/som/streaming + reserva",
+      "obs": "Eixo z=130cm desde fundos do estar, h=35cm piso acabado. Placa 4×4 com 4 tomadas 2P+T 10A, linha modular comum. Caixa deve ficar acessível mediante abertura técnica/traseira removível do rack, não embutir plugues ou adaptadores contra a madeira. A altura é proposta, não exigência da NBR 5410."
     },
     {
-      "id": "EST-RACK-ENERGIA-2",
-      "tipo": "tomada",
-      "nome": "Rack — tomadas 3 e 4",
+      "id": "EST-RACK-TUG-02",
+      "tipo": "tomada-quadrupla",
+      "nome": "Rack · caixa 4×4 quatro tomadas 2P+T 10A (B)",
       "parede": "direita",
-      "dosFundos": 165,
-      "doPiso": 30,
-      "modulos": 2,
+      "dosFundos": 230,
+      "doPiso": 35,
       "amperagem": 10,
-      "uso": "Console, TV box e periféricos",
+      "modulos": 4,
+      "largura": 12,
+      "altura": 12,
+      "profundidade": 1.5,
       "status": "proposta",
-      "obs": "Segundo conjunto baixo de duas tomadas 2P+T. Cota provisória e localização revisável em painel de acesso técnico para futuros móveis."
-    },
-    {
-      "id": "EST-RACK-ENERGIA-3",
-      "tipo": "tomada",
-      "nome": "Rack — tomadas 5 e 6",
-      "parede": "direita",
-      "dosFundos": 195,
-      "doPiso": 30,
-      "modulos": 2,
-      "amperagem": 10,
-      "uso": "Som, soundbar ou receiver",
-      "status": "proposta",
-      "obs": "Terceiro conjunto baixo de duas tomadas 2P+T. Se houver receiver/amplificador de maior potência, confirmar consumo e circuito apropriado antes da execução."
-    },
-    {
-      "id": "EST-RACK-ENERGIA-4",
-      "tipo": "tomada",
-      "nome": "Rack — tomadas 7 e 8",
-      "parede": "direita",
-      "dosFundos": 225,
-      "doPiso": 30,
-      "modulos": 2,
-      "amperagem": 10,
-      "uso": "Rede local, switch, subwoofer ou reserva",
-      "status": "proposta",
-      "obs": "Quarto conjunto baixo de duas tomadas 2P+T. O roteador Wi-Fi principal não deve ser obrigatoriamente colocado no rack; rede preferencialmente centralizada em área de telecomunicações ventilada, com AP cabeado no teto conforme estudo da casa."
+      "uso": "amplificador/receptor/console/switch + reserva",
+      "obs": "Eixo z=230cm, h=35cm piso acabado. Placa 4×4 com 4 tomadas 2P+T 10A. Quatro tomadas na placa NÃO significam quatro circuitos nem autorizam 40 A de corrente: dimensionar circuito, proteção e simultaneidade segundo a carga prevista. Se equipamento usar plugue 20 A, rever ponto correspondente e circuito antes de instalar."
     }
   ]
 }
