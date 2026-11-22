@@ -48,3 +48,9 @@ Uma mesa de 160 × 85 cm, com cadeiras compactas 48 × 56 cm, melhora a situaç�
 - Estado inicial: **recolhidas**. Ao acionar, as seis cadeiras afastam **28 cm para fora** (duas em cada lateral e uma em cada cabeceira). A ação funciona com tampo oval ou retangular e nas orientações horizontal ou vertical.
 - A mesa permanece fixa; o afastamento é uma simulação de puxar cadeira, não representa necessariamente cadeira ocupada nem comprova circulação normativa.
 - A posição do lustre, interruptores e tomadas continua **pendente de aprovação do layout**.
+
+## Revisão 03 — correção ergonômica dos dois estados (substitui a revisão 02)
+- Problema identificado: as cadeiras já estavam quase fora do tampo em repouso e ainda se afastavam 28 cm, deixando vão exagerado.
+- **Recolhidas:** centros laterais z=±58 cm; cabeceiras x=±102 cm, relativos ao centro da mesa. Geometricamente, a projeção da cadeira de 56 cm avança aproximadamente **15–16 cm sob o tampo**, para efeito visual.
+- **Para sentar:** deslocamento de **16 cm** para fora; centros laterais z=±74 cm e cabeceiras x=±118 cm. Bordas das cadeiras ficam aproximadamente alinhadas às bordas do tampo, sem vazio desnecessário.
+- Válido para mesas oval e retangular, ambas orientações. Ajuste ilustrativo: confirmar uso real com cadeiras/modelos escolhidos, balanço do tampo, pernas e passagem de pessoas.
