@@ -443,6 +443,61 @@ reg('mesa', { rotulo: 'Mesa', dimensoes: () => ({ largura: 160, profundidade: 90
     else { for (const [x, z] of [[5, 5], [L - 11, 5], [5, P - 11], [L - 11, P - 11]]) M.cx(x, x + 6, 0, A - e, z, z + 6, me); M.cx(8, L - 8, A - e - 7, A - e, 7, 9.5, me, { sombra: false }); M.cx(8, L - 8, A - e - 7, A - e, P - 9.5, P - 7, me, { sombra: false }); }
   } });
 
+// Sala de jantar: DUAS ALTERNATIVAS no mesmo conjunto, sem mobiliário duplicado.
+// Ações do 3D: oval/retangular e horizontal/vertical, ambas com SEIS cadeiras.
+// Dimensões do tampo 180x90x77 cm, cadeira visual 48x56x88 cm.
+// A caixa declarada corresponde somente ao tampo: cadeiras ultrapassam-na.
+// Ver ESTUDO-MESAS-SALA-JANTAR.md antes de definir lustre/tomadas.
+reg('conjunto-jantar-duas-opcoes', {
+  rotulo: 'Jantar 6 lugares · oval/retangular · girar 90°',
+  dimensoes: () => ({ largura: 180, profundidade: 90, altura: 77 }),
+  material: p => p.material || 'madeira-mel',
+  construir(M, p, { L, P, A }) {
+    const madeira = p.material || 'madeira-mel', estofado = p.estofado || 'tecido-cru';
+    // Rotacionar em torno do centro geométrico preserva o posicionamento.
+    const conjunto = M.sub(L / 2, 0, P / 2);
+    const oval = conjunto.sub(), retangular = conjunto.sub();
+    // Mesa oval 180 x 90: cilindro achatado em elipse (escala x=2).
+    const elipse = oval.cil(0, 0, A - 4, 4, P / 2, madeira, { seg: 64 });
+    elipse.scale.x = L / P;
+    // Retangular igual em dimensões e altura.
+    retangular.cx(-L/2, L/2, A-4, A, -P/2, P/2, madeira);
+    // Apoios centrais mantêm cabeceiras com espaço para pernas.
+    for (const corpo of [oval, retangular]) {
+      corpo.cx(-10, 10, 4, A - 4, -26, 26, madeira);
+      corpo.cx(-41, 41, 0, 4, -30, 30, madeira);
+    }
+    // Seis cadeiras compactas 48 x 56: 2 de cada lado e uma em cada cabeceira.
+    // Coordenadas do centro da cadeira relativas ao centro da mesa.
+    const cadeiras = [
+      [-48, -72, 0], [48, -72, 0],
+      [-48, 72, Math.PI], [48, 72, Math.PI],
+      [-116, 0, Math.PI/2], [116, 0, -Math.PI/2]
+    ];
+    for (const [x, z, ang] of cadeiras) {
+      const lugar = conjunto.sub(x, 0, z);
+      lugar.g.rotation.y = ang;
+      const w=48, d=56, hAssento=46;
+      lugar.cx(-w/2, w/2, hAssento-5, hAssento, -d/2+5, d/2-3, estofado);
+      for (const px of [-w/2+3, w/2-6]) for (const pz of [-d/2+4, d/2-7])
+        lugar.cx(px, px+3, 0, hAssento-5, pz, pz+4, madeira);
+      lugar.cx(-w/2+3, w/2-3, 62, 87, -d/2+1, -d/2+6, estofado);
+      lugar.cx(-w/2+3, -w/2+7, hAssento, 88, -d/2+1, -d/2+5, madeira);
+      lugar.cx(w/2-7, w/2-3, hAssento, 88, -d/2+1, -d/2+5, madeira);
+    }
+    const formatoInicial = p.formatoInicial === 'retangular';
+    oval.g.visible = !formatoInicial;
+    retangular.g.visible = formatoInicial;
+    M.acao('Mesa retangular / oval (comparar)', v => {
+      oval.g.visible = v < 0.5;
+      retangular.g.visible = v >= 0.5;
+    }, formatoInicial);
+    M.acao('Girar conjunto vertical / horizontal (90°)', v => {
+      conjunto.g.rotation.y = v * Math.PI / 2;
+    }, p.orientacaoInicial === 'vertical');
+  }
+});
+
 reg('cadeira', { rotulo: 'Cadeira', dimensoes: () => ({ largura: 45, profundidade: 48, altura: 90 }), material: p => p.material || 'madeira-mel',
   construir(M, p, { L, P, A }) {
     const m = p.material || 'madeira-mel', as = num(p.assento, 45);
