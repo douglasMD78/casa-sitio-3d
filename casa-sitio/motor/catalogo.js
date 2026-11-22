@@ -546,6 +546,74 @@ reg('sofa', { rotulo: 'Sofá', dimensoes: () => ({ largura: 220, profundidade: 9
     for (let i = 0; i < n; i++) { M.cx(br + i * w + 0.6, br + (i + 1) * w - 0.6, as - 12, as, 20, P - 1, m); M.cx(br + i * w + 1.5, br + (i + 1) * w - 1.5, as, A - 6, 20, 34, m); }
   } });
 
+// Biblioteca comparativa de sofás REAIS com chaise, para sala integrada 450x400cm.
+// Envelope máximo da biblioteca 260x164cm; eixo longo em Z global (frentePara: direita).
+// As medidas e os links dos produtos estão em ESTUDO-SOFAS-SALA-ESTAR.md.
+// A representação é VOLUMÉTRICA, não reproduz costuras/estruturas patenteadas.
+// Duas ações binárias combinadas oferecem QUATRO modelos sem sobreposição.
+// Um terceiro controle muda a chaise de extremidade, quando houver opção do fabricante.
+reg('sofa-biblioteca-4', {
+  rotulo: 'Biblioteca de sofás · quatro modelos comerciais',
+  dimensoes: () => ({ largura: 260, profundidade: 164, altura: 105 }),
+  material: p => p.material || 'tecido-cru',
+  construir(M, p, { L, P }) {
+    const estofado = p.material || 'tecido-cru';
+    const base = M.sub(0,0,0);
+    // Modelo, largura do eixo longo, profundidade total, altura e profundidade do assento comum.
+    // Profundidade comum não indicada pelo fabricante? Apenas estimativa da representação visual.
+    const tipos = [
+      { nome:'Pierri 240x160', largura:240, profundidade:160, altura:82, comum:85 },
+      { nome:'Mercúrio 250x153', largura:250, profundidade:153, altura:89, comum:90 },
+      { nome:'Canyon 250x160', largura:250, profundidade:160, altura:105, comum:100 },
+      { nome:'Beny 260x164', largura:260, profundidade:164, altura:82, comum:80 }
+    ];
+    const grupos = [];
+    let bit1 = !!p.selecaoBit1, bit2 = !!p.selecaoBit2, lado = !!p.chaiseNaPontaFundos;
+    for (const t of tipos) {
+      // Todos os sofás têm o mesmo centro ao longo da sala (alinhamento TV).
+      const m = base.sub((L-t.largura)/2,0,0);
+      grupos.push(m);
+      const prof=t.profundidade, comum=t.comum, h=t.altura, seat=43, cb=19, br=14;
+      // Superfície principal e encosto contínuo visto pelo jantar.
+      m.cx(0,t.largura,5,seat-5,0,comum,estofado);
+      m.cx(0,t.largura,seat-5,h,0,cb,estofado);
+      m.cx(0,br,seat-5,seat+15,cb,comum,estofado);
+      m.cx(t.largura-br,t.largura,seat-5,seat+15,cb,comum,estofado);
+      const n=3,w=(t.largura-br*2)/n;
+      for(let i=0;i<n;i++){
+        m.cx(br+i*w+1,br+(i+1)*w-1,seat-4,seat,cb,comum-1,estofado);
+        m.cx(br+i*w+2,br+(i+1)*w-2,seat,h-7,cb,cb+15,estofado);
+      }
+      for(const ax of [6,t.largura-11]) for(const dz of [8,comum-12])
+        m.cx(ax,ax+5,0,5,dz,dz+5,'madeira-mel');
+      // Chaise: trecho junto a UMA extremidade do eixo longo, projeta em direção à TV.
+      // Os dois grupos são mutuamente exclusivos.
+      const chaises=[];
+      for(const noFundo of [false,true]){
+        const ch=m.sub();
+        const x0=noFundo?0:t.largura-78;
+        const x1=x0+78;
+        ch.cx(x0,x1,5,seat,comum-1,prof,estofado);
+        ch.cx(x0+4,x1-4,seat,seat+4,comum+3,prof-5,estofado);
+        ch.cx(x0,x0+br,seat-5,seat+12,comum,prof-5,estofado);
+        chaises.push(ch);
+      }
+      m.g.userData.chaiseGrupos=chaises.map(x=>x.g);
+    }
+    const atualizar=()=>{
+      const ativo=(bit1?1:0)+(bit2?2:0);
+      grupos.forEach((m,i)=>{
+        m.g.visible=i===ativo;
+        m.g.userData.chaiseGrupos.forEach((g,k)=>{g.visible=(k===(lado?1:0));});
+      });
+    };
+    M.acao('Sofás: opção 1 ↔ 2 / 3 ↔ 4',v=>{bit1=v>=0.5;atualizar();},bit1);
+    M.acao('Sofás: grupo 1–2 ↔ grupo 3–4',v=>{bit2=v>=0.5;atualizar();},bit2);
+    M.acao('Chaise na ponta frente ↔ fundos (estudo)',v=>{lado=v>=0.5;atualizar();},lado);
+    atualizar();
+  }
+});
+
 reg('tapete', { rotulo: 'Tapete', camada: 'decoracao', colide: false, dimensoes: () => ({ largura: 200, profundidade: 150, altura: 1 }), material: p => p.material || 'tecido-cru',
   construir(M, p, { L, P }) { M.cx(0, L, 0, 1, 0, P, p.material || 'tecido-cru', { sombra: false }); } });
 
