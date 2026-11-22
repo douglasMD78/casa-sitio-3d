@@ -1,6 +1,6 @@
 # Sala de jantar — estudo dimensional de duas mesas com seis cadeiras
 
-**Status:** estudo comparativo, não é layout aprovado nem projeto elétrico executivo. **Não alterar móveis ou pontos de luz antes da escolha.**
+**Status:** **duas opções implementadas no 3D**, sem escolha definitiva nem projeto elétrico executivo. Não fixar ponto de luminária/tomadas até aprovar posição.
 
 ## Geometria confirmada do repositório
 - `dados/casa.json`: cômodo `jantar`, 450 cm (eixo x, esquerda–direita) × 300 cm (eixo z, cozinha→estar); origem global x=440, z=700.
@@ -36,9 +36,9 @@ Coordenadas locais `x` e `z`, medidas do canto junto à cozinha e à esquerda. C
 ## Alternativa compacta para avaliar posteriormente
 Uma mesa de 160 × 85 cm, com cadeiras compactas 48 × 56 cm, melhora a situação horizontal. Na vertical, ainda deixa só 70 cm nas extremidades para mesa centralizada e 14 cm após projeção de cadeira de 56 cm; **não resolve circulação em uso**.
 
-## Próximos passos antes de implementar no 3D
+## Implementação 3D — revisão 01
 1. **P2 validada** na folha 1/3: começa 150 cm após a cozinha, cruza a linha imaginária jantar/estar em 30 cm e abre à varanda; manter as cotas existentes do cadastro, sem centralização. Conferir a rota de circulação das seis cadeiras até a passagem da varanda e o vão V4 do corredor.
-2. Escolher oval versus retangular, além do modelo exato de seis cadeiras e tamanho do tampo.
-3. Implantar e testar trajetos com cadeiras recolhidas e ocupadas, sem obstruir acessos à varanda, corredor, cozinha e estar.
+2. Selecionar a peça `JAN-MESA-6-OPCOES` na sala de jantar. A ação **Mesa retangular / oval (comparar)** alterna a forma do tampo sem duplicar a mesa. A ação **Girar conjunto vertical / horizontal (90°)** gira mesa e todas as seis cadeiras juntas. Estado inicial: **oval, horizontal**. Mesma medida 180×90×77 cm para ambas; seis cadeiras visuais 48×56×88 cm.
+3. Posição implementada **provisória centralizada**: mesa horizontal x=135..315, z=105..195 cm no cômodo; centro x=225 z=150 cm. Conjunto na vertical gira 90° ao redor do centro (só estudo). As seis cadeiras ficam fora do retângulo de tampo e não representam afastamento total de uso. Testar trajetos com cadeiras recolhidas e ocupadas, sem obstruir acessos à varanda, corredor, cozinha e estar.
 4. **Somente após a posição final** cotar centro da luminária de jantar, pontos de interruptores e tomadas de apoio no `ETAPAS-PENDENTES.md`; não fixar ponto de lustre no centro geométrico por padrão.
 5. Diretriz estética: evitar fitas, sancas e perfis LED decorativos; priorizar luminárias convencionais e iluminação funcional, deixando definição da tecnologia da lâmpada para etapa posterior.
