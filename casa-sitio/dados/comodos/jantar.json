@@ -1,7 +1,7 @@
 {
   "comodo": "jantar",
-  "revisao": "02",
-  "obs": "Estudo comparativo para sala 450×300 cm; porta P2 180cm deslocada e confirmada na planta original, cruza 30cm a linha imaginária do estar. Mesa oval OU retangular 180×90×77cm, seis cadeiras compactas 48×56×88cm. Selecionar o conjunto no 3D: ações alternam forma da mesa e orientação horizontal/vertical; nunca mostrar duas mesas sobrepostas. Conjunto centralizado provisoriamente em x225 z150. A forma vertical é desfavorável à circulação nas cabeceiras; não é layout aprovado. Não marcar ponto de lustre nem tomadas ainda. Nada de fitas/perfis LED decorativos. Revisão 02: seis cadeiras alternam entre recolhidas e afastadas +28 cm para estudo de circulação; não equivale a validação de acessibilidade ou uso ocupado.",
+  "revisao": "03",
+  "obs": "Estudo comparativo para sala 450×300 cm; porta P2 180cm deslocada e confirmada na planta original, cruza 30cm a linha imaginária do estar. Mesa oval OU retangular 180×90×77cm, seis cadeiras compactas 48×56×88cm. Selecionar o conjunto no 3D: ações alternam forma da mesa e orientação horizontal/vertical; nunca mostrar duas mesas sobrepostas. Conjunto centralizado provisoriamente em x225 z150. A forma vertical é desfavorável à circulação nas cabeceiras; não é layout aprovado. Não marcar ponto de lustre nem tomadas ainda. Nada de fitas/perfis LED decorativos. Revisão 02 (substituída na revisão 03): seis cadeiras alternam entre recolhidas e afastadas +16 cm para estudo de circulação; não equivale a validação de acessibilidade ou uso ocupado. Revisão 03: cadeiras recolhidas aproximadamente 15cm sob o tampo; modo sentar desliza 16cm, deixando a borda da cadeira junto à borda da mesa, sem vão excessivo.",
   "pecas": [
     {
       "id": "JAN-MESA-6-OPCOES",
@@ -23,10 +23,11 @@
         "profundidade": 56,
         "altura": 88,
         "distribuicao": "duas cadeiras de cada lado longo e uma em cada cabeceira",
-        "afastamentoParaSentarCm": 28
+        "afastamentoParaSentarCm": 16,
+        "avancoRecolhidaSobTampoCm": 15
       },
       "status": "estudo",
-      "obs": "Uma única peça interativa com seis cadeiras. Alternar formato oval/retangular na ação 3D; segunda ação gira o conjunto de 90 graus. Mesa centralizada só para comparação dimensional. Porta P2 e corredor preservados; testar circulação com pessoas sentadas e cadeiras afastadas antes de aprovar. Modelo exato da mesa e das cadeiras será definido depois. Revisão 02: ação independente 'Cadeiras recolhidas / afastadas para sentar' move as seis cadeiras 28 cm para fora em ambas orientações; estado inicial recolhido.",
+      "obs": "Uma única peça interativa com seis cadeiras. Alternar formato oval/retangular na ação 3D; segunda ação gira o conjunto de 90 graus. Mesa centralizada só para comparação dimensional. Porta P2 e corredor preservados; testar circulação com pessoas sentadas e cadeiras afastadas antes de aprovar. Modelo exato da mesa e das cadeiras será definido depois. Revisão 02: ação independente 'Cadeiras recolhidas / afastadas para sentar' move as seis cadeiras 16 cm para fora em ambas orientações; estado inicial recolhido. Revisão 03: centros recolhidos nas laterais z=±58cm, cabeceiras x=±102cm (relativos ao centro), permitindo sobreposição física de ~15cm sob o tampo. Modo sentar z=±74cm e cabeceiras x=±118cm; avaliar com a mesa e cadeiras reais.",
       "sentarInicial": false
     }
   ]
