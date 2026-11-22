@@ -42,3 +42,9 @@ Uma mesa de 160 × 85 cm, com cadeiras compactas 48 × 56 cm, melhora a situaç�
 3. Posição implementada **provisória centralizada**: mesa horizontal x=135..315, z=105..195 cm no cômodo; centro x=225 z=150 cm. Conjunto na vertical gira 90° ao redor do centro (só estudo). As seis cadeiras ficam fora do retângulo de tampo e não representam afastamento total de uso. Testar trajetos com cadeiras recolhidas e ocupadas, sem obstruir acessos à varanda, corredor, cozinha e estar.
 4. **Somente após a posição final** cotar centro da luminária de jantar, pontos de interruptores e tomadas de apoio no `ETAPAS-PENDENTES.md`; não fixar ponto de lustre no centro geométrico por padrão.
 5. Diretriz estética: evitar fitas, sancas e perfis LED decorativos; priorizar luminárias convencionais e iluminação funcional, deixando definição da tecnologia da lâmpada para etapa posterior.
+
+## Revisão 02 — cadeiras afastadas para sentar
+- O conjunto 3D agora oferece a ação **Cadeiras recolhidas / afastadas para sentar**.
+- Estado inicial: **recolhidas**. Ao acionar, as seis cadeiras afastam **28 cm para fora** (duas em cada lateral e uma em cada cabeceira). A ação funciona com tampo oval ou retangular e nas orientações horizontal ou vertical.
+- A mesa permanece fixa; o afastamento é uma simulação de puxar cadeira, não representa necessariamente cadeira ocupada nem comprova circulação normativa.
+- A posição do lustre, interruptores e tomadas continua **pendente de aprovação do layout**.
