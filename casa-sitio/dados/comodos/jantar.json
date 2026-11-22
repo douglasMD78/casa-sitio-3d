@@ -1,6 +1,31 @@
 {
   "comodo": "jantar",
-  "revisao": "00",
-  "obs": "Cômodo vazio. Preencher por prompt, seguindo o LEIA-ME-IA.md.",
-  "pecas": []
+  "revisao": "01",
+  "obs": "Estudo comparativo para sala 450×300 cm; porta P2 180cm deslocada e confirmada na planta original, cruza 30cm a linha imaginária do estar. Mesa oval OU retangular 180×90×77cm, seis cadeiras compactas 48×56×88cm. Selecionar o conjunto no 3D: ações alternam forma da mesa e orientação horizontal/vertical; nunca mostrar duas mesas sobrepostas. Conjunto centralizado provisoriamente em x225 z150. A forma vertical é desfavorável à circulação nas cabeceiras; não é layout aprovado. Não marcar ponto de lustre nem tomadas ainda. Nada de fitas/perfis LED decorativos.",
+  "pecas": [
+    {
+      "id": "JAN-MESA-6-OPCOES",
+      "tipo": "conjunto-jantar-duas-opcoes",
+      "nome": "Mesa de jantar 6 lugares · alternar oval e retangular + girar horizontal/vertical",
+      "daEsquerda": 135,
+      "dosFundos": 105,
+      "frentePara": "frente",
+      "largura": 180,
+      "profundidade": 90,
+      "altura": 77,
+      "material": "madeira-mel",
+      "estofado": "tecido-cru",
+      "formatoInicial": "oval",
+      "orientacaoInicial": "horizontal",
+      "cadeiras": {
+        "quantidade": 6,
+        "largura": 48,
+        "profundidade": 56,
+        "altura": 88,
+        "distribuicao": "duas cadeiras de cada lado longo e uma em cada cabeceira"
+      },
+      "status": "estudo",
+      "obs": "Uma única peça interativa com seis cadeiras. Alternar formato oval/retangular na ação 3D; segunda ação gira o conjunto de 90 graus. Mesa centralizada só para comparação dimensional. Porta P2 e corredor preservados; testar circulação com pessoas sentadas e cadeiras afastadas antes de aprovar. Modelo exato da mesa e das cadeiras será definido depois."
+    }
+  ]
 }
