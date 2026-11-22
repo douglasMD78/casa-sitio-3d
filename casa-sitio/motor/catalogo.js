@@ -470,9 +470,9 @@ reg('conjunto-jantar-duas-opcoes', {
     // Seis cadeiras compactas 48 x 56: 2 de cada lado e uma em cada cabeceira.
     // Coordenadas do centro da cadeira relativas ao centro da mesa.
     const cadeiras = [
-      [-48, -72, 0], [48, -72, 0],
-      [-48, 72, Math.PI], [48, 72, Math.PI],
-      [-116, 0, Math.PI/2], [116, 0, -Math.PI/2]
+      [-48, -58, 0], [48, -58, 0],
+      [-48, 58, Math.PI], [48, 58, Math.PI],
+      [-102, 0, Math.PI/2], [102, 0, -Math.PI/2]
     ];
     const lugares = [];
     for (const [x, z, ang] of cadeiras) {
@@ -497,10 +497,12 @@ reg('conjunto-jantar-duas-opcoes', {
     M.acao('Girar conjunto vertical / horizontal (90°)', v => {
       conjunto.g.rotation.y = v * Math.PI / 2;
     }, p.orientacaoInicial === 'vertical');
-    // Todas as 6 cadeiras deslizam radialmente 28 cm para fora da mesa.
-    // A transformação é local ao conjunto: funciona nas duas orientações e formatos.
+    // Revisão 03: duas posições REALISTAS, debaixo do tampo e junto à mesa para sentar.
+    // Recolhida: a borda da cadeira avança cerca de 15 cm sob o tampo.
+    // Para sentar: desloca 16 cm, deixando a borda da cadeira quase alinhada à mesa.
+    // Coordenadas relativas ao conjunto: funciona nas duas orientações e formatos.
     M.acao('Cadeiras recolhidas / afastadas para sentar', v => {
-      const afastamento = 28 * v;
+      const afastamento = 16 * v;
       lugares.forEach((lugar, i) => {
         const [x, z] = cadeiras[i];
         lugar.g.position.x = x + (i < 4 ? 0 : (x < 0 ? -afastamento : afastamento));
