@@ -203,7 +203,8 @@
       "modelo": "almofadada",
       "material": "madeira-mel",
       "nome": "Sala de jantar – varanda",
-      "status": "definido"
+      "status": "definido",
+      "obs": "Conferido na planta original (folha 1/3): P2 tem largura 180 cm e começa 150 cm após o limite cozinha/jantar, chegando a z=1030 cm. Ultrapassa em 30 cm a linha imaginária jantar/estar (z=1000), o que é correto porque são ambientes integrados, sem divisória. Não centralizar nem reposicionar."
     },
     {
       "id": "P3",
