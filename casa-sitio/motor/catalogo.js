@@ -726,6 +726,22 @@ reg('tomada', { rotulo: 'Tomada', camada: 'eletrica', colide: false, ponto: true
     const n = clamp(num(p.modulos, 1), 1, 3);
     for (let i = 0; i < n; i++) { const y = A / 2 + (i - (n - 1) / 2) * 3.4; M.cilZ(L / 2, y, 0.8, 0.5, 1.75, num(p.amperagem, 10) >= 20 ? '#7a2e22' : 'placa-furo', { seg: 14, sombra: false }); for (const dx of [-0.75, 0.75]) M.cilZ(L / 2 + dx, y, 1.3, 0.12, 0.22, '#111111', { seg: 6, sombra: false }); }
   } });
+// Conjunto convencional brasileiro: placa 4x4 com quatro módulos 2P+T 10 A.
+// Representação gráfica de caixa + placa; bitola, corrente, ligação e proteção
+// devem ser conferidas pelo profissional responsável conforme NBR 5410.
+reg('tomada-quadrupla', {
+  rotulo:'Tomada quádrupla 2P+T 10 A · caixa 4x4',
+  camada:'eletrica',colide:false,ponto:true,fixacao:'parede',etiqueta:'T4',
+  dimensoes:()=>({largura:12,profundidade:1.5,altura:12,doPiso:30}),
+  construir(M,p,{L,A}){
+    placa(M,L,A,p.cor);
+    for(const x of [L*0.28,L*0.72])for(const y of [A*0.29,A*0.71]){
+      M.cilZ(x,y,0.85,0.6,1.18,'placa-furo',{seg:16,sombra:false});
+      M.cilZ(x,y-0.52,1.1,0.12,0.20,'#111111',{seg:8,sombra:false});
+      for(const dx of [-0.48,0.48])M.cilZ(x+dx,y+0.33,1.1,0.12,0.19,'#111111',{seg:8,sombra:false});
+    }
+  }
+});
 reg('interruptor', { rotulo: 'Interruptor', camada: 'eletrica', colide: false, ponto: true, fixacao: 'parede', etiqueta: 'I',
   dimensoes: () => ({ largura: 7.5, profundidade: 1.6, altura: 11.5, doPiso: 110 }),
   construir(M, p, { L, A }) { placa(M, L, A, p.cor); const n = clamp(num(p.teclas, 1), 1, 3); for (let i = 0; i < n; i++) { const y = A / 2 + (i - (n - 1) / 2) * 3.1; M.cx(L / 2 - 1.9, L / 2 + 1.9, y - 1.3, y + 1.3, 0.8, 1.5, '#e9e9e6', { sombra: false }); } } });
