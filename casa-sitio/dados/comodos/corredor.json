@@ -1,6 +1,6 @@
 {
   "comodo": "corredor",
-  "revisao": "00",
-  "obs": "Cômodo vazio. Preencher por prompt, seguindo o LEIA-ME-IA.md.",
+  "revisao": "01",
+  "obs": "INFORMAÇÃO CONFIRMADA PELO PROPRIETÁRIO (22/11/2026): o quadro de distribuição de disjuntores (QD) fica na parte INTERNA do corredor. A parede, as cotas exatas, altura, dimensão e orientação da tampa ainda não foram informadas; NÃO desenhar QD em local arbitrário, não fixar alimentadores nem atribuir circuitos até levantamento. Manter acesso permanente ao quadro e compatibilizar com portas e futuros acabamentos.",
   "pecas": []
 }
