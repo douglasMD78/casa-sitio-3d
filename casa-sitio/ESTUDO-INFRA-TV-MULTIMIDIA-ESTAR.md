@@ -6,7 +6,7 @@
 ## 0. Dados físicos de referência
 - Sala de estar: 450 cm (esquerda-direita) × 400 cm (fundos-frente), piso acabado como referência de cotas verticais.
 - TV na **parede direita** (x=450 local), **eixo longitudinal z=180 cm** desde os fundos da sala, com rack aproximadamente alinhado; local poderá ser revisto antes de executar os rasgos.
-- TV existente no 3D ainda é **esquemática e está alta** (doPiso=112cm, altura=73cm, centro=148,5cm). **Não usar a altura renderizada como gabarito de instalação.**
+- **Atualização rev07:** a antiga TV esquemática alta (centro=148,5cm) foi substituída por comparador visual de 55 a 98 polegadas, com borda inferior em 70/80cm. O comparador NÃO define a altura executiva. Ver [estudo de compatibilidade TV/sofá](ESTUDO-COMPATIBILIDADE-TV-SOFA.md).
 - Porta lateral P2 está em parede direita, atravessa 30cm da linha imaginária de jantar para estar; zona da TV a partir de z≈85cm não coincide com sua abertura na parede, mas a circulação deve ser verificada.
 - Porta P1 dupla, 180cm, na frente, aberta para dentro. Sofá continua em comparação, não há modelo definitivo.
 - O quadro de disjuntores (QD) fica no **INTERIOR do corredor**, posição exata ainda desconhecida. **Não utilizar o QD como abrigo de roteador, ONU/ONT ou switch de rede.**
