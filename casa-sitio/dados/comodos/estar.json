@@ -1,37 +1,42 @@
 {
   "comodo": "estar",
-  "revisao": "06",
-  "obs": "REVISÃO 06 — PRÉ-PROJETO da zona multimídia na parede direita do estar, PROPOSTA SEM AUTORIZAÇÃO EXECUTIVA. Inclui duas posições superiores de tomadas duplas 10 A em z140 e z220 / eixo a 115cm piso acabado (4 tomadas, cabos da TV sem extensão oculta) e quatro conjuntos inferiores de tomadas duplas 10 A em z135,165,195,225 / eixo a 30cm (8 tomadas para PlayStation, Xbox, soundbar, equipamentos, reservas). TOMADAS são só parte do estudo: passagens de HDMI, RJ45/Cat6, fibra/coaxial e conduítes vazios NÃO estão representadas fisicamente no catálogo; ver ESTUDO-INFRA-TV-MULTIMIDIA-ESTAR.md. QD dentro do corredor, posição exata desconhecida; não misturar caixas de telecom com QD. Projeto final só após conferir estrutura da parede, ponto de entrada da internet, VESA, cargas/tensão, acessibilidade, rack e compatibilização com responsável técnico. Não alterar TV e rack ainda, pois seus tamanhos não estão fechados.",
+  "revisao": "07",
+  "obs": "REVISÃO 07 — estudo de COMPATIBILIDADE COM MÚLTIPLOS SOFÁS/TVs, sem fixar equipamentos. 8 volumes alternáveis de sofá (4 modelos comerciais anteriores e 4 cenários de estilos comerciais usuais com dimensões hipotéticas claramente identificadas); 5 opções de TV 55,65,75,85,98 polegadas, base 70/80cm ajustável. TV na parede direita centro z180 desde os fundos; sofá de comprimento 220–260cm ocupando z35..295 e x105..295 no envelope, eixo z165 e afastamento nominal 15cm antes do setor de giro da P1. As portas P1/P2, rack de estudo e TODAS as 12 tomadas do pré-projeto elétrico continuam como estavam; nenhum condutor/circuito alterado. Rack e tela ainda não escolhidos; a comparação não substitui detalhamento VESA, rota de abertura P1, carga da TV 98, ergonomia e circulação com modelos reais. QD no interior do corredor, posição exata não informada.",
   "pecas": [
     {
       "id": "EST-SOFA-BIBLIOTECA",
-      "tipo": "sofa-biblioteca-4",
-      "nome": "Comparador: Pierri 240, Mercúrio 250, Canyon 250, Beny 260",
+      "tipo": "sofa-biblioteca-8",
+      "nome": "Estudo flexível · 4 sofás comerciais + 4 estilos dimensionais",
       "daEsquerda": 105,
-      "dosFundos": 50,
+      "dosFundos": 35,
       "frentePara": "direita",
       "largura": 260,
-      "profundidade": 164,
+      "profundidade": 190,
       "altura": 105,
       "material": "tecido-cru",
       "selecaoBit1": false,
       "selecaoBit2": false,
       "chaiseNaPontaFundos": true,
       "status": "proposta",
-      "obs": "Biblioteca de QUATRO opções em um objeto, ativadas pelas duas primeiras ações (0,0=Pierri 240×160; 1,0=Mercúrio 250×153; 0,1=Canyon 250×160; 1,1=Beny 260×164). A terceira ação muda a chaise de extremidade no estudo visual, sem assegurar que o fabricante venda a variante espelhada. Comprimento comercial ocupa eixo z, sempre com centro z180; profundidade da chaise projeta x a partir de105; corredor lateral à esquerda x0..105cm. Cuidado: giro da porta principal P1 pode interferir, especialmente quando chaise estiver na ponta da frente. Ver memorial. Não define o modelo definitivo."
+      "obs": "Comparador de 8 cenários: (1) Pierri 240×160, (2) Mercúrio 250×153, (3) Canyon 250×160, (4) Beny 260×164 (dimensões dos quatro produtos do estudo anterior); (5) sofá reto 220×95, (6) reto 260×105, (7) retrátil em posição ABERTA 250×180, (8) canto em L 260×190 (cenários geométricos, não produtos/fabricantes definidos). Controle 1 seleciona ímpar/par, controle 2 escolhe par 1-2/3-4 ou 5-6/7-8, controle 3 seleciona comerciais/adicionais. Chaise reversível apenas para simulação visual. Envelope local da sala x=105..295cm, z=35..295cm; corredor atrás do sofá x0..105=105cm. Largura máxima 260 deixa 105cm da frente da sala até ponta do sofá, com 15cm antes do giro nominal de 90cm da porta P1 (z310..400); NÃO substitui teste de giro presencial com ferragens. Eixo do sofá z165, TV z180: desalinhamento intencional de 15cm para preservar a porta e o espaço junto à abertura da varanda. Sofá ainda divide visualmente os ambientes; alternativa de orientação transversal exige outra avaliação.",
+      "selecaoBit3": false
     },
     {
       "id": "EST-PAINEL-TV",
-      "tipo": "tv",
-      "nome": "TV na parede direita",
+      "tipo": "tv-comparador",
+      "nome": "TV ajustável · 55/65/75/85/98 polegadas",
       "parede": "direita",
-      "dosFundos": 115,
-      "largura": 130,
+      "dosFundos": 70,
+      "largura": 220,
       "profundidade": 5,
-      "altura": 73,
-      "doPiso": 112,
-      "status": "definido",
-      "obs": "Eixo da TV z180 cm, alinhado ao eixo do sofá principal e aparador. Faixa z115..245cm, fora do trecho da porta P2. Altura da tela/tamanho em polegadas a confirmar antes de definir tomadas, cabeamento e furação; largura renderizada 130cm é só estudo."
+      "altura": 126,
+      "doPiso": 70,
+      "status": "proposta",
+      "obs": "TELA REAL AINDA NÃO ESCOLHIDA: comparador com geometria 16:9 aproximada: 55 (122×69), 65 (145×82), 75 (167×94), 85 (189×107), 98 (218×123) cm. Eixo horizontal fixo da parede z180cm desde os fundos do estar. Envelope de 220cm ocupa z70..290; maior TV começa em z71, mantendo 41cm da extremidade P2 que termina em z30. 55–85 por duas ações combinadas, modo 98 separado; base da tela pode alternar entre 70 e 80cm do piso acabado e centro muda conforme altura. Os pontos elétricos superiores existentes permanecem inalterados z140 e220, h115, em status PROPOSTA; confirmar se caixas ficam integralmente ocultas e livres de suporte VESA em cada aparelho. A tela não pode ser comprada/montada só com esse envelope sem conferir dimensões do fabricante, peso e fixação.",
+      "tvBit1": false,
+      "tvBit2": true,
+      "tv98": false,
+      "tvElevada": false
     },
     {
       "id": "EST-RACK",
@@ -55,8 +60,8 @@
           "prateleiras": 1
         }
       ],
-      "status": "definido",
-      "obs": "Rack na parede direita x415..450 z85..275cm (centro z180), alinhado com sofá/aparador/TV. Conferir portas e ventilação; rack tem 35cm de profundidade. Distância livre aproximada entre frente do sofá x222 e início do rack x415:193cm; da extremidade chaise x298 ao rack:117cm."
+      "status": "proposta",
+      "obs": "Rack de estudo 190×35×49cm, eixo longitudinal na parede direita z180. Nenhum modelo comercial está aprovado; altura e comprimento podem mudar. Compatibilidade em estudo com TV de 55 a 98 polegadas, com borda inferior da TV a 70 ou 80cm. Tomadas baixas permanecem como pré-projeto, não executar antes de confirmar acesso, ventilação e espaço dos conectores. O sofá pode ficar com eixo z165 por conta do giro da P1; desalinhamento longitudinal de 15cm é acomodável visualmente, e deve ser testado no 3D."
     },
     {
       "id": "EST-TV-ENERGIA-E",
