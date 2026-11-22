@@ -6,7 +6,7 @@
 - `dados/casa.json`: cômodo `jantar`, 450 cm (eixo x, esquerda–direita) × 300 cm (eixo z, cozinha→estar); origem global x=440, z=700.
 - Ligação interna à cozinha pelo lado z=0; ligação ao estar pelo lado z=300.
 - Entrada do corredor no lado esquerdo: abertura V4 no corredor, `dosFundos=80`, largura 110; verificar projeção geométrica efetiva no jantar.
-- **P2 CONFIRMADA PELO USUÁRIO:** porta para varanda na parede direita, **180 cm de largura**, **DESLOCADA, exatamente como desenhada na planta original**. Não centralizar nem alterar sua localização. O cadastro `dosFundos=150` resulta em 150+180=330 cm, superior aos 300 cm de profundidade do ambiente; portanto há divergência na *interpretação/cadastro da referência*, não na decisão da arquitetura. Recuperar e inspecionar a folha original com cotas para transcrever a posição com precisão, **sem deslocar a porta para corrigir automaticamente a soma**.
+- **P2 CONFERIDA NA PLANTA ORIGINAL (folha 1/3):** porta de duas folhas para a varanda, largura 180 cm, deslocada. Começa 150 cm após a divisa cozinha/jantar e termina 330 cm após ela, isto é, 30 cm dentro da **faixa da sala de estar**. Isso é fisicamente possível porque jantar e estar são integrados, sem parede divisória. **Não há erro de cota da porta e ela não deve ser centralizada.** Coordenadas globais no cadastro: z=850..1030 cm; fronteira jantar/estar z=1000 cm.
 
 ## Dimensões comerciais para comparar
 - Opção A: mesa OVAL 180 × 90 × 75–80 cm (tampo); conjuntos de seis cadeiras disponíveis comercialmente.
@@ -37,7 +37,7 @@ Coordenadas locais `x` e `z`, medidas do canto junto à cozinha e à esquerda. C
 Uma mesa de 160 × 85 cm, com cadeiras compactas 48 × 56 cm, melhora a situação horizontal. Na vertical, ainda deixa só 70 cm nas extremidades para mesa centralizada e 14 cm após projeção de cadeira de 56 cm; **não resolve circulação em uso**.
 
 ## Próximos passos antes de implementar no 3D
-1. Manter P2 de 180 cm **deslocada conforme a planta original**, nunca centralizar por hipótese; verificar a cota de posição na folha original e compatibilizar somente o cadastro 3D, depois de conferir o desenho. Conferir também V4.
+1. **P2 validada** na folha 1/3: começa 150 cm após a cozinha, cruza a linha imaginária jantar/estar em 30 cm e abre à varanda; manter as cotas existentes do cadastro, sem centralização. Conferir a rota de circulação das seis cadeiras até a passagem da varanda e o vão V4 do corredor.
 2. Escolher oval versus retangular, além do modelo exato de seis cadeiras e tamanho do tampo.
 3. Implantar e testar trajetos com cadeiras recolhidas e ocupadas, sem obstruir acessos à varanda, corredor, cozinha e estar.
 4. **Somente após a posição final** cotar centro da luminária de jantar, pontos de interruptores e tomadas de apoio no `ETAPAS-PENDENTES.md`; não fixar ponto de lustre no centro geométrico por padrão.
