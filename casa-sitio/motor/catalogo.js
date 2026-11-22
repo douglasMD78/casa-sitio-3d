@@ -474,8 +474,10 @@ reg('conjunto-jantar-duas-opcoes', {
       [-48, 72, Math.PI], [48, 72, Math.PI],
       [-116, 0, Math.PI/2], [116, 0, -Math.PI/2]
     ];
+    const lugares = [];
     for (const [x, z, ang] of cadeiras) {
       const lugar = conjunto.sub(x, 0, z);
+      lugares.push(lugar);
       lugar.g.rotation.y = ang;
       const w=48, d=56, hAssento=46;
       lugar.cx(-w/2, w/2, hAssento-5, hAssento, -d/2+5, d/2-3, estofado);
@@ -495,6 +497,16 @@ reg('conjunto-jantar-duas-opcoes', {
     M.acao('Girar conjunto vertical / horizontal (90°)', v => {
       conjunto.g.rotation.y = v * Math.PI / 2;
     }, p.orientacaoInicial === 'vertical');
+    // Todas as 6 cadeiras deslizam radialmente 28 cm para fora da mesa.
+    // A transformação é local ao conjunto: funciona nas duas orientações e formatos.
+    M.acao('Cadeiras recolhidas / afastadas para sentar', v => {
+      const afastamento = 28 * v;
+      lugares.forEach((lugar, i) => {
+        const [x, z] = cadeiras[i];
+        lugar.g.position.x = x + (i < 4 ? 0 : (x < 0 ? -afastamento : afastamento));
+        lugar.g.position.z = z + (i < 4 ? (z < 0 ? -afastamento : afastamento) : 0);
+      });
+    }, !!p.sentarInicial);
   }
 });
 
