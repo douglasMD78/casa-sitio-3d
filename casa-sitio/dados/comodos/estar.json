@@ -1,6 +1,91 @@
 {
   "comodo": "estar",
-  "revisao": "00",
-  "obs": "Cômodo vazio. Preencher por prompt, seguindo o LEIA-ME-IA.md.",
-  "pecas": []
+  "revisao": "01",
+  "obs": "Proposta INICIAL de mobiliário, ainda não aprovada: sala 450x400cm; acesso P1 180cm na frente x135..315; acesso P2 à varanda na parede direita, vindo da sala de jantar até 30cm dentro do estar. Montagem de estudo para orientar tomadas e iluminação, SEM pontos elétricos novos. QD situa-se dentro do corredor, posição exata a confirmar. Sofá em L voltado à TV da parede direita; aparador atrás do sofá. Conferir circulação da entrada principal e afastamentos reais antes de aprovar.",
+  "pecas": [
+    {
+      "id": "EST-SOFA-PRINCIPAL",
+      "tipo": "sofa",
+      "nome": "Sofá claro · módulo principal voltado à TV (proposta)",
+      "daEsquerda": 72,
+      "dosFundos": 60,
+      "frentePara": "direita",
+      "largura": 240,
+      "profundidade": 92,
+      "altura": 85,
+      "lugares": 3,
+      "material": "tecido-cru",
+      "status": "proposta",
+      "obs": "Vira-se para a parede direita da sala; base x72..164 z60..300cm. Manter acesso à porta frontal no limite z400. Modelo e medidas sujeitos a escolha."
+    },
+    {
+      "id": "EST-SOFA-CHAISE",
+      "tipo": "sofa",
+      "nome": "Extensão em L · chaise conceitual (proposta)",
+      "daEsquerda": 164,
+      "dosFundos": 60,
+      "frentePara": "frente",
+      "largura": 76,
+      "profundidade": 90,
+      "altura": 44,
+      "lugares": 1,
+      "material": "tecido-cru",
+      "status": "proposta",
+      "obs": "Trecho de 76x90cm em L: representação provisória com geometria do catálogo; não é chaise detalhada de fábrica. Encaixa no extremo posterior do módulo principal, sem ultrapassar x240cm."
+    },
+    {
+      "id": "EST-APARADOR",
+      "tipo": "mesa",
+      "nome": "Aparador estreito em madeira atrás do sofá (proposta)",
+      "daEsquerda": 28,
+      "dosFundos": 92,
+      "frentePara": "direita",
+      "largura": 170,
+      "profundidade": 32,
+      "altura": 78,
+      "material": "madeira-mel",
+      "estrutura": "madeira-mel",
+      "pes": "central",
+      "status": "proposta",
+      "obs": "Aparador x28..60 z92..262 cm, atrás do sofá. Não é mesa de jantar; volume de estudo."
+    },
+    {
+      "id": "EST-PAINEL-TV",
+      "tipo": "tv",
+      "nome": "TV na parede direita · estudo",
+      "parede": "direita",
+      "dosFundos": 165,
+      "largura": 130,
+      "profundidade": 5,
+      "altura": 73,
+      "doPiso": 112,
+      "status": "proposta",
+      "obs": "Parede direita, fora da área da porta P2. Centro projetado z230cm. Verificar ergonomia/altura e tamanho da TV antes da elétrica."
+    },
+    {
+      "id": "EST-RACK",
+      "tipo": "armario",
+      "nome": "Rack baixo TV · madeira clara e branco",
+      "parede": "direita",
+      "dosFundos": 135,
+      "largura": 190,
+      "profundidade": 35,
+      "altura": 49,
+      "corpo": "madeira-mel",
+      "frente": "mdf-branco",
+      "puxador": "nenhum",
+      "modulos": [
+        {
+          "tipo": "portas",
+          "portas": 2
+        },
+        {
+          "tipo": "nicho",
+          "prateleiras": 1
+        }
+      ],
+      "status": "proposta",
+      "obs": "Volume x415..450 z135..325cm; confirmar afastamento da porta P2 e ventilação de equipamentos."
+    }
+  ]
 }
