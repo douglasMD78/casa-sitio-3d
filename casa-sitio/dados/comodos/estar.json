@@ -1,7 +1,7 @@
 {
   "comodo": "estar",
-  "revisao": "05",
-  "obs": "REVISÃO 05: removido aparador previamente; sofá genérico/chaise substituídos por COMPARADOR de quatro modelos com medidas de produtos encontrados comercialmente (240×160, 250×153, 250×160, 260×164 cm). Costas voltadas ao lado esquerdo/corredor, sofá divide estar e jantar visualmente e eixo longitudinal z180 alinhado com TV/rack. Dois comandos binários combinados selecionam 1 de 4 modelos; terceiro alterna a posição da chaise no estudo. Configuração inicial Pierri 240×160, chaise na extremidade dos fundos (mais distante da porta principal). A geometria é apenas volumétrica, não réplica; dimensões de compra, backs e lado vendável dependem do fabricante. Atenção especial ao GIRO DAS FOLHAS DA P1 na frente (invasão de parte do estar), circulação por trás e proximidade da chaise. NÃO finalizado eletricidade/iluminação. QD fica por dentro do corredor e posição exata permanece desconhecida.",
+  "revisao": "06",
+  "obs": "REVISÃO 06 — PRÉ-PROJETO da zona multimídia na parede direita do estar, PROPOSTA SEM AUTORIZAÇÃO EXECUTIVA. Inclui duas posições superiores de tomadas duplas 10 A em z140 e z220 / eixo a 115cm piso acabado (4 tomadas, cabos da TV sem extensão oculta) e quatro conjuntos inferiores de tomadas duplas 10 A em z135,165,195,225 / eixo a 30cm (8 tomadas para PlayStation, Xbox, soundbar, equipamentos, reservas). TOMADAS são só parte do estudo: passagens de HDMI, RJ45/Cat6, fibra/coaxial e conduítes vazios NÃO estão representadas fisicamente no catálogo; ver ESTUDO-INFRA-TV-MULTIMIDIA-ESTAR.md. QD dentro do corredor, posição exata desconhecida; não misturar caixas de telecom com QD. Projeto final só após conferir estrutura da parede, ponto de entrada da internet, VESA, cargas/tensão, acessibilidade, rack e compatibilização com responsável técnico. Não alterar TV e rack ainda, pois seus tamanhos não estão fechados.",
   "pecas": [
     {
       "id": "EST-SOFA-BIBLIOTECA",
@@ -57,6 +57,84 @@
       ],
       "status": "definido",
       "obs": "Rack na parede direita x415..450 z85..275cm (centro z180), alinhado com sofá/aparador/TV. Conferir portas e ventilação; rack tem 35cm de profundidade. Distância livre aproximada entre frente do sofá x222 e início do rack x415:193cm; da extremidade chaise x298 ao rack:117cm."
+    },
+    {
+      "id": "EST-TV-ENERGIA-E",
+      "tipo": "tomada",
+      "nome": "TV — duas tomadas 10 A, posição superior esquerda",
+      "parede": "direita",
+      "dosFundos": 140,
+      "doPiso": 115,
+      "modulos": 2,
+      "amperagem": 10,
+      "uso": "TV e reserva de alimentação, lado fundos",
+      "status": "proposta",
+      "obs": "Pré-projeto: eixo da placa em z=140cm, 115cm do piso acabado. Tomadas 2P+T com terra, alimentadas por circuito de tomadas dimensionado. Uma das duas alternativas de alimentação da TV. Somente fechar posição após suporte VESA e área de fixação definidos; manter acessibilidade removendo TV. Eletroduto de energia separado dos de sinal. Não passar cabo de alimentação removível do aparelho embutido na parede."
+    },
+    {
+      "id": "EST-TV-ENERGIA-D",
+      "tipo": "tomada",
+      "nome": "TV — duas tomadas 10 A, posição superior direita",
+      "parede": "direita",
+      "dosFundos": 220,
+      "doPiso": 115,
+      "modulos": 2,
+      "amperagem": 10,
+      "uso": "TV e reserva de alimentação, lado frente",
+      "status": "proposta",
+      "obs": "Pré-projeto: eixo da placa em z=220cm, 115cm do piso acabado, alternativa à posição de z140 conforme lado de saída do cabo da TV. Cota vertical/horizontal sujeita ao suporte VESA, fixação, largura da TV e interferência de estrutura. Não usar extensões ocultas na parede."
+    },
+    {
+      "id": "EST-RACK-ENERGIA-1",
+      "tipo": "tomada",
+      "nome": "Rack — tomadas 1 e 2",
+      "parede": "direita",
+      "dosFundos": 135,
+      "doPiso": 30,
+      "modulos": 2,
+      "amperagem": 10,
+      "uso": "Consoles e acessórios multimídia",
+      "status": "proposta",
+      "obs": "Primeiro conjunto baixo de duas tomadas 2P+T. Cota provisória do eixo da placa 30cm do piso acabado. Tomadas acessíveis após retirada do rack/painel de inspeção; ajustar após altura e modo de fixação do rack definidos."
+    },
+    {
+      "id": "EST-RACK-ENERGIA-2",
+      "tipo": "tomada",
+      "nome": "Rack — tomadas 3 e 4",
+      "parede": "direita",
+      "dosFundos": 165,
+      "doPiso": 30,
+      "modulos": 2,
+      "amperagem": 10,
+      "uso": "Console, TV box e periféricos",
+      "status": "proposta",
+      "obs": "Segundo conjunto baixo de duas tomadas 2P+T. Cota provisória e localização revisável em painel de acesso técnico para futuros móveis."
+    },
+    {
+      "id": "EST-RACK-ENERGIA-3",
+      "tipo": "tomada",
+      "nome": "Rack — tomadas 5 e 6",
+      "parede": "direita",
+      "dosFundos": 195,
+      "doPiso": 30,
+      "modulos": 2,
+      "amperagem": 10,
+      "uso": "Som, soundbar ou receiver",
+      "status": "proposta",
+      "obs": "Terceiro conjunto baixo de duas tomadas 2P+T. Se houver receiver/amplificador de maior potência, confirmar consumo e circuito apropriado antes da execução."
+    },
+    {
+      "id": "EST-RACK-ENERGIA-4",
+      "tipo": "tomada",
+      "nome": "Rack — tomadas 7 e 8",
+      "parede": "direita",
+      "dosFundos": 225,
+      "doPiso": 30,
+      "modulos": 2,
+      "amperagem": 10,
+      "uso": "Rede local, switch, subwoofer ou reserva",
+      "status": "proposta",
+      "obs": "Quarto conjunto baixo de duas tomadas 2P+T. O roteador Wi-Fi principal não deve ser obrigatoriamente colocado no rack; rede preferencialmente centralizada em área de telecomunicações ventilada, com AP cabeado no teto conforme estudo da casa."
     }
   ]
 }
