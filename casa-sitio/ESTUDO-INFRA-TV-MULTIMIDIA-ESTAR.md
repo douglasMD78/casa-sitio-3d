@@ -1,4 +1,7 @@
-# Casa do Sítio — pré-projeto da parede da TV e multimídia (revisão 01)
+# Casa do Sítio — pré-projeto da parede da TV e multimídia (revisão 01, HISTÓRICO)
+
+> **HISTÓRICO — SUBSTITUÍDO PELA REVISÃO 08 (22/11/2026).** A proposta de **12 tomadas em 6 caixas** descrita abaixo NÃO é mais a distribuição vigente. A versão atual é brasileira convencional: **10 tomadas em 3 caixas elétricas (1 caixa 4×2 dupla para TV + 2 caixas 4×4 quádruplas para rack)**, com caixas independentes de dados. Consulte o [memorial atual](PROJETO-PAREDE-TV-PADRAO-BR.md) e a [vista técnica da parede](vista-eletrica-tv.html). As informações de rede e multimedia abaixo são histórico de possibilidades de expansão, não cotas de execução.
+
 
 **Data:** 22/11/2026  
 **Natureza:** estudo funcional PRÉ-EXECUTIVO — não é projeto elétrico assinado, memorial de dimensionamento de circuitos nem ordem de execução. O proprietário quer executar uma infraestrutura duradoura ANTES do reboco, independentemente dos modelos finais de sofá, televisão, suporte e rack. A validação final cabe a profissional habilitado, presencialmente, segundo NBR 5410 (edição vigente), NBR 16264 (cabeamento residencial) e condições da obra.
