@@ -1,7 +1,7 @@
 {
   "comodo": "estar",
-  "revisao": "07",
-  "obs": "REVISÃO 07 — estudo de COMPATIBILIDADE COM MÚLTIPLOS SOFÁS/TVs, sem fixar equipamentos. 8 volumes alternáveis de sofá (4 modelos comerciais anteriores e 4 cenários de estilos comerciais usuais com dimensões hipotéticas claramente identificadas); 5 opções de TV 55,65,75,85,98 polegadas, base 70/80cm ajustável. TV na parede direita centro z180 desde os fundos; sofá de comprimento 220–260cm ocupando z35..295 e x105..295 no envelope, eixo z165 e afastamento nominal 15cm antes do setor de giro da P1. As portas P1/P2, rack de estudo e TODAS as 12 tomadas do pré-projeto elétrico continuam como estavam; nenhum condutor/circuito alterado. Rack e tela ainda não escolhidos; a comparação não substitui detalhamento VESA, rota de abertura P1, carga da TV 98, ergonomia e circulação com modelos reais. QD no interior do corredor, posição exata não informada.",
+  "revisao": "08",
+  "obs": "REVISÃO 07 — estudo de COMPATIBILIDADE COM MÚLTIPLOS SOFÁS/TVs, sem fixar equipamentos. 8 volumes alternáveis de sofá (4 modelos comerciais anteriores e 4 cenários de estilos comerciais usuais com dimensões hipotéticas claramente identificadas); 5 opções de TV 55,65,75,85,98 polegadas, base 70/80cm ajustável. TV na parede direita centro z180 desde os fundos; sofá de comprimento 220–260cm ocupando z35..295 e x105..295 no envelope, eixo z165 e afastamento nominal 15cm antes do setor de giro da P1. As portas P1/P2, rack de estudo e TODAS as 12 tomadas do pré-projeto elétrico continuam como estavam; nenhum condutor/circuito alterado. Rack e tela ainda não escolhidos; a comparação não substitui detalhamento VESA, rota de abertura P1, carga da TV 98, ergonomia e circulação com modelos reais. QD no interior do corredor, posição exata não informada. ADIÇÃO DE TUGs DE USO GERAL (22/11/2026): EST-TUG-GERAL-01 na parede esquerda, eixo 130cm, altura 30cm, placa dupla 2P+T 10A; EST-TUG-GERAL-02 na parede frente, eixo 70cm, altura 30cm, placa dupla 2P+T 10A; EST-TUG-GERAL-03 na parede direita, eixo 355cm, altura 30cm, placa dupla 2P+T 10A. Pontos PROPOSTOS, sem instalação/circuito/eletroduto definido; conferir NBR 5410, aberturas, circulação, dimensões reais e rede existente antes do reboco. Demais peças preservadas.",
   "pecas": [
     {
       "id": "EST-SOFA-BIBLIOTECA",
@@ -140,6 +140,45 @@
       "uso": "Rede local, switch, subwoofer ou reserva",
       "status": "proposta",
       "obs": "Quarto conjunto baixo de duas tomadas 2P+T. O roteador Wi-Fi principal não deve ser obrigatoriamente colocado no rack; rede preferencialmente centralizada em área de telecomunicações ventilada, com AP cabeado no teto conforme estudo da casa."
+    },
+    {
+      "id": "EST-TUG-GERAL-01",
+      "tipo": "tomada",
+      "nome": "Tomada dupla de uso geral · lateral esquerda junto ao sofá",
+      "parede": "esquerda",
+      "dosFundos": 130,
+      "doPiso": 30,
+      "modulos": 2,
+      "amperagem": 10,
+      "uso": "carregadores, luminária de apoio e uso geral na lateral esquerda da sala",
+      "status": "proposta",
+      "obs": "Eixo horizontal 130cm desde os fundos da sala de estar, parede esquerda; altura ao eixo 30cm do piso acabado. Sofá atual inicia a 105cm da parede esquerda, sem obstrução direta deste ponto. Placa 4x2 dupla 2P+T 10A sugerida; verificar acesso com os 8 modelos simulados e eletroduto disponível."
+    },
+    {
+      "id": "EST-TUG-GERAL-02",
+      "tipo": "tomada",
+      "nome": "Tomada dupla de uso geral · parede da entrada",
+      "parede": "frente",
+      "daEsquerda": 70,
+      "doPiso": 30,
+      "modulos": 2,
+      "amperagem": 10,
+      "uso": "aspirador e usos temporários próximos à entrada principal",
+      "status": "proposta",
+      "obs": "Eixo horizontal 70cm da esquerda da sala, na parede frontal; altura 30cm do piso acabado. A porta P1 ocupa x135..315cm da frente da sala; este ponto fica fora do vão e da faixa nominal de abertura das folhas. Validar guarnições, interruptores, móveis e rota do conduíte na obra."
+    },
+    {
+      "id": "EST-TUG-GERAL-03",
+      "tipo": "tomada",
+      "nome": "Tomada dupla de uso geral · lateral direita próxima à entrada",
+      "parede": "direita",
+      "dosFundos": 355,
+      "doPiso": 30,
+      "modulos": 2,
+      "amperagem": 10,
+      "uso": "limpeza e equipamentos ocasionais, fora do setor da televisão",
+      "status": "proposta",
+      "obs": "Eixo horizontal 355cm desde os fundos da sala de estar; altura 30cm do piso acabado. Fica depois do final da TV/rack no estudo e fora do vão da P2, que se estende somente até z30cm no setor do estar. Não altera caixas da TV. Rever se futuramente houver móvel nessa lateral."
     }
   ]
 }
