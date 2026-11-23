@@ -1,7 +1,7 @@
 {
   "comodo": "jantar",
-  "revisao": "03",
-  "obs": "Estudo comparativo para sala 450×300 cm; porta P2 180cm deslocada e confirmada na planta original, cruza 30cm a linha imaginária do estar. Mesa oval OU retangular 180×90×77cm, seis cadeiras compactas 48×56×88cm. Selecionar o conjunto no 3D: ações alternam forma da mesa e orientação horizontal/vertical; nunca mostrar duas mesas sobrepostas. Conjunto centralizado provisoriamente em x225 z150. A forma vertical é desfavorável à circulação nas cabeceiras; não é layout aprovado. Não marcar ponto de lustre nem tomadas ainda. Nada de fitas/perfis LED decorativos. Revisão 02 (substituída na revisão 03): seis cadeiras alternam entre recolhidas e afastadas +16 cm para estudo de circulação; não equivale a validação de acessibilidade ou uso ocupado. Revisão 03: cadeiras recolhidas aproximadamente 15cm sob o tampo; modo sentar desliza 16cm, deixando a borda da cadeira junto à borda da mesa, sem vão excessivo.",
+  "revisao": "04",
+  "obs": "Estudo comparativo para sala 450×300 cm; porta P2 180cm deslocada e confirmada na planta original, cruza 30cm a linha imaginária do estar. Mesa oval OU retangular 180×90×77cm, seis cadeiras compactas 48×56×88cm. Selecionar o conjunto no 3D: ações alternam forma da mesa e orientação horizontal/vertical; nunca mostrar duas mesas sobrepostas. Conjunto centralizado provisoriamente em x225 z150. A forma vertical é desfavorável à circulação nas cabeceiras; não é layout aprovado. Não marcar ponto de lustre nem tomadas ainda. Nada de fitas/perfis LED decorativos. Revisão 02 (substituída na revisão 03): seis cadeiras alternam entre recolhidas e afastadas +16 cm para estudo de circulação; não equivale a validação de acessibilidade ou uso ocupado. Revisão 03: cadeiras recolhidas aproximadamente 15cm sob o tampo; modo sentar desliza 16cm, deixando a borda da cadeira junto à borda da mesa, sem vão excessivo. ADIÇÃO DE TUGs DE USO GERAL (22/11/2026): JAN-TUG-GERAL-01 na parede esquerda, eixo 50cm, altura 30cm, placa dupla 2P+T 10A; JAN-TUG-GERAL-02 na parede esquerda, eixo 255cm, altura 30cm, placa dupla 2P+T 10A; JAN-TUG-GERAL-03 na parede direita, eixo 65cm, altura 30cm, placa dupla 2P+T 10A. Pontos PROPOSTOS, sem instalação/circuito/eletroduto definido; conferir NBR 5410, aberturas, circulação, dimensões reais e rede existente antes do reboco. Demais peças preservadas.",
   "pecas": [
     {
       "id": "JAN-MESA-6-OPCOES",
@@ -29,6 +29,45 @@
       "status": "estudo",
       "obs": "Uma única peça interativa com seis cadeiras. Alternar formato oval/retangular na ação 3D; segunda ação gira o conjunto de 90 graus. Mesa centralizada só para comparação dimensional. Porta P2 e corredor preservados; testar circulação com pessoas sentadas e cadeiras afastadas antes de aprovar. Modelo exato da mesa e das cadeiras será definido depois. Revisão 02: ação independente 'Cadeiras recolhidas / afastadas para sentar' move as seis cadeiras 16 cm para fora em ambas orientações; estado inicial recolhido. Revisão 03: centros recolhidos nas laterais z=±58cm, cabeceiras x=±102cm (relativos ao centro), permitindo sobreposição física de ~15cm sob o tampo. Modo sentar z=±74cm e cabeceiras x=±118cm; avaliar com a mesa e cadeiras reais.",
       "sentarInicial": false
+    },
+    {
+      "id": "JAN-TUG-GERAL-01",
+      "tipo": "tomada",
+      "nome": "Tomada dupla de uso geral · esquerda perto da cozinha",
+      "parede": "esquerda",
+      "dosFundos": 50,
+      "doPiso": 30,
+      "modulos": 2,
+      "amperagem": 10,
+      "uso": "aspirador e uso geral do jantar no trecho próximo à cozinha",
+      "status": "proposta",
+      "obs": "Eixo z50cm a partir dos fundos da sala de jantar (limite com cozinha), h30cm do piso acabado. Fica antes da abertura V4 do corredor, que começa em z100cm do jantar. Conferir espaço de instalação e acabamento no trecho livre de 100cm."
+    },
+    {
+      "id": "JAN-TUG-GERAL-02",
+      "tipo": "tomada",
+      "nome": "Tomada dupla de uso geral · esquerda perto do estar",
+      "parede": "esquerda",
+      "dosFundos": 255,
+      "doPiso": 30,
+      "modulos": 2,
+      "amperagem": 10,
+      "uso": "uso geral do jantar e reserva para rearranjo da mesa",
+      "status": "proposta",
+      "obs": "Eixo z255cm desde fundos do jantar, h30cm do piso acabado. Fica após a abertura V4 do corredor (z100..210cm na sala de jantar), e antes da transição aberta para o estar. Confirmar funcionamento da porta do quarto e ponto do QD pela face do corredor, sem interferir nas instalações já existentes."
+    },
+    {
+      "id": "JAN-TUG-GERAL-03",
+      "tipo": "tomada",
+      "nome": "Tomada dupla de uso geral · direita antes da porta da varanda",
+      "parede": "direita",
+      "dosFundos": 65,
+      "doPiso": 30,
+      "modulos": 2,
+      "amperagem": 10,
+      "uso": "limpeza e pequenos aparelhos ocasionais, sem tomada de piso junto à mesa",
+      "status": "proposta",
+      "obs": "Eixo z65cm desde fundos do jantar, h30cm do piso acabado. Porta P2 inicia em z150cm do jantar e avança até z330cm; este ponto está 85cm antes do vão. Conferir posição com guarnições e interruptores da varanda."
     }
   ]
 }
